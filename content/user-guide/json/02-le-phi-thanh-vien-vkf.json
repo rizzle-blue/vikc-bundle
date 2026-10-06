@@ -1,0 +1,761 @@
+{
+  "docId": "02",
+  "slug": "02-le-phi-thanh-vien-vkf",
+  "title": "Entry fee — thành viên VKF / VKF members",
+  "source": "resources/user-guide/2_1ST VIKC 2026 Entry Fee (Thành viên VKF).pdf",
+  "lang": "vi",
+  "kind": "pdf-text",
+  "tags": [
+    "fees",
+    "entry"
+  ],
+  "pageCount": 2,
+  "sha256": "f96f210901cb1095b8e9ccd4a79392f43f9cbb8379f3b79a6c46eab6f9e6c752",
+  "generatedOn": "2026-10-06",
+  "warnings": [],
+  "notes": [],
+  "assets": [],
+  "outline": [
+    {
+      "level": 3,
+      "text": "1. Khách sạn:",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "2. Phí đăng ký dành cho vận động viên là thành viên VKF",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "3. Phí những ngày đăng ký thêm và những người không tham gia thi đấu.",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "4. Di chuyển từ sân bay Nội Bài đến Tam Chúc.",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "5. Tiệc chào mừng sẽ được tổ chức vào thứ Bảy ngày 21 tháng 11. Địa điểm:",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "6. Hạn chót nộp đơn đăng ký và danh sách thi đấu đồng đội:",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "7. Quy định và phương thức thanh toán:",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "8. Tất cả các mẫu đơn đăng ký và hồ sơ thi lên đẳng (Dan) phải được gửi đến các địa chỉ",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "9. VKF có quyền đưa ra các điều chỉnh cuối cùng mà không cần thông báo trước.",
+      "page": 2
+    }
+  ],
+  "blocks": [
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "GIẢI VÔ ĐỊCH KENDO QUỐC TẾ VIỆT NAM LẦN THỨ NHẤT 2026",
+      "markdown": "GIẢI VÔ ĐỊCH KENDO QUỐC TẾ VIỆT NAM LẦN THỨ NHẤT 2026",
+      "bbox": [
+        87.28,
+        76.81,
+        527.98,
+        92.3
+      ],
+      "fontSize": 14.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Phí tham dự (Thành viên VKF)",
+      "markdown": "Phí tham dự (Thành viên VKF)",
+      "bbox": [
+        211.6,
+        98.31,
+        403.68,
+        113.8
+      ],
+      "fontSize": 14.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Thời gian: 19-22/11/2026\nĐịa điểm: Trung tâm Hội nghị Quốc tế Vesak, Tam Chúc, Ninh Bình\nĐơn vị tổ chức: Liên đoàn Kendo Việt Nam (VKF)",
+      "markdown": "Thời gian: 19-22/11/2026\nĐịa điểm: Trung tâm Hội nghị Quốc tế Vesak, Tam Chúc, Ninh Bình\nĐơn vị tổ chức: Liên đoàn Kendo Việt Nam (VKF)",
+      "bbox": [
+        72.03,
+        132.86,
+        410.42,
+        177.89
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "1. Khách sạn:",
+      "markdown": "### 1. Khách sạn:",
+      "bbox": [
+        90.05,
+        196.22,
+        164.83,
+        209.67
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Khách xá Tam Chúc trong khu du lịch Tam Chúc.\nDi chuyển đến địa điểm thi đấu:",
+      "markdown": "Khách xá Tam Chúc trong khu du lịch Tam Chúc.\nDi chuyển đến địa điểm thi đấu:",
+      "bbox": [
+        108.05,
+        212.14,
+        351.65,
+        241.42
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Bằng xe điện: 5 phút",
+      "markdown": "- Bằng xe điện: 5 phút",
+      "bbox": [
+        108.05,
+        243.72,
+        229.1,
+        257.17
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Trải nghiệm bằng thuyền du lịch đi qua hồ: 18 phút\nWebsite: https://tamchuc.com.vn/tien-ich?tab=khach-xa-tam-chuc",
+      "markdown": "- Trải nghiệm bằng thuyền du lịch đi qua hồ: 18 phút\nWebsite: https://tamchuc.com.vn/tien-ich?tab=khach-xa-tam-chuc",
+      "bbox": [
+        108.05,
+        259.72,
+        428.93,
+        288.92
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "2. Phí đăng ký dành cho vận động viên là thành viên VKF",
+      "markdown": "### 2. Phí đăng ký dành cho vận động viên là thành viên VKF",
+      "bbox": [
+        90.05,
+        307.24,
+        377.9,
+        320.69
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "table",
+      "text": "Loại phòng | Số đêm | Tham dự một nội dung | Tham dự 2 nội dung\nPhòng đôi (Ghép cùng\nngười khác) | 1 đêm | 1.550.000 | 1.850.000\nPhòng ba (Ghép cùng\nngười khác) | 1 đêm | 1.450.000 | 1.750.000\nPhòng đơn | 1 đêm | 1.900.000 | 2.200.000",
+      "markdown": "| Loại phòng | Số đêm | Tham dự một nội dung | Tham dự 2 nội dung |\n|---|---|---|---|\n| Phòng đôi (Ghép cùng<br>người khác) | 1 đêm | 1.550.000 | 1.850.000 |\n| Phòng ba (Ghép cùng<br>người khác) | 1 đêm | 1.450.000 | 1.750.000 |\n| Phòng đơn | 1 đêm | 1.900.000 | 2.200.000 |",
+      "bbox": [
+        72.28,
+        338.85,
+        554.28,
+        455.67
+      ],
+      "rows": [
+        [
+          "Loại phòng",
+          "Số đêm",
+          "Tham dự một nội dung",
+          "Tham dự 2 nội dung"
+        ],
+        [
+          "Phòng đôi (Ghép cùng\nngười khác)",
+          "1 đêm",
+          "1.550.000",
+          "1.850.000"
+        ],
+        [
+          "Phòng ba (Ghép cùng\nngười khác)",
+          "1 đêm",
+          "1.450.000",
+          "1.750.000"
+        ],
+        [
+          "Phòng đơn",
+          "1 đêm",
+          "1.900.000",
+          "2.200.000"
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Lưu ý:",
+      "markdown": "Lưu ý:",
+      "bbox": [
+        72.03,
+        472.21,
+        110.3,
+        485.49
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Gói đăng ký đã bao gồm phí thi đấu (theo số lượng sự kiện tham gia), 1 đêm khách\nsạn (thứ Bảy ngày 21/11), ăn sáng (của ngày hôm sau), ăn trưa ngày đăng ký thi đấu\nvà tiệc chào mừng.",
+      "markdown": "- Gói đăng ký đã bao gồm phí thi đấu (theo số lượng sự kiện tham gia), 1 đêm khách\nsạn (thứ Bảy ngày 21/11), ăn sáng (của ngày hôm sau), ăn trưa ngày đăng ký thi đấu\nvà tiệc chào mừng.",
+      "bbox": [
+        108.05,
+        488.04,
+        533.72,
+        533.24
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Có thể đăng ký bạn cùng phòng theo form đăng ký. Nếu không có ai BTC sẽ sắp xếp\nở với người cùng giới.",
+      "markdown": "- Có thể đăng ký bạn cùng phòng theo form đăng ký. Nếu không có ai BTC sẽ sắp xếp\nở với người cùng giới.",
+      "bbox": [
+        108.05,
+        535.56,
+        536.73,
+        564.76
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Gói đăng ký thi đấu áp dụng chung cho tất cả vận động viên cả trong trường hợp\nkhông lưu trú tại khách xá Tam Chúc",
+      "markdown": "- Gói đăng ký thi đấu áp dụng chung cho tất cả vận động viên cả trong trường hợp\nkhông lưu trú tại khách xá Tam Chúc",
+      "bbox": [
+        108.05,
+        567.32,
+        516.45,
+        596.52
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "3. Phí những ngày đăng ký thêm và những người không tham gia thi đấu.",
+      "markdown": "### 3. Phí những ngày đăng ký thêm và những người không tham gia thi đấu.",
+      "bbox": [
+        90.05,
+        614.82,
+        451.2,
+        628.27
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "table",
+      "text": "Loại phòng | Giá/Đêm/1 người | Ăn trưa | Ăn tối | Tiệc chào mừng\nPhòng đôi (Ghép cùng\nngười khác) | 350.000 | 120.000 | 200.000 | 700.000\nPhòng ba (Ghép cùng\nngười khác) | 250.000 |  |  | \nPhòng đơn | 700.000 |  |  | ",
+      "markdown": "| Loại phòng | Giá/Đêm/1 người | Ăn trưa | Ăn tối | Tiệc chào mừng |\n|---|---|---|---|---|\n| Phòng đôi (Ghép cùng<br>người khác) | 350.000 | 120.000 | 200.000 | 700.000 |\n| Phòng ba (Ghép cùng<br>người khác) | 250.000 |  |  |  |\n| Phòng đơn | 700.000 |  |  |  |",
+      "bbox": [
+        72.28,
+        646.45,
+        539.78,
+        763.27
+      ],
+      "rows": [
+        [
+          "Loại phòng",
+          "Giá/Đêm/1 người",
+          "Ăn trưa",
+          "Ăn tối",
+          "Tiệc chào mừng"
+        ],
+        [
+          "Phòng đôi (Ghép cùng\nngười khác)",
+          "350.000",
+          "120.000",
+          "200.000",
+          "700.000"
+        ],
+        [
+          "Phòng ba (Ghép cùng\nngười khác)",
+          "250.000",
+          null,
+          null,
+          null
+        ],
+        [
+          "Phòng đơn",
+          "700.000",
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Lưu ý:",
+      "markdown": "Lưu ý:",
+      "bbox": [
+        72.03,
+        779.78,
+        107.3,
+        793.07
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Phí dành cho những ngày đăng ký thêm của vận động viên",
+      "markdown": "- Phí dành cho những ngày đăng ký thêm của vận động viên",
+      "bbox": [
+        108.05,
+        36.67,
+        413.67,
+        50.12
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Cho người thi Dan, quản lý, huấn luyện viên hoặc người nhà.",
+      "markdown": "- Cho người thi Dan, quản lý, huấn luyện viên hoặc người nhà.",
+      "bbox": [
+        108.05,
+        52.67,
+        423.43,
+        66.12
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Mức giá nêu trên (tính theo người/đêm) đã bao gồm bữa sáng.",
+      "markdown": "- Mức giá nêu trên (tính theo người/đêm) đã bao gồm bữa sáng.",
+      "bbox": [
+        108.05,
+        68.42,
+        427.67,
+        81.87
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "4. Di chuyển từ sân bay Nội Bài đến Tam Chúc.",
+      "markdown": "### 4. Di chuyển từ sân bay Nội Bài đến Tam Chúc.",
+      "bbox": [
+        90.05,
+        100.42,
+        330.13,
+        113.87
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "paragraph",
+      "text": "Cá nhân hoặc đoàn chủ động liên hệ với đơn vị cung cấp dịch vụ",
+      "markdown": "Cá nhân hoặc đoàn chủ động liên hệ với đơn vị cung cấp dịch vụ",
+      "bbox": [
+        90.05,
+        116.36,
+        404.43,
+        129.64
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "table",
+      "text": " | Taxi |  |  | Một chiều (VND) |  |  | Lưu ý | \nNoi Bai taxi. ĐT:\n0888.100.100 -\n024.7777.8888 |  |  | Khoảng 750.000vnd cho\n3-4 người bao gồm hành lý |  |  | Thời gian di chuyển: từ 2 - 2.5 giờ |  | \nGreen SM |  |  |  |  |  |  |  | \nGrab |  |  |  |  |  |  |  | \nBee |  |  |  |  |  |  |  | \n | Bus - ĐT: 0904409090 |  |  | Một chiều (VND) |  |  | Lưu ý | \n16 chỗ |  |  | 1.800.000 |  |  | Có thể chở tối đa 9 người kèm hành lý |  | \n29 chỗ |  |  | 2.300.000 |  |  | Xe có khoang hành lý riêng bên dưới. |  | \n35 chỗ |  |  | 2.800.000 |  |  |  |  | \n45 chỗ |  |  | 3.500.000 |  |  |  |  | ",
+      "markdown": "|  | Taxi |  |  | Một chiều (VND) |  |  | Lưu ý |  |\n|---|---|---|---|---|---|---|---|---|\n| Noi Bai taxi. ĐT:<br>0888.100.100 -<br>024.7777.8888 |  |  | Khoảng 750.000vnd cho<br>3-4 người bao gồm hành lý |  |  | Thời gian di chuyển: từ 2 - 2.5 giờ |  |  |\n| Green SM |  |  |  |  |  |  |  |  |\n| Grab |  |  |  |  |  |  |  |  |\n| Bee |  |  |  |  |  |  |  |  |\n|  | Bus - ĐT: 0904409090 |  |  | Một chiều (VND) |  |  | Lưu ý |  |\n| 16 chỗ |  |  | 1.800.000 |  |  | Có thể chở tối đa 9 người kèm hành lý |  |  |\n| 29 chỗ |  |  | 2.300.000 |  |  | Xe có khoang hành lý riêng bên dưới. |  |  |\n| 35 chỗ |  |  | 2.800.000 |  |  |  |  |  |\n| 45 chỗ |  |  | 3.500.000 |  |  |  |  |  |",
+      "bbox": [
+        72.29,
+        147.17,
+        539.96,
+        339.66
+      ],
+      "rows": [
+        [
+          "",
+          "Taxi",
+          "",
+          "",
+          "Một chiều (VND)",
+          "",
+          "",
+          "Lưu ý",
+          ""
+        ],
+        [
+          "Noi Bai taxi. ĐT:\n0888.100.100 -\n024.7777.8888",
+          null,
+          null,
+          "Khoảng 750.000vnd cho\n3-4 người bao gồm hành lý",
+          null,
+          null,
+          "Thời gian di chuyển: từ 2 - 2.5 giờ",
+          null,
+          null
+        ],
+        [
+          "Green SM",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Grab",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Bee",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          "Bus - ĐT: 0904409090",
+          "",
+          "",
+          "Một chiều (VND)",
+          "",
+          "",
+          "Lưu ý",
+          ""
+        ],
+        [
+          "16 chỗ",
+          null,
+          null,
+          "1.800.000",
+          null,
+          null,
+          "Có thể chở tối đa 9 người kèm hành lý",
+          null,
+          null
+        ],
+        [
+          "29 chỗ",
+          null,
+          null,
+          "2.300.000",
+          null,
+          null,
+          "Xe có khoang hành lý riêng bên dưới.",
+          null,
+          null
+        ],
+        [
+          "35 chỗ",
+          null,
+          null,
+          "2.800.000",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "45 chỗ",
+          null,
+          null,
+          "3.500.000",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "5. Tiệc chào mừng sẽ được tổ chức vào thứ Bảy ngày 21 tháng 11. Địa điểm:",
+      "markdown": "### 5. Tiệc chào mừng sẽ được tổ chức vào thứ Bảy ngày 21 tháng 11. Địa điểm:",
+      "bbox": [
+        90.05,
+        355.74,
+        471.7,
+        369.19
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Nhà hàng Cát Tường, tầng 5 của Khách xá.",
+      "markdown": "- Nhà hàng Cát Tường, tầng 5 của Khách xá.",
+      "bbox": [
+        126.05,
+        371.93,
+        355.15,
+        385.37
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "6. Hạn chót nộp đơn đăng ký và danh sách thi đấu đồng đội:",
+      "markdown": "### 6. Hạn chót nộp đơn đăng ký và danh sách thi đấu đồng đội:",
+      "bbox": [
+        90.05,
+        387.51,
+        388.15,
+        400.96
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Thứ Ba, ngày 20 tháng 10 năm 2026.",
+      "markdown": "- Thứ Ba, ngày 20 tháng 10 năm 2026.",
+      "bbox": [
+        126.05,
+        403.68,
+        334.65,
+        417.12
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "7. Quy định và phương thức thanh toán:",
+      "markdown": "### 7. Quy định và phương thức thanh toán:",
+      "bbox": [
+        90.05,
+        419.26,
+        294.13,
+        432.71
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "paragraph",
+      "text": "Các khoản phí đóng trực tiếp vào tài khoản Liên đoàn Kendo Việt Nam",
+      "markdown": "Các khoản phí đóng trực tiếp vào tài khoản Liên đoàn Kendo Việt Nam",
+      "bbox": [
+        90.05,
+        435.43,
+        436.67,
+        448.71
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- STK: 8670127801 - BIDV",
+      "markdown": "- STK: 8670127801 - BIDV",
+      "bbox": [
+        126.05,
+        451.21,
+        275.38,
+        464.65
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "8. Tất cả các mẫu đơn đăng ký và hồ sơ thi lên đẳng (Dan) phải được gửi đến các địa chỉ",
+      "markdown": "### 8. Tất cả các mẫu đơn đăng ký và hồ sơ thi lên đẳng (Dan) phải được gửi đến các địa chỉ",
+      "bbox": [
+        90.05,
+        467.04,
+        523.98,
+        480.49
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "paragraph",
+      "text": "email sau: vikc@vietnamkendo.com và info@kendo.vn",
+      "markdown": "email sau: vikc@vietnamkendo.com và info@kendo.vn",
+      "bbox": [
+        108.05,
+        482.96,
+        378.4,
+        496.24
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "9. VKF có quyền đưa ra các điều chỉnh cuối cùng mà không cần thông báo trước.",
+      "markdown": "### 9. VKF có quyền đưa ra các điều chỉnh cuối cùng mà không cần thông báo trước.",
+      "bbox": [
+        90.05,
+        498.79,
+        489.7,
+        512.24
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "paragraph",
+      "text": "Lưu ý quan trọng",
+      "markdown": "Lưu ý quan trọng",
+      "bbox": [
+        72.03,
+        530.46,
+        166.08,
+        543.74
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Người tham dự thi đấu phải đăng ký theo gói do BTC cung cấp.",
+      "markdown": "- Người tham dự thi đấu phải đăng ký theo gói do BTC cung cấp.",
+      "bbox": [
+        90.05,
+        546.48,
+        417.93,
+        559.92
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Người tham dự chỉ thi Dan được cung cấp bữa trưa của ngày thi và không bắt buộc đăng\nký theo gói của BTC.",
+      "markdown": "- Người tham dự chỉ thi Dan được cung cấp bữa trưa của ngày thi và không bắt buộc đăng\nký theo gói của BTC.",
+      "bbox": [
+        90.05,
+        562.23,
+        536.19,
+        591.51
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Người tham dự phải cung cấp thông tin họ tên trùng khớp hoàn toàn với giấy tờ tùy\nthân/giấy tờ đi lại.",
+      "markdown": "- Người tham dự phải cung cấp thông tin họ tên trùng khớp hoàn toàn với giấy tờ tùy\nthân/giấy tờ đi lại.",
+      "bbox": [
+        90.05,
+        593.98,
+        511.7,
+        623.26
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Người tham dự có thể đưa ra yêu cầu về việc sắp xếp phòng, nhưng VKF sẽ quyết định\nviệc chấp thuận dựa trên tình hình thực tế tại thời điểm đó.",
+      "markdown": "- Người tham dự có thể đưa ra yêu cầu về việc sắp xếp phòng, nhưng VKF sẽ quyết định\nviệc chấp thuận dựa trên tình hình thực tế tại thời điểm đó.",
+      "bbox": [
+        90.05,
+        625.76,
+        529.47,
+        655.04
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- VKF và khách sạn không đảm bảo có thể đáp ứng mọi yêu cầu đặc biệt liên quan đến\nkhách sạn. Nếu yêu cầu không được đáp ứng, người tham dự không có quyền yêu cầu\nthay đổi, hoàn tiền hoặc bồi thường.",
+      "markdown": "- VKF và khách sạn không đảm bảo có thể đáp ứng mọi yêu cầu đặc biệt liên quan đến\nkhách sạn. Nếu yêu cầu không được đáp ứng, người tham dự không có quyền yêu cầu\nthay đổi, hoàn tiền hoặc bồi thường.",
+      "bbox": [
+        90.05,
+        657.51,
+        522.97,
+        702.54
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Người tham dự có thể ở chung phòng với người thân trong gia đình; VKF sẽ tính phí dựa\ntrên số lượng người. Vui lòng tham khảo mục \"Chi phí dành cho người không tham gia\nthi đấu\" để biết chi tiết.",
+      "markdown": "- Người tham dự có thể ở chung phòng với người thân trong gia đình; VKF sẽ tính phí dựa\ntrên số lượng người. Vui lòng tham khảo mục \"Chi phí dành cho người không tham gia\nthi đấu\" để biết chi tiết.",
+      "bbox": [
+        90.05,
+        705.29,
+        538.97,
+        750.32
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Sau khi các khoản phí đã được thanh toán và chấp nhận, người tham dự không có quyền\nyêu cầu hoàn tiền.",
+      "markdown": "- Sau khi các khoản phí đã được thanh toán và chấp nhận, người tham dự không có quyền\nyêu cầu hoàn tiền.",
+      "bbox": [
+        90.05,
+        752.78,
+        534.48,
+        782.07
+      ],
+      "fontSize": 12.0
+    }
+  ]
+}

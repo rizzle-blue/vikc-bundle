@@ -1,0 +1,1038 @@
+{
+  "docId": "05",
+  "slug": "05-thi-kyu-dan-va-mau-dang-ky",
+  "title": "Thông tin thi Kyu/Dan và mẫu đăng ký / Kyu-Dan exam information & application form",
+  "source": "resources/user-guide/5_ 1ST VIKC 2026 Thông tin thi Kyu Dan và Mẫu đăng ký (cập nhật).pdf",
+  "lang": "vi",
+  "kind": "pdf-text",
+  "tags": [
+    "grading",
+    "kyu-dan",
+    "form"
+  ],
+  "pageCount": 4,
+  "sha256": "24db6a737d3df10963037bd9bb9adb092098f4d3e090e4c93a9b6ea42e2b6a05",
+  "generatedOn": "2026-10-06",
+  "warnings": [],
+  "notes": [],
+  "assets": [],
+  "outline": [
+    {
+      "level": 3,
+      "text": "ĐƠN ĐĂNG KÝ THI KYU/DAN\nKYU/DAN EXAMINATION APPLICATION FORM",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "Thông Tin Kì Thi Kyu/Dan Tháng 11\nKyu/Dan Grading Information (Nov 2026)",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "Thời gian | Time",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "Cách thức đăng ký | Registration Guidelines",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "Điều kiện thi | Grading Eligibility",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "Lệ phí thi | Grading Fee",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "Thời hạn đăng ký | Registration Deadline",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "Nội dung thi Kyu/Dan | Grading Syllabus",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "1. Thi 1 Kyu | Kyu Examination",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "2. Thi 1 đẳng | 1 Dan Examination",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "text": "3. Thi 2 đẳng | 2 Dan Examination",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "text": "4. Thi 3 đẳng | 3 Dan Examination",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "text": "5. Thi 4 đẳng | 4 Dan Examination",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "text": "6. Thi 5 đẳng | 5 Dan Examination",
+      "page": 4
+    }
+  ],
+  "blocks": [
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "ĐƠN ĐĂNG KÝ THI KYU/DAN\nKYU/DAN EXAMINATION APPLICATION FORM",
+      "markdown": "### ĐƠN ĐĂNG KÝ THI KYU/DAN KYU/DAN EXAMINATION APPLICATION FORM",
+      "bbox": [
+        126.26,
+        121.04,
+        480.25,
+        159.11
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Thứ 6, ngày 20/11/2026\nFriday, 20th November 2026\nTrung tâm Hội nghị Quốc tế Vesak, Tam Chúc, Ninh Bình\nVesak International Convention Center, Tam Chuc, Ninh Binh",
+      "markdown": "Thứ 6, ngày 20/11/2026\nFriday, 20th November 2026\nTrung tâm Hội nghị Quốc tế Vesak, Tam Chúc, Ninh Bình\nVesak International Convention Center, Tam Chuc, Ninh Binh",
+      "bbox": [
+        138.98,
+        173.75,
+        466.9,
+        232.86
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 1,
+      "type": "table",
+      "text": "Họ và tên chữ Latin (viết hoa)\nFull name in Latin (BLOCK CAPITALS) | Dùng cho giấy\nchứng nhận\nUse on\ncertificate | Yes / No\nHọ và tên chữ Hán\nFull name in Kanji |  | Yes / No\nSố CCCD / Hộ chiếu\nNational ID / Passport No. | Quốc tịch\nNationality | \nNgày sinh (dd/mm/yyyy)\nDate of birth (dd/mm/yyyy) | Giới tính (nam / nữ)\nGender (male / female) | \nSố điện thoại / Mobile | Email | \nĐịa chỉ / Address | Nghề nghiệp\nOccupation | \nTên CLB\nDojo name | Trình độ hiện tại\nCurrent Kyu / Dan | \nNơi cấp bằng hiện tại\nPlace of issue | Ngày cấp (dd/mm/yyyy)\nDate of issue (dd/mm/yyyy) | \nKyu/Dan đăng ký thi\nKyu/Dan applied for |  | \nĐịa chỉ nhận bằng (theo nhóm đăng ký)\nCertificate mailing address (registration group's address) |  | ",
+      "markdown": "| Họ và tên chữ Latin (viết hoa)<br>Full name in Latin (BLOCK CAPITALS) | Dùng cho giấy<br>chứng nhận<br>Use on<br>certificate | Yes / No |\n|---|---|---|\n| Họ và tên chữ Hán<br>Full name in Kanji |  | Yes / No |\n| Số CCCD / Hộ chiếu<br>National ID / Passport No. | Quốc tịch<br>Nationality |  |\n| Ngày sinh (dd/mm/yyyy)<br>Date of birth (dd/mm/yyyy) | Giới tính (nam / nữ)<br>Gender (male / female) |  |\n| Số điện thoại / Mobile | Email |  |\n| Địa chỉ / Address | Nghề nghiệp<br>Occupation |  |\n| Tên CLB<br>Dojo name | Trình độ hiện tại<br>Current Kyu / Dan |  |\n| Nơi cấp bằng hiện tại<br>Place of issue | Ngày cấp (dd/mm/yyyy)<br>Date of issue (dd/mm/yyyy) |  |\n| Kyu/Dan đăng ký thi<br>Kyu/Dan applied for |  |  |\n| Địa chỉ nhận bằng (theo nhóm đăng ký)<br>Certificate mailing address (registration group's address) |  |  |",
+      "bbox": [
+        72.25,
+        276.11,
+        540.36,
+        628.9
+      ],
+      "rows": [
+        [
+          "Họ và tên chữ Latin (viết hoa)\nFull name in Latin (BLOCK CAPITALS)",
+          "Dùng cho giấy\nchứng nhận\nUse on\ncertificate",
+          "Yes / No"
+        ],
+        [
+          "Họ và tên chữ Hán\nFull name in Kanji",
+          null,
+          "Yes / No"
+        ],
+        [
+          "Số CCCD / Hộ chiếu\nNational ID / Passport No.",
+          "Quốc tịch\nNationality",
+          null
+        ],
+        [
+          "Ngày sinh (dd/mm/yyyy)\nDate of birth (dd/mm/yyyy)",
+          "Giới tính (nam / nữ)\nGender (male / female)",
+          null
+        ],
+        [
+          "Số điện thoại / Mobile",
+          "Email",
+          null
+        ],
+        [
+          "Địa chỉ / Address",
+          "Nghề nghiệp\nOccupation",
+          null
+        ],
+        [
+          "Tên CLB\nDojo name",
+          "Trình độ hiện tại\nCurrent Kyu / Dan",
+          null
+        ],
+        [
+          "Nơi cấp bằng hiện tại\nPlace of issue",
+          "Ngày cấp (dd/mm/yyyy)\nDate of issue (dd/mm/yyyy)",
+          null
+        ],
+        [
+          "Kyu/Dan đăng ký thi\nKyu/Dan applied for",
+          null,
+          null
+        ],
+        [
+          "Địa chỉ nhận bằng (theo nhóm đăng ký)\nCertificate mailing address (registration group's address)",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "type": "table",
+      "text": "Xác nhận của CLB/ Liên đoàn Chủ quản\nApproval by Dojo/ Organization | Chữ ký của người đăng ký\nApplicant's Signature\n | ",
+      "markdown": "| Xác nhận của CLB/ Liên đoàn Chủ quản<br>Approval by Dojo/ Organization | Chữ ký của người đăng ký<br>Applicant's Signature |\n|---|---|\n|  |  |",
+      "bbox": [
+        72.25,
+        654.98,
+        540.36,
+        780.78
+      ],
+      "rows": [
+        [
+          "Xác nhận của CLB/ Liên đoàn Chủ quản\nApproval by Dojo/ Organization",
+          "Chữ ký của người đăng ký\nApplicant's Signature"
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "Thông Tin Kì Thi Kyu/Dan Tháng 11\nKyu/Dan Grading Information (Nov 2026)",
+      "markdown": "### Thông Tin Kì Thi Kyu/Dan Tháng 11 Kyu/Dan Grading Information (Nov 2026)",
+      "bbox": [
+        160.7,
+        45.66,
+        445.81,
+        81.69
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "Thời gian | Time",
+      "markdown": "### Thời gian | Time",
+      "bbox": [
+        72.02,
+        128.84,
+        189.32,
+        146.51
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "• 7h sáng, thứ 6, ngày 20/11/2026 / Friday, 20th November 2026, 7:00 am",
+      "markdown": "- 7h sáng, thứ 6, ngày 20/11/2026 / Friday, 20th November 2026, 7:00 am",
+      "bbox": [
+        80.06,
+        155.09,
+        473.86,
+        169.62
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "• Thí sinh đến muộn giờ check-in sẽ bị huỷ tư cách thi và không được hoàn lệ phí đã\nđóng / Latecomers will be disqualified without refund.",
+      "markdown": "- Thí sinh đến muộn giờ check-in sẽ bị huỷ tư cách thi và không được hoàn lệ phí đã\nđóng / Latecomers will be disqualified without refund.",
+      "bbox": [
+        80.06,
+        177.05,
+        527.62,
+        206.58
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "Cách thức đăng ký | Registration Guidelines",
+      "markdown": "### Cách thức đăng ký | Registration Guidelines",
+      "bbox": [
+        72.02,
+        241.88,
+        378.1,
+        259.55
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "• CLB gửi file Excel đăng ký theo mẫu, kèm theo tất cả Đơn đăng ký thi Kyu/Dan\ncủa thành viên. Đối với đoàn nước ngoài, gửi kèm hình chụp hộ chiếu của từng thí\nsinh.",
+      "markdown": "- CLB gửi file Excel đăng ký theo mẫu, kèm theo tất cả Đơn đăng ký thi Kyu/Dan\ncủa thành viên. Đối với đoàn nước ngoài, gửi kèm hình chụp hộ chiếu của từng thí\nsinh.",
+      "bbox": [
+        80.06,
+        268.16,
+        531.22,
+        312.57
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "• Submit the Excel registration file using the provided template, together with all\nmembers’ Kyu/Dan examination application forms. Overseas delegations must\nalso submit a photo of each candidate’s passport.",
+      "markdown": "- Submit the Excel registration file using the provided template, together with all\nmembers’ Kyu/Dan examination application forms. Overseas delegations must\nalso submit a photo of each candidate’s passport.",
+      "bbox": [
+        80.06,
+        320.0,
+        520.11,
+        364.53
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "Điều kiện thi | Grading Eligibility",
+      "markdown": "### Điều kiện thi | Grading Eligibility",
+      "bbox": [
+        72.02,
+        399.83,
+        304.88,
+        417.5
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "• Đối với các thí sinh thi 1 Kyu: cần có bằng 2 Kyu hợp lệ do VKF cấp / Foreign\ncandidates do not need a 2 Kyu certificate to register for the 1 Kyu examination.",
+      "markdown": "- Đối với các thí sinh thi 1 Kyu: cần có bằng 2 Kyu hợp lệ do VKF cấp / Foreign\ncandidates do not need a 2 Kyu certificate to register for the 1 Kyu examination.",
+      "bbox": [
+        80.06,
+        426.08,
+        514.18,
+        455.63
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "• Đối với các thí sinh thi dan/ For Dan grading:",
+      "markdown": "- Đối với các thí sinh thi dan/ For Dan grading:",
+      "bbox": [
+        80.06,
+        463.06,
+        333.91,
+        477.59
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 2,
+      "type": "table",
+      "text": " | Dan dự thi |  |  | Thời gian tập luyện tối thiểu |  |  | Độ tuổi tối thiểu | \n | Grading for |  |  | Minimum training period |  |  | Minimum age | \n1 Dan |  |  | Sau khi đạt 1 Kyu\nAfter passing 1 Kyu |  |  | 13 |  | \n2 Dan |  |  |  | 1 năm sau khi đạt 1 Dan |  | 14 |  | \n |  |  |  | 1 year after 1 Dan |  |  |  | \n3 Dan |  |  | 2 năm sau khi đạt 2 Dan\n2 years after 2 Dan |  |  | 16 |  | \n4 Dan |  |  |  | 3 năm sau khi đạt 3 Dan |  | 19 |  | \n |  |  |  | 3 years after 3 Dan |  |  |  | \n5 Dan |  |  | 4 năm sau khi đạt 4 Dan\n4 years after 4 Dan |  |  | 23 |  | ",
+      "markdown": "|  | Dan dự thi |  |  | Thời gian tập luyện tối thiểu |  |  | Độ tuổi tối thiểu |  |\n|---|---|---|---|---|---|---|---|---|\n|  | Grading for |  |  | Minimum training period |  |  | Minimum age |  |\n| 1 Dan |  |  | Sau khi đạt 1 Kyu<br>After passing 1 Kyu |  |  | 13 |  |  |\n| 2 Dan |  |  |  | 1 năm sau khi đạt 1 Dan |  | 14 |  |  |\n|  |  |  |  | 1 year after 1 Dan |  |  |  |  |\n| 3 Dan |  |  | 2 năm sau khi đạt 2 Dan<br>2 years after 2 Dan |  |  | 16 |  |  |\n| 4 Dan |  |  |  | 3 năm sau khi đạt 3 Dan |  | 19 |  |  |\n|  |  |  |  | 3 years after 3 Dan |  |  |  |  |\n| 5 Dan |  |  | 4 năm sau khi đạt 4 Dan<br>4 years after 4 Dan |  |  | 23 |  |  |",
+      "bbox": [
+        72.43,
+        486.07,
+        540.41,
+        693.07
+      ],
+      "rows": [
+        [
+          "",
+          "Dan dự thi",
+          "",
+          "",
+          "Thời gian tập luyện tối thiểu",
+          "",
+          "",
+          "Độ tuổi tối thiểu",
+          ""
+        ],
+        [
+          null,
+          "Grading for",
+          null,
+          null,
+          "Minimum training period",
+          null,
+          null,
+          "Minimum age",
+          null
+        ],
+        [
+          "1 Dan",
+          null,
+          null,
+          "Sau khi đạt 1 Kyu\nAfter passing 1 Kyu",
+          null,
+          null,
+          "13",
+          null,
+          null
+        ],
+        [
+          "2 Dan",
+          null,
+          null,
+          "",
+          "1 năm sau khi đạt 1 Dan",
+          "",
+          "14",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "1 year after 1 Dan",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "3 Dan",
+          null,
+          null,
+          "2 năm sau khi đạt 2 Dan\n2 years after 2 Dan",
+          null,
+          null,
+          "16",
+          null,
+          null
+        ],
+        [
+          "4 Dan",
+          null,
+          null,
+          "",
+          "3 năm sau khi đạt 3 Dan",
+          "",
+          "19",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "3 years after 3 Dan",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "5 Dan",
+          null,
+          null,
+          "4 năm sau khi đạt 4 Dan\n4 years after 4 Dan",
+          null,
+          null,
+          "23",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "* Tại kỳ thi lần này, thí sinh có thể đăng ký thi 1 Kyu và thi Shodan ngay sau khi đạt 1 Kyu.",
+      "markdown": "* Tại kỳ thi lần này, thí sinh có thể đăng ký thi 1 Kyu và thi Shodan ngay sau khi đạt 1 Kyu.",
+      "bbox": [
+        72.02,
+        706.41,
+        514.78,
+        719.69
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "* At this examination, candidates may register for 1 Kyu and proceed directly to Shodan\ngrading upon passing 1 Kyu.",
+      "markdown": "* At this examination, candidates may register for 1 Kyu and proceed directly to Shodan\ngrading upon passing 1 Kyu.",
+      "bbox": [
+        72.02,
+        720.21,
+        500.64,
+        747.29
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "Lệ phí thi | Grading Fee",
+      "markdown": "### Lệ phí thi | Grading Fee",
+      "bbox": [
+        72.02,
+        45.66,
+        240.08,
+        63.33
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "• Sau khi hoàn tất đăng ký, thông tin xác nhận sẽ được gửi đến địa chỉ email đã sử\ndụng trong quá trình đăng ký. Lệ phí cấp chứng chỉ đã được bao gồm trong Lệ phí\nđăng ký thi.",
+      "markdown": "- Sau khi hoàn tất đăng ký, thông tin xác nhận sẽ được gửi đến địa chỉ email đã sử\ndụng trong quá trình đăng ký. Lệ phí cấp chứng chỉ đã được bao gồm trong Lệ phí\nđăng ký thi.",
+      "bbox": [
+        80.06,
+        71.93,
+        524.39,
+        116.34
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "• Upon successful registration, a confirmation email will be sent to the email address\nprovided during registration. The registration fee includes the certificate fee.",
+      "markdown": "- Upon successful registration, a confirmation email will be sent to the email address\nprovided during registration. The registration fee includes the certificate fee.",
+      "bbox": [
+        80.06,
+        123.77,
+        528.97,
+        153.3
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 3,
+      "type": "table",
+      "text": "Dan dự thi\nGrading for | Lệ phí đăng kí thi / Registration fee |  |  |  |  | \n |  | Thành viên VKF / |  |  | Không phải thành viên VKF / | \n |  | VKF Member |  |  | Non-VKF Member | \n1 Kyu | 1,000,000 VND |  |  | 2,000,000 VND |  | \n1 Dan | 1,500,000 VND |  |  | 2,500,000 VND |  | \n2 Dan | 2,200,000 VND |  |  | 4,200,000 VND |  | \n3 Dan | 3,000,000 VND |  |  | 5,000,000 VND |  | \n4 Dan | 4,500,000 VND |  |  | 6,500,000 VND |  | \n5 Dan | 6,000,000 VND |  |  | 8,000,000 VND |  | ",
+      "markdown": "| Dan dự thi<br>Grading for | Lệ phí đăng kí thi / Registration fee |  |  |  |  |  |\n|---|---|---|---|---|---|---|\n|  |  | Thành viên VKF / |  |  | Không phải thành viên VKF / |  |\n|  |  | VKF Member |  |  | Non-VKF Member |  |\n| 1 Kyu | 1,000,000 VND |  |  | 2,000,000 VND |  |  |\n| 1 Dan | 1,500,000 VND |  |  | 2,500,000 VND |  |  |\n| 2 Dan | 2,200,000 VND |  |  | 4,200,000 VND |  |  |\n| 3 Dan | 3,000,000 VND |  |  | 5,000,000 VND |  |  |\n| 4 Dan | 4,500,000 VND |  |  | 6,500,000 VND |  |  |\n| 5 Dan | 6,000,000 VND |  |  | 8,000,000 VND |  |  |",
+      "bbox": [
+        72.44,
+        161.16,
+        540.39,
+        436.1
+      ],
+      "rows": [
+        [
+          "Dan dự thi\nGrading for",
+          "Lệ phí đăng kí thi / Registration fee",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          "Thành viên VKF /",
+          "",
+          "",
+          "Không phải thành viên VKF /",
+          ""
+        ],
+        [
+          null,
+          null,
+          "VKF Member",
+          null,
+          null,
+          "Non-VKF Member",
+          null
+        ],
+        [
+          "1 Kyu",
+          "1,000,000 VND",
+          null,
+          null,
+          "2,000,000 VND",
+          null,
+          null
+        ],
+        [
+          "1 Dan",
+          "1,500,000 VND",
+          null,
+          null,
+          "2,500,000 VND",
+          null,
+          null
+        ],
+        [
+          "2 Dan",
+          "2,200,000 VND",
+          null,
+          null,
+          "4,200,000 VND",
+          null,
+          null
+        ],
+        [
+          "3 Dan",
+          "3,000,000 VND",
+          null,
+          null,
+          "5,000,000 VND",
+          null,
+          null
+        ],
+        [
+          "4 Dan",
+          "4,500,000 VND",
+          null,
+          null,
+          "6,500,000 VND",
+          null,
+          null
+        ],
+        [
+          "5 Dan",
+          "6,000,000 VND",
+          null,
+          null,
+          "8,000,000 VND",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "* Lệ phí cấp chứng chỉ được tính bằng 30% lệ phí đăng kí thi. Trường hợp thí sinh không vượt\nqua được kì thi, lệ phí cấp chứng chỉ sẽ được hoàn trả lại. Lệ phí đăng ký thi sẽ không được\nhoàn lại trong bất kì tình huống nào khác.",
+      "markdown": "* Lệ phí cấp chứng chỉ được tính bằng 30% lệ phí đăng kí thi. Trường hợp thí sinh không vượt\nqua được kì thi, lệ phí cấp chứng chỉ sẽ được hoàn trả lại. Lệ phí đăng ký thi sẽ không được\nhoàn lại trong bất kì tình huống nào khác.",
+      "bbox": [
+        72.02,
+        451.38,
+        532.52,
+        492.26
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "* The certificate fee is equivalent to 30% of the registration fee. The certificate fee will be\nrefunded to unsuccessful candidates. The registration fee is non-refundable in any other\ncircumstances.",
+      "markdown": "* The certificate fee is equivalent to 30% of the registration fee. The certificate fee will be\nrefunded to unsuccessful candidates. The registration fee is non-refundable in any other\ncircumstances.",
+      "bbox": [
+        72.02,
+        492.78,
+        509.38,
+        533.66
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "Thời hạn đăng ký | Registration Deadline",
+      "markdown": "### Thời hạn đăng ký | Registration Deadline",
+      "bbox": [
+        72.02,
+        564.61,
+        357.7,
+        582.28
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "• Thứ 3, ngày 20/10/2026",
+      "markdown": "- Thứ 3, ngày 20/10/2026",
+      "bbox": [
+        80.06,
+        590.74,
+        221.81,
+        605.27
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "• Tuesday, 20th October 2026",
+      "markdown": "- Tuesday, 20th October 2026",
+      "bbox": [
+        80.06,
+        612.31,
+        240.89,
+        627.26
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "Nội dung thi Kyu/Dan | Grading Syllabus",
+      "markdown": "### Nội dung thi Kyu/Dan | Grading Syllabus",
+      "bbox": [
+        72.02,
+        661.48,
+        358.78,
+        679.15
+      ],
+      "level": 3,
+      "fontSize": 15.96
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "1. Thi 1 Kyu | Kyu Examination",
+      "markdown": "### 1. Thi 1 Kyu | Kyu Examination",
+      "bbox": [
+        72.02,
+        689.83,
+        252.65,
+        704.18
+      ],
+      "level": 3,
+      "fontSize": 12.96
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "• Kirikaeshi × 1 lượt / round",
+      "markdown": "- Kirikaeshi × 1 lượt / round",
+      "bbox": [
+        80.06,
+        710.65,
+        235.73,
+        725.18
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "• Jitsugi 2 hiệp với 2 đối thủ khác nhau (30 giây / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (30 seconds/round)",
+      "markdown": "- Jitsugi 2 hiệp với 2 đối thủ khác nhau (30 giây / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (30 seconds/round)",
+      "bbox": [
+        80.06,
+        732.61,
+        501.96,
+        762.14
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "• Bokuto Ni Yoru Kendo Kihon Waza No.1 – No.9",
+      "markdown": "- Bokuto Ni Yoru Kendo Kihon Waza No.1 – No.9",
+      "bbox": [
+        80.06,
+        769.57,
+        354.79,
+        784.1
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "heading",
+      "text": "2. Thi 1 đẳng | 1 Dan Examination",
+      "markdown": "### 2. Thi 1 đẳng | 1 Dan Examination",
+      "bbox": [
+        72.02,
+        45.69,
+        265.25,
+        60.04
+      ],
+      "level": 3,
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "markdown": "- Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "bbox": [
+        80.06,
+        66.39,
+        496.2,
+        95.94
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Nihon Kendo Kata No.1 – No. 3",
+      "markdown": "- Nihon Kendo Kata No.1 – No. 3",
+      "bbox": [
+        80.06,
+        103.37,
+        265.25,
+        117.9
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Bài thi viết / Written test",
+      "markdown": "- Bài thi viết / Written test",
+      "bbox": [
+        80.06,
+        125.33,
+        225.17,
+        139.86
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "heading",
+      "text": "3. Thi 2 đẳng | 2 Dan Examination",
+      "markdown": "### 3. Thi 2 đẳng | 2 Dan Examination",
+      "bbox": [
+        72.02,
+        150.47,
+        265.25,
+        164.82
+      ],
+      "level": 3,
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "markdown": "- Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "bbox": [
+        80.06,
+        171.17,
+        496.2,
+        200.7
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Nihon Kendo Kata No. 1 – No.5",
+      "markdown": "- Nihon Kendo Kata No. 1 – No.5",
+      "bbox": [
+        80.06,
+        208.13,
+        265.25,
+        222.66
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Bài thi viết / Written test",
+      "markdown": "- Bài thi viết / Written test",
+      "bbox": [
+        80.06,
+        230.09,
+        225.17,
+        244.62
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "heading",
+      "text": "4. Thi 3 đẳng | 3 Dan Examination",
+      "markdown": "### 4. Thi 3 đẳng | 3 Dan Examination",
+      "bbox": [
+        72.02,
+        255.26,
+        265.25,
+        269.61
+      ],
+      "level": 3,
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "markdown": "- Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "bbox": [
+        80.06,
+        275.96,
+        496.26,
+        305.49
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Nihon Kendo Kata No.1 – No.7",
+      "markdown": "- Nihon Kendo Kata No.1 – No.7",
+      "bbox": [
+        80.06,
+        312.92,
+        262.01,
+        327.45
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Bài thi viết / Written test",
+      "markdown": "- Bài thi viết / Written test",
+      "bbox": [
+        80.06,
+        334.88,
+        225.17,
+        349.41
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "heading",
+      "text": "5. Thi 4 đẳng | 4 Dan Examination",
+      "markdown": "### 5. Thi 4 đẳng | 4 Dan Examination",
+      "bbox": [
+        72.02,
+        360.02,
+        265.25,
+        374.37
+      ],
+      "level": 3,
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "markdown": "- Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "bbox": [
+        80.06,
+        380.72,
+        496.41,
+        410.25
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Nihon Kendo Kata: Tachi-no-Kata 1–7, Kodachi-no-Kata 1–3",
+      "markdown": "- Nihon Kendo Kata: Tachi-no-Kata 1–7, Kodachi-no-Kata 1–3",
+      "bbox": [
+        80.06,
+        417.68,
+        419.47,
+        432.21
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Bài thi viết / Written test",
+      "markdown": "- Bài thi viết / Written test",
+      "bbox": [
+        80.06,
+        439.66,
+        225.17,
+        454.19
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "heading",
+      "text": "6. Thi 5 đẳng | 5 Dan Examination",
+      "markdown": "### 6. Thi 5 đẳng | 5 Dan Examination",
+      "bbox": [
+        72.02,
+        464.68,
+        265.25,
+        479.03
+      ],
+      "level": 3,
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "markdown": "- Jitsugi 2 hiệp với 2 đối thủ khác nhau (1 phút / hiệp) | Jitsugi 2 rounds with 2\ndifferent opponents (1 minute/round)",
+      "bbox": [
+        80.06,
+        485.5,
+        496.2,
+        515.03
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Nihon Kendo Kata: Tachi-no-Kata 1–7, Kodachi-no-Kata 1–3",
+      "markdown": "- Nihon Kendo Kata: Tachi-no-Kata 1–7, Kodachi-no-Kata 1–3",
+      "bbox": [
+        80.06,
+        522.46,
+        419.47,
+        536.99
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "• Bài thi viết / Written test",
+      "markdown": "- Bài thi viết / Written test",
+      "bbox": [
+        80.06,
+        544.3,
+        225.17,
+        558.83
+      ],
+      "fontSize": 12.96
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "* Đề bài thi viết sẽ được gửi sau ngày ban tổ chức đóng đăng ký.",
+      "markdown": "* Đề bài thi viết sẽ được gửi sau ngày ban tổ chức đóng đăng ký.",
+      "bbox": [
+        72.02,
+        581.94,
+        387.79,
+        595.22
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 4,
+      "type": "list",
+      "text": "* Written test questions will be sent after the registration deadline.",
+      "markdown": "* Written test questions will be sent after the registration deadline.",
+      "bbox": [
+        72.02,
+        595.74,
+        396.19,
+        609.02
+      ],
+      "fontSize": 12.0
+    }
+  ]
+}

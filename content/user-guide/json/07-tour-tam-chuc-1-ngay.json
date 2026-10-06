@@ -1,0 +1,2353 @@
+{
+  "docId": "07",
+  "slug": "07-tour-tam-chuc-1-ngay",
+  "title": "Tam Chúc 1-day tour itinerary",
+  "source": "resources/user-guide/Tam Chuc Tour.pdf",
+  "lang": "en",
+  "kind": "pdf-scan",
+  "tags": [
+    "venue",
+    "tour"
+  ],
+  "pageCount": 3,
+  "sha256": "60a294458e94463f052344cd308c5b978bf0c4d44f04f176b9f1d31bc8510f04",
+  "generatedOn": "2026-10-06",
+  "warnings": [],
+  "notes": [],
+  "assets": [
+    "content/user-guide/assets/07-page-01.png",
+    "content/user-guide/assets/07-page-02.png",
+    "content/user-guide/assets/07-page-03.png"
+  ],
+  "outline": [],
+  "blocks": [
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "NINH BINH 1-DAY ITINERARY",
+      "markdown": "NINH BINH 1-DAY ITINERARY",
+      "bbox": [
+        0.28,
+        0.02,
+        0.74,
+        0.04
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "HOA LU - MUA CAVE - TRANG AN",
+      "markdown": "HOA LU - MUA CAVE - TRANG AN",
+      "bbox": [
+        0.15,
+        0.05,
+        0.88,
+        0.08
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "EXPLORE THE ANCIENT CAPITAL - CONQUER THE LANDSCAPE - HERITAGE CRUISE",
+      "markdown": "EXPLORE THE ANCIENT CAPITAL - CONQUER THE LANDSCAPE - HERITAGE CRUISE",
+      "bbox": [
+        0.22,
+        0.1,
+        0.8,
+        0.11
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "DAY TRIP",
+      "markdown": "DAY TRIP",
+      "bbox": [
+        0.16,
+        0.26,
+        0.24,
+        0.28
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "07:30",
+      "markdown": "07:30",
+      "bbox": [
+        0.17,
+        0.3,
+        0.22,
+        0.32
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Meet the group at Tam Chuc",
+      "markdown": "Meet the group at Tam Chuc",
+      "bbox": [
+        0.1,
+        0.32,
+        0.3,
+        0.33
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "- Depart for Ninh Binh",
+      "markdown": "- Depart for Ninh Binh",
+      "bbox": [
+        0.14,
+        0.34,
+        0.26,
+        0.35
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "08:30 - 10:00",
+      "markdown": "08:30 - 10:00",
+      "bbox": [
+        0.43,
+        0.3,
+        0.56,
+        0.32
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Visit the ancient capital of Hoa Lu - the",
+      "markdown": "Visit the ancient capital of Hoa Lu - the",
+      "bbox": [
+        0.39,
+        0.32,
+        0.59,
+        0.33
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "temples of King Dinh and King Le.",
+      "markdown": "temples of King Dinh and King Le.",
+      "bbox": [
+        0.41,
+        0.34,
+        0.57,
+        0.35
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "10:15 - 11:45",
+      "markdown": "10:15 - 11:45",
+      "bbox": [
+        0.73,
+        0.3,
+        0.86,
+        0.32
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Visit Mua Cave - Conquer",
+      "markdown": "Visit Mua Cave - Conquer",
+      "bbox": [
+        0.71,
+        0.32,
+        0.9,
+        0.33
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Ngoa Long Peak",
+      "markdown": "Ngoa Long Peak",
+      "bbox": [
+        0.74,
+        0.34,
+        0.86,
+        0.35
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "12:00",
+      "markdown": "12:00",
+      "bbox": [
+        0.16,
+        0.54,
+        0.22,
+        0.56
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Have lunch",
+      "markdown": "Have lunch",
+      "bbox": [
+        0.15,
+        0.56,
+        0.23,
+        0.57
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "at a local restaurant.",
+      "markdown": "at a local restaurant.",
+      "bbox": [
+        0.11,
+        0.58,
+        0.28,
+        0.59
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "13:30 - 16:30",
+      "markdown": "13:30 - 16:30",
+      "bbox": [
+        0.41,
+        0.54,
+        0.55,
+        0.56
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Explore Trang An by",
+      "markdown": "Explore Trang An by",
+      "bbox": [
+        0.4,
+        0.56,
+        0.57,
+        0.58
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "boat.",
+      "markdown": "boat.",
+      "bbox": [
+        0.46,
+        0.58,
+        0.51,
+        0.59
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "16:45 - 17:45",
+      "markdown": "16:45 - 17:45",
+      "bbox": [
+        0.72,
+        0.54,
+        0.85,
+        0.56
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "The vehicle will take the group back to",
+      "markdown": "The vehicle will take the group back to",
+      "bbox": [
+        0.69,
+        0.56,
+        0.9,
+        0.57
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Tam Chúc - End of program.",
+      "markdown": "Tam Chúc - End of program.",
+      "bbox": [
+        0.71,
+        0.57,
+        0.87,
+        0.59
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "ATTRACTION TICKET PRICES",
+      "markdown": "ATTRACTION TICKET PRICES",
+      "bbox": [
+        0.12,
+        0.76,
+        0.43,
+        0.77
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "TRANG AN",
+      "markdown": "TRANG AN",
+      "bbox": [
+        0.45,
+        0.79,
+        0.52,
+        0.8
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "HOA LU ANCIENT CAPITAL",
+      "markdown": "HOA LU ANCIENT CAPITAL",
+      "bbox": [
+        0.07,
+        0.79,
+        0.19,
+        0.8
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "DANCE CAVE",
+      "markdown": "DANCE CAVE",
+      "bbox": [
+        0.26,
+        0.79,
+        0.34,
+        0.8
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "SAME DAY SERVICE",
+      "markdown": "SAME DAY SERVICE",
+      "bbox": [
+        0.69,
+        0.76,
+        0.88,
+        0.77
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Tourist car",
+      "markdown": "Tourist car",
+      "bbox": [
+        0.7,
+        0.8,
+        0.79,
+        0.81
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "according to the program",
+      "markdown": "according to the program",
+      "bbox": [
+        0.7,
+        0.81,
+        0.84,
+        0.83
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Lunch at",
+      "markdown": "Lunch at",
+      "bbox": [
+        0.7,
+        0.85,
+        0.77,
+        0.86
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "local restaurant",
+      "markdown": "local restaurant",
+      "bbox": [
+        0.7,
+        0.86,
+        0.83,
+        0.87
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Sightseeing boat",
+      "markdown": "Sightseeing boat",
+      "bbox": [
+        0.7,
+        0.9,
+        0.84,
+        0.91
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "20,000 VND/person",
+      "markdown": "20,000 VND/person",
+      "bbox": [
+        0.07,
+        0.91,
+        0.2,
+        0.92
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "150,000 VND/person",
+      "markdown": "150,000 VND/person",
+      "bbox": [
+        0.24,
+        0.91,
+        0.37,
+        0.92
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "300,000 VND/person",
+      "markdown": "300,000 VND/person",
+      "bbox": [
+        0.42,
+        0.91,
+        0.54,
+        0.92
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Trang An",
+      "markdown": "Trang An",
+      "bbox": [
+        0.7,
+        0.91,
+        0.77,
+        0.92
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Estimated total ticket price: 470,000 VND/person",
+      "markdown": "Estimated total ticket price: 470,000 VND/person",
+      "bbox": [
+        0.11,
+        0.94,
+        0.51,
+        0.96
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Transportationand mealcosts will be quoted based on the numberofguests.",
+      "markdown": "Transportationand mealcosts will be quoted based on the numberofguests.",
+      "bbox": [
+        0.61,
+        0.94,
+        0.93,
+        0.95
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "* Ticket prices may change according to the regulations of the Management Board at the time of",
+      "markdown": "* Ticket prices may change according to the regulations of the Management Board at the time of",
+      "bbox": [
+        0.07,
+        0.97,
+        0.61,
+        0.98
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "visit. The price above does not include transportation, meals, tour guide, and personal expenses.",
+      "markdown": "visit. The price above does not include transportation, meals, tour guide, and personal expenses.",
+      "bbox": [
+        0.08,
+        0.98,
+        0.64,
+        1.0
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "2-Day 1-Night Tour Itinerary",
+      "markdown": "2-Day 1-Night Tour Itinerary",
+      "bbox": [
+        0.31,
+        0.08,
+        0.7,
+        0.1
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "TAM CHUC - TO KING DINH & KING LE TEMPLES - TRANG AN",
+      "markdown": "TAM CHUC - TO KING DINH & KING LE TEMPLES - TRANG AN",
+      "bbox": [
+        0.18,
+        0.12,
+        0.85,
+        0.14
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "HERITAGE EXPLORER - SPIRITUAL EXPERIENCE - LAKESIDE RELAXATION",
+      "markdown": "HERITAGE EXPLORER - SPIRITUAL EXPERIENCE - LAKESIDE RELAXATION",
+      "bbox": [
+        0.2,
+        0.17,
+        0.8,
+        0.19
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "DAY 1: TAM CHUC",
+      "markdown": "DAY 1: TAM CHUC",
+      "bbox": [
+        0.04,
+        0.21,
+        0.2,
+        0.23
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "08:30 - 09:15",
+      "markdown": "08:30 - 09:15",
+      "bbox": [
+        0.21,
+        0.25,
+        0.31,
+        0.26
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "08:00",
+      "markdown": "08:00",
+      "bbox": [
+        0.07,
+        0.25,
+        0.12,
+        0.26
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Luc Nhac",
+      "markdown": "Luc Nhac",
+      "bbox": [
+        0.22,
+        0.26,
+        0.29,
+        0.27
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "We coming the group",
+      "markdown": "We coming the group",
+      "bbox": [
+        0.05,
+        0.26,
+        0.14,
+        0.27
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "at Tam Chuc",
+      "markdown": "at Tam Chuc",
+      "bbox": [
+        0.06,
+        0.27,
+        0.13,
+        0.28
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Lake Cruise",
+      "markdown": "Lake Cruise",
+      "bbox": [
+        0.22,
+        0.27,
+        0.3,
+        0.28
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "09:15 - 09:40",
+      "markdown": "09:15 - 09:40",
+      "bbox": [
+        0.36,
+        0.25,
+        0.47,
+        0.26
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Visit Tam",
+      "markdown": "Visit Tam",
+      "bbox": [
+        0.38,
+        0.26,
+        0.45,
+        0.27
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Chuc communal house",
+      "markdown": "Chuc communal house",
+      "bbox": [
+        0.36,
+        0.27,
+        0.47,
+        0.28
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "10:00 - 11:45",
+      "markdown": "10:00 - 11:45",
+      "bbox": [
+        0.53,
+        0.25,
+        0.64,
+        0.26
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Visit Tam",
+      "markdown": "Visit Tam",
+      "bbox": [
+        0.55,
+        0.26,
+        0.62,
+        0.27
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Chuc Pagoda",
+      "markdown": "Chuc Pagoda",
+      "bbox": [
+        0.54,
+        0.27,
+        0.62,
+        0.28
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "12:00",
+      "markdown": "12:00",
+      "bbox": [
+        0.72,
+        0.25,
+        0.77,
+        0.26
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Lunch at Tam",
+      "markdown": "Lunch at Tam",
+      "bbox": [
+        0.71,
+        0.26,
+        0.78,
+        0.27
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "An Restaurant",
+      "markdown": "An Restaurant",
+      "bbox": [
+        0.7,
+        0.27,
+        0.79,
+        0.28
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "14:00",
+      "markdown": "14:00",
+      "bbox": [
+        0.88,
+        0.25,
+        0.92,
+        0.26
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Check in to",
+      "markdown": "Check in to",
+      "bbox": [
+        0.87,
+        0.26,
+        0.93,
+        0.27
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Tam Chuc guest room",
+      "markdown": "Tam Chuc guest room",
+      "bbox": [
+        0.84,
+        0.27,
+        0.96,
+        0.28
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "16:00 - 18:30",
+      "markdown": "16:00 - 18:30",
+      "bbox": [
+        0.09,
+        0.45,
+        0.19,
+        0.46
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Erjoy the freedom to experience: watch the sunset,",
+      "markdown": "Erjoy the freedom to experience: watch the sunset,",
+      "bbox": [
+        0.04,
+        0.46,
+        0.24,
+        0.47
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "enjoy tea, take photos, and participate in lakeside actv tes",
+      "markdown": "enjoy tea, take photos, and participate in lakeside actv tes",
+      "bbox": [
+        0.04,
+        0.48,
+        0.26,
+        0.48
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "19:00",
+      "markdown": "19:00",
+      "bbox": [
+        0.58,
+        0.45,
+        0.62,
+        0.46
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Dinner - Free time to stroll around Tam Chuc",
+      "markdown": "Dinner - Free time to stroll around Tam Chuc",
+      "bbox": [
+        0.51,
+        0.46,
+        0.72,
+        0.47
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "- Overnight stay in Tam Chuc",
+      "markdown": "- Overnight stay in Tam Chuc",
+      "bbox": [
+        0.51,
+        0.47,
+        0.66,
+        0.48
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "DAY 2: HOA LU - TRANG AN - TAM CHUC",
+      "markdown": "DAY 2: HOA LU - TRANG AN - TAM CHUC",
+      "bbox": [
+        0.04,
+        0.56,
+        0.43,
+        0.57
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "06:30",
+      "markdown": "06:30",
+      "bbox": [
+        0.07,
+        0.58,
+        0.11,
+        0.6
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "07:30",
+      "markdown": "07:30",
+      "bbox": [
+        0.23,
+        0.58,
+        0.27,
+        0.6
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "09:00 - 10:30",
+      "markdown": "09:00 - 10:30",
+      "bbox": [
+        0.36,
+        0.58,
+        0.47,
+        0.6
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Visit the",
+      "markdown": "Visit the",
+      "bbox": [
+        0.39,
+        0.6,
+        0.44,
+        0.61
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Breakfast at",
+      "markdown": "Breakfast at",
+      "bbox": [
+        0.05,
+        0.6,
+        0.13,
+        0.61
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Check out -",
+      "markdown": "Check out -",
+      "bbox": [
+        0.21,
+        0.6,
+        0.29,
+        0.61
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "the hotel",
+      "markdown": "the hotel",
+      "bbox": [
+        0.06,
+        0.61,
+        0.12,
+        0.62
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Depart for Ninh Binh",
+      "markdown": "Depart for Ninh Binh",
+      "bbox": [
+        0.2,
+        0.61,
+        0.3,
+        0.62
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "temples of King Dinh and King Le.",
+      "markdown": "temples of King Dinh and King Le.",
+      "bbox": [
+        0.35,
+        0.61,
+        0.48,
+        0.62
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "11:30",
+      "markdown": "11:30",
+      "bbox": [
+        0.55,
+        0.58,
+        0.59,
+        0.6
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Have lunch",
+      "markdown": "Have lunch",
+      "bbox": [
+        0.53,
+        0.6,
+        0.6,
+        0.61
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "at a local restaurant.",
+      "markdown": "at a local restaurant.",
+      "bbox": [
+        0.51,
+        0.61,
+        0.63,
+        0.62
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "13:00 - 16:00",
+      "markdown": "13:00 - 16:00",
+      "bbox": [
+        0.68,
+        0.58,
+        0.78,
+        0.6
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Visit Trang",
+      "markdown": "Visit Trang",
+      "bbox": [
+        0.69,
+        0.6,
+        0.76,
+        0.61
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "An (by boat)",
+      "markdown": "An (by boat)",
+      "bbox": [
+        0.69,
+        0.61,
+        0.77,
+        0.62
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "16:15 - 17:00",
+      "markdown": "16:15 - 17:00",
+      "bbox": [
+        0.85,
+        0.58,
+        0.96,
+        0.6
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "The vehicle will take the group",
+      "markdown": "The vehicle will take the group",
+      "bbox": [
+        0.84,
+        0.6,
+        0.96,
+        0.61
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "back to Tam -",
+      "markdown": "back to Tam -",
+      "bbox": [
+        0.86,
+        0.61,
+        0.94,
+        0.62
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Chuc. The program concludes.",
+      "markdown": "Chuc. The program concludes.",
+      "bbox": [
+        0.84,
+        0.62,
+        0.97,
+        0.64
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "ATTRACTION TICKET PRICES",
+      "markdown": "ATTRACTION TICKET PRICES",
+      "bbox": [
+        0.12,
+        0.76,
+        0.39,
+        0.78
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Tam Chuc",
+      "markdown": "Tam Chuc",
+      "bbox": [
+        0.09,
+        0.8,
+        0.15,
+        0.81
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Temple of King Dinh - King Le",
+      "markdown": "Temple of King Dinh - King Le",
+      "bbox": [
+        0.23,
+        0.8,
+        0.4,
+        0.81
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Trang An",
+      "markdown": "Trang An",
+      "bbox": [
+        0.46,
+        0.8,
+        0.53,
+        0.81
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "STAY",
+      "markdown": "STAY",
+      "bbox": [
+        0.75,
+        0.77,
+        0.79,
+        0.78
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Tam Chuc Guesthouse",
+      "markdown": "Tam Chuc Guesthouse",
+      "bbox": [
+        0.68,
+        0.8,
+        0.84,
+        0.81
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "01 night",
+      "markdown": "01 night",
+      "bbox": [
+        0.91,
+        0.8,
+        0.96,
+        0.81
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "250,000 - -",
+      "markdown": "250,000 - -",
+      "bbox": [
+        0.08,
+        0.87,
+        0.16,
+        0.88
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "20,000 VND/person",
+      "markdown": "20,000 VND/person",
+      "bbox": [
+        0.25,
+        0.88,
+        0.38,
+        0.89
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "300,000 VND/person",
+      "markdown": "300,000 VND/person",
+      "bbox": [
+        0.44,
+        0.88,
+        0.56,
+        0.89
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "350,000 VND/person",
+      "markdown": "350,000 VND/person",
+      "bbox": [
+        0.06,
+        0.88,
+        0.18,
+        0.89
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Estimated total ticket price: 570,000 - 670,000 VND/person",
+      "markdown": "Estimated total ticket price: 570,000 - 670,000 VND/person",
+      "bbox": [
+        0.11,
+        0.91,
+        0.5,
+        0.92
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "* Ticket prices may change according to the regulations of the Management Board at the time of visit.",
+      "markdown": "* Ticket prices may change according to the regulations of the Management Board at the time of visit.",
+      "bbox": [
+        0.01,
+        0.93,
+        0.49,
+        0.94
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Room rates are sublectto change and may vary depending on the im e ofyear.",
+      "markdown": "Room rates are sublectto change and may vary depending on the im e ofyear.",
+      "bbox": [
+        0.67,
+        0.91,
+        0.89,
+        0.91
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "3-DAY 2-NIGHT HERITAGE JOURNEY",
+      "markdown": "3-DAY 2-NIGHT HERITAGE JOURNEY",
+      "bbox": [
+        0.26,
+        0.07,
+        0.7,
+        0.09
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "TAM CHUC - HOA LU - TRANG AN",
+      "markdown": "TAM CHUC - HOA LU - TRANG AN",
+      "bbox": [
+        0.2,
+        0.1,
+        0.81,
+        0.12
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "- BAI DINH - TAM COC",
+      "markdown": "- BAI DINH - TAM COC",
+      "bbox": [
+        0.31,
+        0.14,
+        0.71,
+        0.16
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "HERITAGE DISCOVERY - SPIRITUAL EXPERIENCE - THE ENTIRE NINH BINH ROUTE Z",
+      "markdown": "HERITAGE DISCOVERY - SPIRITUAL EXPERIENCE - THE ENTIRE NINH BINH ROUTE Z",
+      "bbox": [
+        0.22,
+        0.17,
+        0.8,
+        0.19
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "HE DAY 1: TAM CHUC",
+      "markdown": "HE DAY 1: TAM CHUC",
+      "bbox": [
+        0.03,
+        0.21,
+        0.25,
+        0.22
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "08:00",
+      "markdown": "08:00",
+      "bbox": [
+        0.06,
+        0.23,
+        0.11,
+        0.25
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "08:30 - 09:15",
+      "markdown": "08:30 - 09:15",
+      "bbox": [
+        0.2,
+        0.23,
+        0.3,
+        0.25
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "09:15 - 09:40",
+      "markdown": "09:15 - 09:40",
+      "bbox": [
+        0.37,
+        0.23,
+        0.47,
+        0.25
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "10:00 - 11:45",
+      "markdown": "10:00 - 11:45",
+      "bbox": [
+        0.53,
+        0.23,
+        0.62,
+        0.25
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "12:00",
+      "markdown": "12:00",
+      "bbox": [
+        0.72,
+        0.23,
+        0.76,
+        0.25
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Visit Tam",
+      "markdown": "Visit Tam",
+      "bbox": [
+        0.55,
+        0.25,
+        0.61,
+        0.26
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Luc Nhac",
+      "markdown": "Luc Nhac",
+      "bbox": [
+        0.22,
+        0.25,
+        0.28,
+        0.26
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Visit Tam",
+      "markdown": "Visit Tam",
+      "bbox": [
+        0.39,
+        0.25,
+        0.45,
+        0.26
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Lunch at",
+      "markdown": "Lunch at",
+      "bbox": [
+        0.71,
+        0.25,
+        0.76,
+        0.25
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Welcoming the group",
+      "markdown": "Welcoming the group",
+      "bbox": [
+        0.05,
+        0.25,
+        0.12,
+        0.26
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Lake Cruise",
+      "markdown": "Lake Cruise",
+      "bbox": [
+        0.21,
+        0.26,
+        0.29,
+        0.27
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Tam An Restaurant",
+      "markdown": "Tam An Restaurant",
+      "bbox": [
+        0.69,
+        0.26,
+        0.79,
+        0.27
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "at Tam Chuc",
+      "markdown": "at Tam Chuc",
+      "bbox": [
+        0.06,
+        0.26,
+        0.11,
+        0.27
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Chuc communal house",
+      "markdown": "Chuc communal house",
+      "bbox": [
+        0.37,
+        0.26,
+        0.46,
+        0.27
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Chuc Pagoda",
+      "markdown": "Chuc Pagoda",
+      "bbox": [
+        0.55,
+        0.26,
+        0.61,
+        0.27
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "14:00",
+      "markdown": "14:00",
+      "bbox": [
+        0.87,
+        0.23,
+        0.91,
+        0.25
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Check in to",
+      "markdown": "Check in to",
+      "bbox": [
+        0.86,
+        0.25,
+        0.93,
+        0.26
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Tam Chuc guest house",
+      "markdown": "Tam Chuc guest house",
+      "bbox": [
+        0.84,
+        0.26,
+        0.94,
+        0.27
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "16:00 - 18:30",
+      "markdown": "16:00 - 18:30",
+      "bbox": [
+        0.1,
+        0.39,
+        0.2,
+        0.4
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Enjoy watching the sunset,",
+      "markdown": "Enjoy watching the sunset,",
+      "bbox": [
+        0.08,
+        0.4,
+        0.21,
+        0.41
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "having tea, and taking photos.",
+      "markdown": "having tea, and taking photos.",
+      "bbox": [
+        0.09,
+        0.41,
+        0.21,
+        0.42
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "7:00 PM",
+      "markdown": "7:00 PM",
+      "bbox": [
+        0.58,
+        0.39,
+        0.63,
+        0.4
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Dinner -",
+      "markdown": "Dinner -",
+      "bbox": [
+        0.58,
+        0.4,
+        0.62,
+        0.41
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Overnight stay",
+      "markdown": "Overnight stay",
+      "bbox": [
+        0.56,
+        0.41,
+        0.64,
+        0.42
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "in Tam Chuc",
+      "markdown": "in Tam Chuc",
+      "bbox": [
+        0.57,
+        0.42,
+        0.63,
+        0.43
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "DAY 2: HOA LU - TRANG AN - BAI DINH",
+      "markdown": "DAY 2: HOA LU - TRANG AN - BAI DINH",
+      "bbox": [
+        0.07,
+        0.48,
+        0.42,
+        0.49
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "07:30",
+      "markdown": "07:30",
+      "bbox": [
+        0.19,
+        0.5,
+        0.23,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "09:00 - 10:30",
+      "markdown": "09:00 - 10:30",
+      "bbox": [
+        0.32,
+        0.5,
+        0.4,
+        0.51
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "11:30",
+      "markdown": "11:30",
+      "bbox": [
+        0.47,
+        0.5,
+        0.5,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "06:30",
+      "markdown": "06:30",
+      "bbox": [
+        0.06,
+        0.51,
+        0.09,
+        0.51
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Visit the",
+      "markdown": "Visit the",
+      "bbox": [
+        0.33,
+        0.52,
+        0.38,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Breakfast",
+      "markdown": "Breakfast",
+      "bbox": [
+        0.05,
+        0.52,
+        0.1,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Check out -",
+      "markdown": "Check out -",
+      "bbox": [
+        0.18,
+        0.52,
+        0.24,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Have lunch",
+      "markdown": "Have lunch",
+      "bbox": [
+        0.46,
+        0.52,
+        0.51,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Depart for Ninh Binh",
+      "markdown": "Depart for Ninh Binh",
+      "bbox": [
+        0.17,
+        0.53,
+        0.26,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Temple of King Dinh and King Le",
+      "markdown": "Temple of King Dinh and King Le",
+      "bbox": [
+        0.3,
+        0.53,
+        0.41,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "at a local restaurant.",
+      "markdown": "at a local restaurant.",
+      "bbox": [
+        0.44,
+        0.53,
+        0.53,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "13:00 - 16:00",
+      "markdown": "13:00 - 16:00",
+      "bbox": [
+        0.59,
+        0.5,
+        0.67,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "16:15",
+      "markdown": "16:15",
+      "bbox": [
+        0.72,
+        0.5,
+        0.76,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Explore",
+      "markdown": "Explore",
+      "bbox": [
+        0.61,
+        0.52,
+        0.65,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "The ven d e took me group",
+      "markdown": "The ven d e took me group",
+      "bbox": [
+        0.7,
+        0.52,
+        0.77,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Trang An by boat.",
+      "markdown": "Trang An by boat.",
+      "bbox": [
+        0.58,
+        0.53,
+        0.68,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "back tofhe Bai Dinh area.",
+      "markdown": "back tofhe Bai Dinh area.",
+      "bbox": [
+        0.7,
+        0.53,
+        0.77,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "17:00",
+      "markdown": "17:00",
+      "bbox": [
+        0.81,
+        0.5,
+        0.85,
+        0.51
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Check in to",
+      "markdown": "Check in to",
+      "bbox": [
+        0.8,
+        0.52,
+        0.86,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "the hotel",
+      "markdown": "the hotel",
+      "bbox": [
+        0.8,
+        0.53,
+        0.86,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "19:00",
+      "markdown": "19:00",
+      "bbox": [
+        0.9,
+        0.5,
+        0.94,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Dinner and",
+      "markdown": "Dinner and",
+      "bbox": [
+        0.9,
+        0.52,
+        0.94,
+        0.52
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "overnight stay",
+      "markdown": "overnight stay",
+      "bbox": [
+        0.89,
+        0.52,
+        0.96,
+        0.53
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "at Bai Dinh.",
+      "markdown": "at Bai Dinh.",
+      "bbox": [
+        0.9,
+        0.53,
+        0.94,
+        0.54
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "DAY 3: BAI DINH - TAM COC - RETURN TO TAM CHUC",
+      "markdown": "DAY 3: BAI DINH - TAM COC - RETURN TO TAM CHUC",
+      "bbox": [
+        0.07,
+        0.65,
+        0.5,
+        0.66
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "06:30",
+      "markdown": "06:30",
+      "bbox": [
+        0.06,
+        0.67,
+        0.1,
+        0.68
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "7:30-10:30",
+      "markdown": "7:30-10:30",
+      "bbox": [
+        0.24,
+        0.67,
+        0.29,
+        0.68
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "11:30",
+      "markdown": "11:30",
+      "bbox": [
+        0.45,
+        0.67,
+        0.48,
+        0.68
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Breakfast at",
+      "markdown": "Breakfast at",
+      "bbox": [
+        0.05,
+        0.68,
+        0.11,
+        0.69
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Visit Lord Bai",
+      "markdown": "Visit Lord Bai",
+      "bbox": [
+        0.24,
+        0.68,
+        0.3,
+        0.69
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Having lunch",
+      "markdown": "Having lunch",
+      "bbox": [
+        0.44,
+        0.68,
+        0.48,
+        0.69
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "the hotel",
+      "markdown": "the hotel",
+      "bbox": [
+        0.06,
+        0.69,
+        0.11,
+        0.7
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Dinh",
+      "markdown": "Dinh",
+      "bbox": [
+        0.25,
+        0.69,
+        0.28,
+        0.7
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "13:00 - 15:30ł",
+      "markdown": "13:00 - 15:30ł",
+      "bbox": [
+        0.61,
+        0.67,
+        0.7,
+        0.68
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Visit Tam",
+      "markdown": "Visit Tam",
+      "bbox": [
+        0.63,
+        0.68,
+        0.68,
+        0.69
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Coc (by boat)",
+      "markdown": "Coc (by boat)",
+      "bbox": [
+        0.61,
+        0.69,
+        0.69,
+        0.7
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "15:45 - 17:00",
+      "markdown": "15:45 - 17:00",
+      "bbox": [
+        0.82,
+        0.67,
+        0.9,
+        0.68
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "The vehicle will take the group back to Tam",
+      "markdown": "The vehicle will take the group back to Tam",
+      "bbox": [
+        0.79,
+        0.68,
+        0.92,
+        0.69
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Chúc - End of program.",
+      "markdown": "Chúc - End of program.",
+      "bbox": [
+        0.81,
+        0.69,
+        0.91,
+        0.7
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "1 ATTRACTION TICKET PRICES",
+      "markdown": "1 ATTRACTION TICKET PRICES",
+      "bbox": [
+        0.03,
+        0.78,
+        0.33,
+        0.8
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Tam Chuc",
+      "markdown": "Tam Chuc",
+      "bbox": [
+        0.06,
+        0.81,
+        0.11,
+        0.81
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Temple of King Dinh - King Le",
+      "markdown": "Temple of King Dinh - King Le",
+      "bbox": [
+        0.16,
+        0.81,
+        0.28,
+        0.82
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Trang An",
+      "markdown": "Trang An",
+      "bbox": [
+        0.34,
+        0.81,
+        0.4,
+        0.82
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Bai Dinh",
+      "markdown": "Bai Dinh",
+      "bbox": [
+        0.48,
+        0.81,
+        0.52,
+        0.82
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Tam Coc",
+      "markdown": "Tam Coc",
+      "bbox": [
+        0.59,
+        0.81,
+        0.64,
+        0.82
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "250,000-350,000",
+      "markdown": "250,000-350,000",
+      "bbox": [
+        0.05,
+        0.88,
+        0.12,
+        0.88
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "20,000 VND/person",
+      "markdown": "20,000 VND/person",
+      "bbox": [
+        0.17,
+        0.88,
+        0.28,
+        0.89
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "300,000 VND/person",
+      "markdown": "300,000 VND/person",
+      "bbox": [
+        0.31,
+        0.88,
+        0.42,
+        0.89
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "150,000 VND/person",
+      "markdown": "150,000 VND/person",
+      "bbox": [
+        0.45,
+        0.88,
+        0.54,
+        0.89
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "250,000 VND/person",
+      "markdown": "250,000 VND/person",
+      "bbox": [
+        0.57,
+        0.88,
+        0.65,
+        0.89
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "VND/person",
+      "markdown": "VND/person",
+      "bbox": [
+        0.06,
+        0.89,
+        0.12,
+        0.89
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Estimated total ticket price: 970,000 VND/person",
+      "markdown": "Estimated total ticket price: 970,000 VND/person",
+      "bbox": [
+        0.2,
+        0.9,
+        0.49,
+        0.92
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "* Ticket prices may change according to the regulations of the Management Board at the time of visit.",
+      "markdown": "* Ticket prices may change according to the regulations of the Management Board at the time of visit.",
+      "bbox": [
+        0.02,
+        0.92,
+        0.42,
+        0.93
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "STAY",
+      "markdown": "STAY",
+      "bbox": [
+        0.77,
+        0.78,
+        0.81,
+        0.79
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Tam Chuc",
+      "markdown": "Tam Chuc",
+      "bbox": [
+        0.87,
+        0.81,
+        0.93,
+        0.82
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Guesthouse",
+      "markdown": "Guesthouse",
+      "bbox": [
+        0.87,
+        0.82,
+        0.93,
+        0.83
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "01 night",
+      "markdown": "01 night",
+      "bbox": [
+        0.88,
+        0.83,
+        0.92,
+        0.84
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Hotels in",
+      "markdown": "Hotels in",
+      "bbox": [
+        0.87,
+        0.86,
+        0.93,
+        0.87
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "the Bai Dinh area",
+      "markdown": "the Bai Dinh area",
+      "bbox": [
+        0.86,
+        0.87,
+        0.96,
+        0.88
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "01 night",
+      "markdown": "01 night",
+      "bbox": [
+        0.87,
+        0.88,
+        0.93,
+        0.9
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Roomrates are subject to change and mey vary depending on the time of year.",
+      "markdown": "Roomrates are subject to change and mey vary depending on the time of year.",
+      "bbox": [
+        0.71,
+        0.9,
+        0.91,
+        0.91
+      ]
+    }
+  ]
+}

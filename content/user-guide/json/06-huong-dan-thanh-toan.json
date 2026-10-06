@@ -1,0 +1,220 @@
+{
+  "docId": "06",
+  "slug": "06-huong-dan-thanh-toan",
+  "title": "Hướng dẫn thanh toán / Payment instructions",
+  "source": "resources/user-guide/6_1ST VIKC 2026_Hướng dẫn thanh toán.pdf",
+  "lang": "vi",
+  "kind": "pdf-text",
+  "tags": [
+    "payment"
+  ],
+  "pageCount": 1,
+  "sha256": "5fde0ea61a3098893f0680336d2d03d1c6e6fbd759e1b00f0136d53da50bc4ef",
+  "generatedOn": "2026-10-06",
+  "warnings": [],
+  "notes": [],
+  "assets": [],
+  "outline": [
+    {
+      "level": 2,
+      "text": "HƯỚNG DẪN THANH TOÁN PHÍ THAM DỰ\nGIẢI VÔ ĐỊCH KENDO QUỐC TẾ VIỆT NAM 2026",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "1. Quy trình",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "2. Thời hạn hoàn thành phí tham dự",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "3. Cú pháp",
+      "page": 1
+    },
+    {
+      "level": 3,
+      "text": "4. Thông tin tài khoản",
+      "page": 1
+    }
+  ],
+  "blocks": [
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "HƯỚNG DẪN THANH TOÁN PHÍ THAM DỰ\nGIẢI VÔ ĐỊCH KENDO QUỐC TẾ VIỆT NAM 2026",
+      "markdown": "## HƯỚNG DẪN THANH TOÁN PHÍ THAM DỰ GIẢI VÔ ĐỊCH KENDO QUỐC TẾ VIỆT NAM 2026",
+      "bbox": [
+        88.55,
+        254.54,
+        511.22,
+        295.22
+      ],
+      "level": 2,
+      "fontSize": 18.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "1. Quy trình",
+      "markdown": "### 1. Quy trình",
+      "bbox": [
+        95.55,
+        346.24,
+        167.58,
+        359.69
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Sau khi nhận được đăng ký, BTC sẽ phản hồi xác\nnhận với “Đội” về phí cần đóng.",
+      "markdown": "- Sau khi nhận được đăng ký, BTC sẽ phản hồi xác\nnhận với “Đội” về phí cần đóng.",
+      "bbox": [
+        95.55,
+        360.24,
+        354.14,
+        387.71
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Sau khi hoàn thành đóng phí, “Đội” sẽ gửi hóa đơn\nchuyển khoản đến email: vikc@vietnamkendo.com",
+      "markdown": "- Sau khi hoàn thành đóng phí, “Đội” sẽ gửi hóa đơn\nchuyển khoản đến email: vikc@vietnamkendo.com",
+      "bbox": [
+        95.55,
+        388.26,
+        363.4,
+        415.46
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- BTC sẽ có email xác nhận hoàn thành đóng phí.",
+      "markdown": "- BTC sẽ có email xác nhận hoàn thành đóng phí.",
+      "bbox": [
+        95.55,
+        416.01,
+        347.15,
+        429.87
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "2. Thời hạn hoàn thành phí tham dự",
+      "markdown": "### 2. Thời hạn hoàn thành phí tham dự",
+      "bbox": [
+        95.55,
+        443.51,
+        294.13,
+        456.96
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "25/10/2026",
+      "markdown": "25/10/2026",
+      "bbox": [
+        113.55,
+        457.68,
+        171.33,
+        470.96
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "3. Cú pháp",
+      "markdown": "### 3. Cú pháp",
+      "bbox": [
+        95.55,
+        485.04,
+        163.83,
+        498.49
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Tên đội_1vikc",
+      "markdown": "Tên đội_1vikc",
+      "bbox": [
+        113.55,
+        498.96,
+        186.33,
+        512.24
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "4. Thông tin tài khoản",
+      "markdown": "### 4. Thông tin tài khoản",
+      "bbox": [
+        95.55,
+        526.54,
+        218.35,
+        539.99
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Liên đoàn Kendo Việt Nam\nSTK: 8680065219\nNgân hàng BIDV",
+      "markdown": "Liên đoàn Kendo Việt Nam\nSTK: 8680065219\nNgân hàng BIDV",
+      "bbox": [
+        113.55,
+        540.46,
+        249.85,
+        581.27
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Lưu ý: Sau khi các khoản phí đã được thanh toán và\nchấp nhận, người tham dự không có quyền\nyêu cầu hoàn tiền.",
+      "markdown": "- Lưu ý: Sau khi các khoản phí đã được thanh toán và\nchấp nhận, người tham dự không có quyền\nyêu cầu hoàn tiền.",
+      "bbox": [
+        95.55,
+        595.48,
+        368.65,
+        636.51
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "*Đội: là tổ chức, Liên đoàn hoặc các Đội tham dự giải",
+      "markdown": "*Đội: là tổ chức, Liên đoàn hoặc các Đội tham dự giải",
+      "bbox": [
+        95.55,
+        650.76,
+        362.9,
+        664.04
+      ],
+      "fontSize": 12.0
+    }
+  ]
+}

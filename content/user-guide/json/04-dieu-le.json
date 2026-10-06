@@ -1,0 +1,733 @@
+{
+  "docId": "04",
+  "slug": "04-dieu-le",
+  "title": "Điều lệ thi đấu / Competition regulations",
+  "source": "resources/user-guide/4_1ST VIKC 2026 Điều lệ.pdf",
+  "lang": "vi",
+  "kind": "pdf-text",
+  "tags": [
+    "regulations",
+    "rules"
+  ],
+  "pageCount": 3,
+  "sha256": "5c66b574b5c34042e00f8cb53e5afaeadaf877c02de7361e51d7aabc64739378",
+  "generatedOn": "2026-10-06",
+  "warnings": [],
+  "notes": [],
+  "assets": [],
+  "outline": [
+    {
+      "level": 3,
+      "text": "1. Hạng mục thi đấu:",
+      "page": 1
+    },
+    {
+      "level": 4,
+      "text": "a) Thứ Bảy ngày 21/11/2026 – Nội dung thi đấu Đồng đội nữ 3 người và Đồng đội nam",
+      "page": 1
+    },
+    {
+      "level": 4,
+      "text": "b) Chủ Nhật ngày 22/11/2026 – Nội dung thi đấu Đồng đội nữ 5 người và Đồng đội",
+      "page": 2
+    },
+    {
+      "level": 3,
+      "text": "2. Trọng tài giải đấu",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "3. Quy định trang phục",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "4. Thông số kỹ thuật của shinai",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "5. Điều kiện tham dự dành cho vận động viên là người Việt Nam::",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "6. Điều kiện tham dự dành cho vận động viên là công dân nước ngoài",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "7. Thời hạn gửi đăng ký",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "text": "8. Những vấn đề khác",
+      "page": 3
+    }
+  ],
+  "blocks": [
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "ĐIỀU LỆ THI ĐẤU\nGIẢI VÔ ĐỊCH KENDO QUỐC TẾ VIỆT NAM 2026",
+      "markdown": "ĐIỀU LỆ THI ĐẤU\nGIẢI VÔ ĐỊCH KENDO QUỐC TẾ VIỆT NAM 2026",
+      "bbox": [
+        143.3,
+        102.06,
+        471.95,
+        136.07
+      ],
+      "fontSize": 14.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Thời gian: Thứ Bảy ngày 21/11/2026 - Chủ Nhật ngày 22/11/2026\nĐịa điểm: Trung tâm Hội nghị Quốc tế Vesak, Tam Chúc, Ninh Bình\nĐơn vị tổ chức: Liên đoàn Kendo Việt Nam (VKF)",
+      "markdown": "Thời gian: Thứ Bảy ngày 21/11/2026 - Chủ Nhật ngày 22/11/2026\nĐịa điểm: Trung tâm Hội nghị Quốc tế Vesak, Tam Chúc, Ninh Bình\nĐơn vị tổ chức: Liên đoàn Kendo Việt Nam (VKF)",
+      "bbox": [
+        72.03,
+        158.11,
+        410.42,
+        203.14
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "Vận động viên tham dự vui lòng đọc kỹ các quy tắc, quy định và các nội dung liên quan.\nVui lòng phổ biến Điều lệ này đến các thành viên đội của bạn. *",
+      "markdown": "Vận động viên tham dự vui lòng đọc kỹ các quy tắc, quy định và các nội dung liên quan.\nVui lòng phổ biến Điều lệ này đến các thành viên đội của bạn. *",
+      "bbox": [
+        72.03,
+        224.64,
+        524.97,
+        253.67
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "1. Hạng mục thi đấu:",
+      "markdown": "### 1. Hạng mục thi đấu:",
+      "bbox": [
+        90.05,
+        271.96,
+        207.33,
+        285.41
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "heading",
+      "text": "a) Thứ Bảy ngày 21/11/2026 – Nội dung thi đấu Đồng đội nữ 3 người và Đồng đội nam",
+      "markdown": "#### a) Thứ Bảy ngày 21/11/2026 – Nội dung thi đấu Đồng đội nữ 3 người và Đồng đội nam",
+      "bbox": [
+        90.05,
+        287.74,
+        538.19,
+        301.19
+      ],
+      "level": 4,
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "paragraph",
+      "text": "3 người (18 tuổi trở lên, 1 - 4 Dan)",
+      "markdown": "3 người (18 tuổi trở lên, 1 - 4 Dan)",
+      "bbox": [
+        108.05,
+        303.91,
+        288.63,
+        317.19
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "table",
+      "text": "Nội dung thi đấu | Đồng đội nữ 3 người và Đồng đội nam 3 người\nThời gian | 21/11/2026 (Thứ Bảy)\nDan | 1-4 Dan\nTuổi | 18 tuổi trở lên\nĐội hình thi đấu | 3 tuyển thủ và tối đa một tuyển thủ dự bị\n | Đội phải có ít nhất hai tuyển thủ\nTrận đấu | 3 phút/trận\nTrận chung kết: 4 phút/trận\n(Thời gian có thể được điều chỉnh tùy thuộc vào tình hình thực tế)\n | SANBON SHOBU",
+      "markdown": "| Nội dung thi đấu | Đồng đội nữ 3 người và Đồng đội nam 3 người |\n|---|---|\n| Thời gian | 21/11/2026 (Thứ Bảy) |\n| Dan | 1-4 Dan |\n| Tuổi | 18 tuổi trở lên |\n| Đội hình thi đấu | 3 tuyển thủ và tối đa một tuyển thủ dự bị |\n|  | Đội phải có ít nhất hai tuyển thủ |\n| Trận đấu | 3 phút/trận<br>Trận chung kết: 4 phút/trận<br>(Thời gian có thể được điều chỉnh tùy thuộc vào tình hình thực tế) |\n|  | SANBON SHOBU |",
+      "bbox": [
+        72.0,
+        335.27,
+        539.76,
+        512.48
+      ],
+      "rows": [
+        [
+          "Nội dung thi đấu",
+          "Đồng đội nữ 3 người và Đồng đội nam 3 người"
+        ],
+        [
+          "Thời gian",
+          "21/11/2026 (Thứ Bảy)"
+        ],
+        [
+          "Dan",
+          "1-4 Dan"
+        ],
+        [
+          "Tuổi",
+          "18 tuổi trở lên"
+        ],
+        [
+          "Đội hình thi đấu",
+          "3 tuyển thủ và tối đa một tuyển thủ dự bị"
+        ],
+        [
+          null,
+          "Đội phải có ít nhất hai tuyển thủ"
+        ],
+        [
+          "Trận đấu",
+          "3 phút/trận\nTrận chung kết: 4 phút/trận\n(Thời gian có thể được điều chỉnh tùy thuộc vào tình hình thực tế)"
+        ],
+        [
+          null,
+          "SANBON SHOBU"
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Một vận động viên không được phép tham gia nhiều hơn một đội trong cùng nội dung thi\nđấu tại giải đấu này, kể cả với tư cách vận động viên thi đấu chính thức hoặc vận động\nviên dự bị.",
+      "markdown": "- Một vận động viên không được phép tham gia nhiều hơn một đội trong cùng nội dung thi\nđấu tại giải đấu này, kể cả với tư cách vận động viên thi đấu chính thức hoặc vận động\nviên dự bị.",
+      "bbox": [
+        90.05,
+        528.96,
+        539.7,
+        574.01
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Nếu một đội chỉ cử 2 vận động viên để thành lập đội, thứ tự thi đấu sẽ là SENPO &\nTAISHO.",
+      "markdown": "- Nếu một đội chỉ cử 2 vận động viên để thành lập đội, thứ tự thi đấu sẽ là SENPO &\nTAISHO.",
+      "bbox": [
+        90.05,
+        576.74,
+        512.13,
+        605.77
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Thứ tự thi đấu của đội (vị trí SENPO, CHUKEN, TAISHO) KHÔNG ĐƯỢC THAY\nĐỔI trong trận đấu thứ nhất của đội tại vòng loại (preliminary heats), bắt buộc phải theo\nthứ tự trong bản đăng ký gửi tới Ban Tổ chức.",
+      "markdown": "- Thứ tự thi đấu của đội (vị trí SENPO, CHUKEN, TAISHO) KHÔNG ĐƯỢC THAY\nĐỔI trong trận đấu thứ nhất của đội tại vòng loại (preliminary heats), bắt buộc phải theo\nthứ tự trong bản đăng ký gửi tới Ban Tổ chức.",
+      "bbox": [
+        90.05,
+        608.49,
+        534.94,
+        653.54
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Từ trận đấu thứ hai, thành viên đội và thứ tự thi đấu có thể được thay đổi tự do, nhưng\nchỉ được lựa chọn trong số các vận động viên đã đăng ký của đội (tối đa 4 vận động viên)\nđược ghi trong danh sách đăng ký. Mỗi đội phải nộp lại danh sách thứ tự thi đấu (chỉ khi\ncó thay đổi) cho tổ điều hành sân đấu trước khi trận đấu bắt đầu.",
+      "markdown": "- Từ trận đấu thứ hai, thành viên đội và thứ tự thi đấu có thể được thay đổi tự do, nhưng\nchỉ được lựa chọn trong số các vận động viên đã đăng ký của đội (tối đa 4 vận động viên)\nđược ghi trong danh sách đăng ký. Mỗi đội phải nộp lại danh sách thứ tự thi đấu (chỉ khi\ncó thay đổi) cho tổ điều hành sân đấu trước khi trận đấu bắt đầu.",
+      "bbox": [
+        90.05,
+        656.01,
+        540.93,
+        717.06
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 1,
+      "type": "list",
+      "text": "- Nếu tổ điều hành sân đấu không nhận được danh sách thứ tự thi đấu mới của đội trước\ntrận đấu tiếp theo, Ban Tổ chức sẽ mặc định rằng thứ tự thi đấu của đội vẫn giữ nguyên\nnhư ở trận đấu trước. Đề nghị các đội kiểm tra lại thứ tự thi đấu trên bảng điểm; nếu phát",
+      "markdown": "- Nếu tổ điều hành sân đấu không nhận được danh sách thứ tự thi đấu mới của đội trước\ntrận đấu tiếp theo, Ban Tổ chức sẽ mặc định rằng thứ tự thi đấu của đội vẫn giữ nguyên\nnhư ở trận đấu trước. Đề nghị các đội kiểm tra lại thứ tự thi đấu trên bảng điểm; nếu phát",
+      "bbox": [
+        90.05,
+        719.53,
+        538.69,
+        764.57
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "paragraph",
+      "text": "hiện bất kỳ sai sót nào, phải thông báo ngay lập tức cho tổ điều hành sân đấu và trọng tài\nđiều khiển trận đấu.",
+      "markdown": "hiện bất kỳ sai sót nào, phải thông báo ngay lập tức cho tổ điều hành sân đấu và trọng tài\nđiều khiển trận đấu.",
+      "bbox": [
+        108.05,
+        62.09,
+        536.94,
+        91.12
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Tất cả các trận đấu sẽ được tiến hành theo “The Regulations of Kendo Shiai and\nShinpan” của FIK (ngày 26/7/2023) và “Provisional Match and Referee Rules” do All\nJapan Kendo Federation (AJKF) ban hành (ngày 1/4/2023). Các sửa đổi, bổ sung đối với\nnhững quy định này được ban hành sau đó cũng sẽ được áp dụng.",
+      "markdown": "- Tất cả các trận đấu sẽ được tiến hành theo “The Regulations of Kendo Shiai and\nShinpan” của FIK (ngày 26/7/2023) và “Provisional Match and Referee Rules” do All\nJapan Kendo Federation (AJKF) ban hành (ngày 1/4/2023). Các sửa đổi, bổ sung đối với\nnhững quy định này được ban hành sau đó cũng sẽ được áp dụng.",
+      "bbox": [
+        90.05,
+        93.84,
+        537.22,
+        154.64
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Nếu số lượng người tham gia quá đông, Ban tổ chức có quyền thay đổi thể thức thi đấu\nvà đưa ra quyết định cuối cùng phù hợp với tình hình thực tế.",
+      "markdown": "- Nếu số lượng người tham gia quá đông, Ban tổ chức có quyền thay đổi thể thức thi đấu\nvà đưa ra quyết định cuối cùng phù hợp với tình hình thực tế.",
+      "bbox": [
+        90.05,
+        157.36,
+        529.22,
+        186.39
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "heading",
+      "text": "b) Chủ Nhật ngày 22/11/2026 – Nội dung thi đấu Đồng đội nữ 5 người và Đồng đội",
+      "markdown": "#### b) Chủ Nhật ngày 22/11/2026 – Nội dung thi đấu Đồng đội nữ 5 người và Đồng đội",
+      "bbox": [
+        90.05,
+        204.72,
+        517.98,
+        218.17
+      ],
+      "level": 4,
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "paragraph",
+      "text": "nam 5 người. (18 tuổi trở lên, 1 Dan trở lên)",
+      "markdown": "nam 5 người. (18 tuổi trở lên, 1 Dan trở lên)",
+      "bbox": [
+        108.05,
+        220.89,
+        335.65,
+        234.17
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "table",
+      "text": "Nội dung thi đấu | Đồng đội nữ 5 người và Đồng đội nam 5 người\nThời gian | 22/11/2026 (Chủ Nhật)\nDan | Từ 1 Dan trở lên\nTuổi | 18 tuổi trở lên\nĐội hình thi đấu | 5 tuyển thủ và tối đa 2 tuyển thủ dự bị\n | Đội phải có ít nhất ba tuyển thủ\nTrận đấu | 3 phút/trận\nTrận chung kết: 4 phút/trận\n(Thời gian có thể được điều chỉnh tùy thuộc vào tình hình thực tế)\n | SANBON SHOBU",
+      "markdown": "| Nội dung thi đấu | Đồng đội nữ 5 người và Đồng đội nam 5 người |\n|---|---|\n| Thời gian | 22/11/2026 (Chủ Nhật) |\n| Dan | Từ 1 Dan trở lên |\n| Tuổi | 18 tuổi trở lên |\n| Đội hình thi đấu | 5 tuyển thủ và tối đa 2 tuyển thủ dự bị |\n|  | Đội phải có ít nhất ba tuyển thủ |\n| Trận đấu | 3 phút/trận<br>Trận chung kết: 4 phút/trận<br>(Thời gian có thể được điều chỉnh tùy thuộc vào tình hình thực tế) |\n|  | SANBON SHOBU |",
+      "bbox": [
+        72.0,
+        252.25,
+        539.76,
+        429.45
+      ],
+      "rows": [
+        [
+          "Nội dung thi đấu",
+          "Đồng đội nữ 5 người và Đồng đội nam 5 người"
+        ],
+        [
+          "Thời gian",
+          "22/11/2026 (Chủ Nhật)"
+        ],
+        [
+          "Dan",
+          "Từ 1 Dan trở lên"
+        ],
+        [
+          "Tuổi",
+          "18 tuổi trở lên"
+        ],
+        [
+          "Đội hình thi đấu",
+          "5 tuyển thủ và tối đa 2 tuyển thủ dự bị"
+        ],
+        [
+          null,
+          "Đội phải có ít nhất ba tuyển thủ"
+        ],
+        [
+          "Trận đấu",
+          "3 phút/trận\nTrận chung kết: 4 phút/trận\n(Thời gian có thể được điều chỉnh tùy thuộc vào tình hình thực tế)"
+        ],
+        [
+          null,
+          "SANBON SHOBU"
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Nếu một đội chỉ cử 3 vận động viên để thành lập đội để thi đấu nội dung đồng đội 5\nngười, thứ tự thi đấu sẽ là SENPO, CHUKEN và TAISHO.",
+      "markdown": "- Nếu một đội chỉ cử 3 vận động viên để thành lập đội để thi đấu nội dung đồng đội 5\nngười, thứ tự thi đấu sẽ là SENPO, CHUKEN và TAISHO.",
+      "bbox": [
+        108.05,
+        445.93,
+        531.47,
+        475.24
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Nếu một đội chỉ cử 4 vận động viên tham gia nội dung thi đấu đồng đội 5 người, thì\nthứ tự thi đấu sẽ chỉ bao gồm các vị trí SENPO, CHUKEN, FUKUSHO và TAISHO\n(1, 3, 4, 5);",
+      "markdown": "- Nếu một đội chỉ cử 4 vận động viên tham gia nội dung thi đấu đồng đội 5 người, thì\nthứ tự thi đấu sẽ chỉ bao gồm các vị trí SENPO, CHUKEN, FUKUSHO và TAISHO\n(1, 3, 4, 5);",
+      "bbox": [
+        108.05,
+        477.71,
+        535.17,
+        522.74
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Trong trường hợp đội có ít hơn 5 vận động viên, đại điện đội có thể đề nghị Ban tổ\nchức bố trí/mời thêm thành viên từ địa phương hoặc từ các quốc gia khác để tham gia\nđội.",
+      "markdown": "- Trong trường hợp đội có ít hơn 5 vận động viên, đại điện đội có thể đề nghị Ban tổ\nchức bố trí/mời thêm thành viên từ địa phương hoặc từ các quốc gia khác để tham gia\nđội.",
+      "bbox": [
+        108.05,
+        525.21,
+        539.92,
+        570.26
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Một vận động viên không được phép tham gia nhiều hơn một đội trong cùng nội dung\nthi đấu tại giải đấu này, bao gồm cả với tư cách vận động viên thi đấu chính hoặc vận\nđộng viên dự bị.",
+      "markdown": "- Một vận động viên không được phép tham gia nhiều hơn một đội trong cùng nội dung\nthi đấu tại giải đấu này, bao gồm cả với tư cách vận động viên thi đấu chính hoặc vận\nđộng viên dự bị.",
+      "bbox": [
+        108.05,
+        572.98,
+        541.98,
+        618.01
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Thứ tự thi đấu của đội (SENPO, JIHO, CHUKEN, FUKUSHO, TAISHO) KHÔNG\nĐƯỢC THAY ĐỔI trong trận đấu thứ nhất của đội tại vòng loại (preliminary heats)\nbắt buộc theo thứ tự trong bản đăng ký gửi tới Ban Tổ chức.",
+      "markdown": "- Thứ tự thi đấu của đội (SENPO, JIHO, CHUKEN, FUKUSHO, TAISHO) KHÔNG\nĐƯỢC THAY ĐỔI trong trận đấu thứ nhất của đội tại vòng loại (preliminary heats)\nbắt buộc theo thứ tự trong bản đăng ký gửi tới Ban Tổ chức.",
+      "bbox": [
+        108.05,
+        620.51,
+        532.64,
+        665.54
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Tuy nhiên, từ trận đấu thứ hai trở đi, thành viên đội và thứ tự thi đấu có thể được thay\nđổi tự do, nhưng chỉ trong số các vận động viên đã đăng ký (tối đa 7 thành viên) được\nghi trong đơn đăng ký. Mỗi đội phải nộp lại danh sách thứ tự thi đấu (chỉ khi có thay\nđổi) cho tổ điều hành sân đấu trước khi trận đấu bắt đầu.",
+      "markdown": "- Tuy nhiên, từ trận đấu thứ hai trở đi, thành viên đội và thứ tự thi đấu có thể được thay\nđổi tự do, nhưng chỉ trong số các vận động viên đã đăng ký (tối đa 7 thành viên) được\nghi trong đơn đăng ký. Mỗi đội phải nộp lại danh sách thứ tự thi đấu (chỉ khi có thay\nđổi) cho tổ điều hành sân đấu trước khi trận đấu bắt đầu.",
+      "bbox": [
+        108.05,
+        668.26,
+        541.47,
+        729.06
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 2,
+      "type": "list",
+      "text": "- Nếu tổ điều hành sân đấu không nhận được danh sách thứ tự thi đấu mới của đội\ntrước trận đấu tiếp theo, Ban tổ chức sẽ mặc định rằng thứ tự thi đấu của đội vẫn\ngiống trận đấu trước đó. Các đội được yêu cầu kiểm tra lại thứ tự thi đấu hiển thị trên",
+      "markdown": "- Nếu tổ điều hành sân đấu không nhận được danh sách thứ tự thi đấu mới của đội\ntrước trận đấu tiếp theo, Ban tổ chức sẽ mặc định rằng thứ tự thi đấu của đội vẫn\ngiống trận đấu trước đó. Các đội được yêu cầu kiểm tra lại thứ tự thi đấu hiển thị trên",
+      "bbox": [
+        108.05,
+        731.78,
+        538.22,
+        776.82
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "paragraph",
+      "text": "bảng điểm (scoreboard). Nếu phát hiện bất kỳ sai sót nào, phải thông báo ngay lập tức\ncho tổ điều hành sân đấu và trọng tài điều khiển trận đấu.",
+      "markdown": "bảng điểm (scoreboard). Nếu phát hiện bất kỳ sai sót nào, phải thông báo ngay lập tức\ncho tổ điều hành sân đấu và trọng tài điều khiển trận đấu.",
+      "bbox": [
+        126.05,
+        62.09,
+        541.97,
+        91.12
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Tất cả các trận đấu sẽ được tiến hành theo “The Regulations of Kendo Shiai and\nShinpan” của FIK (ngày 26/7/2023) và “Provisional Match and Referee Rules” do All\nJapan Kendo Federation (AJKF) ban hành (ngày 1/4/2023). Các sửa đổi, bổ sung đối\nvới những quy định này được ban hành sau đó cũng sẽ được áp dụng.",
+      "markdown": "- Tất cả các trận đấu sẽ được tiến hành theo “The Regulations of Kendo Shiai and\nShinpan” của FIK (ngày 26/7/2023) và “Provisional Match and Referee Rules” do All\nJapan Kendo Federation (AJKF) ban hành (ngày 1/4/2023). Các sửa đổi, bổ sung đối\nvới những quy định này được ban hành sau đó cũng sẽ được áp dụng.",
+      "bbox": [
+        108.05,
+        93.84,
+        541.9,
+        154.64
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Nếu số lượng người tham gia quá đông, Ban tổ chức có quyền thay đổi thể thức thi\nđấu và đưa ra quyết định cuối cùng phù hợp với tình hình thực tế.",
+      "markdown": "- Nếu số lượng người tham gia quá đông, Ban tổ chức có quyền thay đổi thể thức thi\nđấu và đưa ra quyết định cuối cùng phù hợp với tình hình thực tế.",
+      "bbox": [
+        108.05,
+        157.36,
+        526.94,
+        186.39
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "2. Trọng tài giải đấu",
+      "markdown": "### 2. Trọng tài giải đấu",
+      "bbox": [
+        90.05,
+        204.72,
+        203.33,
+        218.17
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Trong trường hợp không đủ số lượng Shinpan, Ban tổ chức có thể yêu cầu các vận động\nviên đã đăng ký tham gia giải đảm nhiệm vai trò Shinpan. Tuy nhiên, vận động viên đảm\nnhiệm vai trò Shinpan không được phép điều hành bất kỳ trận đấu nào có sự tham gia của\nđội mà mình thuộc về, hoặc các trận đấu thuộc sân thi đấu (shiai court) của đội mình.",
+      "markdown": "- Trong trường hợp không đủ số lượng Shinpan, Ban tổ chức có thể yêu cầu các vận động\nviên đã đăng ký tham gia giải đảm nhiệm vai trò Shinpan. Tuy nhiên, vận động viên đảm\nnhiệm vai trò Shinpan không được phép điều hành bất kỳ trận đấu nào có sự tham gia của\nđội mà mình thuộc về, hoặc các trận đấu thuộc sân thi đấu (shiai court) của đội mình.",
+      "bbox": [
+        90.05,
+        220.89,
+        541.47,
+        281.67
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "3. Quy định trang phục",
+      "markdown": "### 3. Quy định trang phục",
+      "bbox": [
+        90.05,
+        299.99,
+        218.85,
+        313.44
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Tên trên Zekken bắt buộc phải cùng tên trong danh sách đăng ký thi đấu.",
+      "markdown": "- Tên trên Zekken bắt buộc phải cùng tên trong danh sách đăng ký thi đấu.",
+      "bbox": [
+        108.05,
+        316.16,
+        479.45,
+        329.6
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "4. Thông số kỹ thuật của shinai",
+      "markdown": "### 4. Thông số kỹ thuật của shinai",
+      "bbox": [
+        90.05,
+        347.74,
+        258.85,
+        361.19
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Theo tiêu chuẩn của FIK",
+      "markdown": "- Theo tiêu chuẩn của FIK",
+      "bbox": [
+        108.05,
+        363.66,
+        248.35,
+        377.1
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "5. Điều kiện tham dự dành cho vận động viên là người Việt Nam::",
+      "markdown": "### 5. Điều kiện tham dự dành cho vận động viên là người Việt Nam::",
+      "bbox": [
+        90.05,
+        395.26,
+        436.42,
+        408.71
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Là công dân Việt Nam từ 18 tuổi và có trình độ từ 1 Dan trở lên.",
+      "markdown": "- Là công dân Việt Nam từ 18 tuổi và có trình độ từ 1 Dan trở lên.",
+      "bbox": [
+        108.05,
+        411.18,
+        439.42,
+        424.62
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "6. Điều kiện tham dự dành cho vận động viên là công dân nước ngoài",
+      "markdown": "### 6. Điều kiện tham dự dành cho vận động viên là công dân nước ngoài",
+      "bbox": [
+        90.05,
+        442.76,
+        452.7,
+        456.21
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Là công dân nước ngoài đủ 18 tuổi và có trình độ từ 1 Dan trở lên.",
+      "markdown": "- Là công dân nước ngoài đủ 18 tuổi và có trình độ từ 1 Dan trở lên.",
+      "bbox": [
+        108.05,
+        458.96,
+        448.42,
+        472.4
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "7. Thời hạn gửi đăng ký",
+      "markdown": "### 7. Thời hạn gửi đăng ký",
+      "bbox": [
+        90.05,
+        490.54,
+        221.6,
+        503.99
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Ngày 20 tháng 10 năm 2026",
+      "markdown": "- Ngày 20 tháng 10 năm 2026",
+      "bbox": [
+        108.05,
+        506.46,
+        265.35,
+        519.9
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "heading",
+      "text": "8. Những vấn đề khác",
+      "markdown": "### 8. Những vấn đề khác",
+      "bbox": [
+        90.05,
+        538.06,
+        210.58,
+        551.51
+      ],
+      "level": 3,
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Vận động viên không có mặt tại sân thi đấu trong vòng 5 phút kể từ khi được gọi sẽ\nbị coi là bỏ cuộc và bị loại.",
+      "markdown": "- Vận động viên không có mặt tại sân thi đấu trong vòng 5 phút kể từ khi được gọi sẽ\nbị coi là bỏ cuộc và bị loại.",
+      "bbox": [
+        108.05,
+        554.23,
+        530.47,
+        583.27
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Vận động viên được xác định sử dụng chất kích thích hoặc chất cấm (bao gồm cả đồ\nuống có cồn) sẽ bị trọng tài xử phạt bằng gogi, bị buộc phải từ bỏ trận đấu và bị xử\nthua ngay lập tức.",
+      "markdown": "- Vận động viên được xác định sử dụng chất kích thích hoặc chất cấm (bao gồm cả đồ\nuống có cồn) sẽ bị trọng tài xử phạt bằng gogi, bị buộc phải từ bỏ trận đấu và bị xử\nthua ngay lập tức.",
+      "bbox": [
+        108.05,
+        585.99,
+        534.72,
+        631.04
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "list",
+      "text": "- Khuyến nghị tất cả vận động viên tham gia, bao gồm cả thành viên trong đoàn và\ntrọng tài phải tự mua bảo hiểm tai nạn, bệnh trong suốt quá trình di chuyển và thời\ngian tham dự VIKC 2026.",
+      "markdown": "- Khuyến nghị tất cả vận động viên tham gia, bao gồm cả thành viên trong đoàn và\ntrọng tài phải tự mua bảo hiểm tai nạn, bệnh trong suốt quá trình di chuyển và thời\ngian tham dự VIKC 2026.",
+      "bbox": [
+        108.05,
+        633.51,
+        525.22,
+        678.54
+      ],
+      "fontSize": 12.0
+    },
+    {
+      "page": 3,
+      "type": "paragraph",
+      "text": "~ HẾT ~",
+      "markdown": "~ HẾT ~",
+      "bbox": [
+        284.13,
+        728.78,
+        330.88,
+        742.06
+      ],
+      "fontSize": 12.0
+    }
+  ]
+}

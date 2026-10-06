@@ -1,0 +1,273 @@
+{
+  "docId": "08",
+  "slug": "08-dia-diem-tam-chuc",
+  "title": "The venue — Tam Chúc (Vesak International Convention Center)",
+  "source": "resources/user-guide/The Venue_Tam Chuc.pdf",
+  "lang": "en",
+  "kind": "pdf-scan",
+  "tags": [
+    "venue"
+  ],
+  "pageCount": 7,
+  "sha256": "13570b11e7222e9fa7d083635cb5e85bb6dcca4c2b4450f9f17041f032932cd3",
+  "generatedOn": "2026-10-06",
+  "warnings": [
+    "page 2: 1 low-confidence OCR line(s)",
+    "page 4: no text detected (image-only page)",
+    "page 6: no text detected (image-only page)",
+    "page 7: no text detected (image-only page)"
+  ],
+  "notes": [],
+  "assets": [
+    "content/user-guide/assets/08-page-01.png",
+    "content/user-guide/assets/08-page-02.png",
+    "content/user-guide/assets/08-page-03.png",
+    "content/user-guide/assets/08-page-04.png",
+    "content/user-guide/assets/08-page-05.png",
+    "content/user-guide/assets/08-page-06.png",
+    "content/user-guide/assets/08-page-07.png"
+  ],
+  "outline": [],
+  "blocks": [
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "1ST VIETNAM INTERNATIONAL",
+      "markdown": "1ST VIETNAM INTERNATIONAL",
+      "bbox": [
+        0.14,
+        0.11,
+        0.6,
+        0.15
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "KENDO CHAMPIONSHIPS 2026",
+      "markdown": "KENDO CHAMPIONSHIPS 2026",
+      "bbox": [
+        0.14,
+        0.15,
+        0.59,
+        0.2
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "19 - 22 / 11/2026",
+      "markdown": "19 - 22 / 11/2026",
+      "bbox": [
+        0.14,
+        0.21,
+        0.31,
+        0.25
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "TAM CHUC - NINH BÌNH",
+      "markdown": "TAM CHUC - NINH BÌNH",
+      "bbox": [
+        0.14,
+        0.25,
+        0.41,
+        0.29
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "19 Nov. Hachidan Sensei Seminar",
+      "markdown": "19 Nov. Hachidan Sensei Seminar",
+      "bbox": [
+        0.14,
+        0.84,
+        0.28,
+        0.85
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "20 Nov. Dan Examination 1 Kyu - 5 Dan",
+      "markdown": "20 Nov. Dan Examination 1 Kyu - 5 Dan",
+      "bbox": [
+        0.14,
+        0.85,
+        0.3,
+        0.87
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "21-22 Nov: Team Competitions",
+      "markdown": "21-22 Nov: Team Competitions",
+      "bbox": [
+        0.14,
+        0.87,
+        0.26,
+        0.88
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Men's Team 3-Person - 1-4 Dan",
+      "markdown": "Men's Team 3-Person - 1-4 Dan",
+      "bbox": [
+        0.14,
+        0.89,
+        0.28,
+        0.9
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "- Women's Team 3-Person - 1-4 Dan",
+      "markdown": "- Women's Team 3-Person - 1-4 Dan",
+      "bbox": [
+        0.14,
+        0.91,
+        0.3,
+        0.92
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "- Men's Team 5-Person - 1 Dan and above",
+      "markdown": "- Men's Team 5-Person - 1 Dan and above",
+      "bbox": [
+        0.14,
+        0.92,
+        0.32,
+        0.94
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "- Women's Team 5-Person - 1 Dan and above",
+      "markdown": "- Women's Team 5-Person - 1 Dan and above",
+      "bbox": [
+        0.14,
+        0.94,
+        0.33,
+        0.95
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "ta SILE NE TRE",
+      "markdown": "ta SILE NE TRE <!-- low-confidence OCR -->",
+      "bbox": [
+        0.81,
+        0.48,
+        0.9,
+        0.5
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Competition Venue",
+      "markdown": "Competition Venue",
+      "bbox": [
+        0.43,
+        0.8,
+        0.57,
+        0.82
+      ]
+    },
+    {
+      "page": 2,
+      "type": "ocr-line",
+      "text": "Vesak International Convention Center",
+      "markdown": "Vesak International Convention Center",
+      "bbox": [
+        0.4,
+        0.83,
+        0.6,
+        0.85
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "Competition",
+      "markdown": "Competition",
+      "bbox": [
+        0.5,
+        0.37,
+        0.54,
+        0.38
+      ]
+    },
+    {
+      "page": 3,
+      "type": "ocr-line",
+      "text": "VENUE",
+      "markdown": "VENUE",
+      "bbox": [
+        0.5,
+        0.38,
+        0.54,
+        0.4
+      ]
+    },
+    {
+      "page": 4,
+      "type": "image",
+      "text": "image-only page",
+      "markdown": "> Image-only page. Source render: `content/user-guide/assets/08-page-01.png`",
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 5,
+      "type": "ocr-line",
+      "text": "GIÁI VÕ DỊCH KENDO VIỆT NAM 2025",
+      "markdown": "GIÁI VÕ DỊCH KENDO VIỆT NAM 2025",
+      "bbox": [
+        0.47,
+        0.46,
+        0.59,
+        0.47
+      ]
+    },
+    {
+      "page": 6,
+      "type": "image",
+      "text": "image-only page",
+      "markdown": "> Image-only page. Source render: `content/user-guide/assets/08-page-01.png`",
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 7,
+      "type": "image",
+      "text": "image-only page",
+      "markdown": "> Image-only page. Source render: `content/user-guide/assets/08-page-01.png`",
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,839 @@
+{
+  "docId": "10",
+  "slug": "10-ban-do-tam-chuc",
+  "title": "Bản đồ Tam Chúc / Tam Chúc site map",
+  "source": "resources/user-guide/Tam Chuc Map.jpg",
+  "lang": "en",
+  "kind": "image",
+  "tags": [
+    "venue",
+    "map"
+  ],
+  "pageCount": 1,
+  "sha256": "c530049e35d0001fa246dfaa5384d2bbfbdab12d198c018a34f26658252e0fe2",
+  "generatedOn": "2026-10-06",
+  "warnings": [],
+  "notes": [],
+  "assets": [
+    "content/user-guide/assets/10-tam-chuc-map.jpg"
+  ],
+  "outline": [],
+  "blocks": [
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "28",
+      "markdown": "28",
+      "bbox": [
+        0.09,
+        0.42,
+        0.1,
+        0.44
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "30",
+      "markdown": "30",
+      "bbox": [
+        0.06,
+        0.53,
+        0.08,
+        0.55
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "39",
+      "markdown": "39",
+      "bbox": [
+        0.14,
+        0.51,
+        0.15,
+        0.53
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "MAP OF TAM CHUC",
+      "markdown": "MAP OF TAM CHUC",
+      "bbox": [
+        0.22,
+        0.08,
+        0.49,
+        0.13
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "WELCOME",
+      "markdown": "WELCOME",
+      "bbox": [
+        0.31,
+        0.18,
+        0.35,
+        0.2
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "KHÁCH XÁ",
+      "markdown": "KHÁCH XÁ",
+      "bbox": [
+        0.25,
+        0.19,
+        0.29,
+        0.21
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "PARTY",
+      "markdown": "PARTY",
+      "bbox": [
+        0.32,
+        0.2,
+        0.34,
+        0.21
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Guest House",
+      "markdown": "Guest House",
+      "bbox": [
+        0.25,
+        0.21,
+        0.29,
+        0.22
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "27₴",
+      "markdown": "27₴",
+      "bbox": [
+        0.28,
+        0.28,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "36(",
+      "markdown": "36(",
+      "bbox": [
+        0.34,
+        0.24,
+        0.36,
+        0.26
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "13",
+      "markdown": "13",
+      "bbox": [
+        0.37,
+        0.27,
+        0.38,
+        0.29
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "20‹",
+      "markdown": "20‹",
+      "bbox": [
+        0.36,
+        0.45,
+        0.37,
+        0.46
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "VENUE",
+      "markdown": "VENUE",
+      "bbox": [
+        0.49,
+        0.49,
+        0.54,
+        0.51
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "ELECTRIC CAR",
+      "markdown": "ELECTRIC CAR",
+      "bbox": [
+        0.22,
+        0.65,
+        0.3,
+        0.73
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "BOAT",
+      "markdown": "BOAT",
+      "bbox": [
+        0.4,
+        0.62,
+        0.43,
+        0.64
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "1. Tam Quan Ngoai",
+      "markdown": "1. Tam Quan Ngoai",
+      "bbox": [
+        0.72,
+        0.15,
+        0.82,
+        0.17
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "2. Parking Area",
+      "markdown": "2. Parking Area",
+      "bbox": [
+        0.72,
+        0.17,
+        0.8,
+        0.19
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "3. Medical Center",
+      "markdown": "3. Medical Center",
+      "bbox": [
+        0.72,
+        0.19,
+        0.81,
+        0.21
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "4. Arena",
+      "markdown": "4. Arena",
+      "bbox": [
+        0.72,
+        0.22,
+        0.77,
+        0.23
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "5. Vesak Wharf",
+      "markdown": "5. Vesak Wharf",
+      "bbox": [
+        0.72,
+        0.24,
+        0.8,
+        0.25
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "6. Luc Nhac Wharf",
+      "markdown": "6. Luc Nhac Wharf",
+      "bbox": [
+        0.72,
+        0.26,
+        0.82,
+        0.28
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "7. Chung Thien Wharf",
+      "markdown": "7. Chung Thien Wharf",
+      "bbox": [
+        0.72,
+        0.28,
+        0.83,
+        0.3
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "8. Tu Bi Wharf",
+      "markdown": "8. Tu Bi Wharf",
+      "bbox": [
+        0.72,
+        0.3,
+        0.8,
+        0.32
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "9. Hy Xa Wharf",
+      "markdown": "9. Hy Xa Wharf",
+      "bbox": [
+        0.72,
+        0.33,
+        0.8,
+        0.34
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "10. Electric Car Station",
+      "markdown": "10. Electric Car Station",
+      "bbox": [
+        0.72,
+        0.35,
+        0.83,
+        0.37
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Cho Xuan",
+      "markdown": "Cho Xuan",
+      "bbox": [
+        0.72,
+        0.37,
+        0.77,
+        0.39
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "11. Electric Car Station",
+      "markdown": "11. Electric Car Station",
+      "bbox": [
+        0.72,
+        0.39,
+        0.83,
+        0.41
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Tu Bi",
+      "markdown": "Tu Bi",
+      "bbox": [
+        0.72,
+        0.42,
+        0.75,
+        0.43
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "12. Electric Car Station",
+      "markdown": "12. Electric Car Station",
+      "bbox": [
+        0.72,
+        0.44,
+        0.83,
+        0.46
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Hy Ха",
+      "markdown": "Hy Ха",
+      "bbox": [
+        0.72,
+        0.46,
+        0.75,
+        0.48
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "13. Electric Car Station",
+      "markdown": "13. Electric Car Station",
+      "bbox": [
+        0.72,
+        0.48,
+        0.83,
+        0.5
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Tam An",
+      "markdown": "Tam An",
+      "bbox": [
+        0.72,
+        0.5,
+        0.76,
+        0.52
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "14. Electric Car Station",
+      "markdown": "14. Electric Car Station",
+      "bbox": [
+        0.72,
+        0.53,
+        0.83,
+        0.54
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Chua Ba Sao",
+      "markdown": "Chua Ba Sao",
+      "bbox": [
+        0.72,
+        0.55,
+        0.79,
+        0.56
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "15. Stork Island",
+      "markdown": "15. Stork Island",
+      "bbox": [
+        0.72,
+        0.57,
+        0.8,
+        0.59
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "16. Tam Chuc",
+      "markdown": "16. Tam Chuc",
+      "bbox": [
+        0.72,
+        0.59,
+        0.79,
+        0.61
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Communal House",
+      "markdown": "Communal House",
+      "bbox": [
+        0.72,
+        0.61,
+        0.81,
+        0.63
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "17. Den Mau",
+      "markdown": "17. Den Mau",
+      "bbox": [
+        0.72,
+        0.64,
+        0.78,
+        0.65
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "18. Tam Ouan Noi",
+      "markdown": "18. Tam Ouan Noi",
+      "bbox": [
+        0.72,
+        0.66,
+        0.81,
+        0.68
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "19. Tu Bi House",
+      "markdown": "19. Tu Bi House",
+      "bbox": [
+        0.72,
+        0.68,
+        0.8,
+        0.7
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "20. Hy Xa House",
+      "markdown": "20. Hy Xa House",
+      "bbox": [
+        0.72,
+        0.7,
+        0.8,
+        0.72
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "21. Garden of Dharma",
+      "markdown": "21. Garden of Dharma",
+      "bbox": [
+        0.86,
+        0.15,
+        0.98,
+        0.17
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Pillars",
+      "markdown": "Pillars",
+      "bbox": [
+        0.86,
+        0.17,
+        0.9,
+        0.19
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "22. Pho Minh Dinh",
+      "markdown": "22. Pho Minh Dinh",
+      "bbox": [
+        0.86,
+        0.19,
+        0.96,
+        0.21
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "23. Dien Quan Am",
+      "markdown": "23. Dien Quan Am",
+      "bbox": [
+        0.86,
+        0.22,
+        0.96,
+        0.24
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "24. Dien Giao Chu",
+      "markdown": "24. Dien Giao Chu",
+      "bbox": [
+        0.86,
+        0.24,
+        0.96,
+        0.25
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "25. Dien Tam The",
+      "markdown": "25. Dien Tam The",
+      "bbox": [
+        0.86,
+        0.26,
+        0.95,
+        0.28
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "26. Sacred Bodhi Tree",
+      "markdown": "26. Sacred Bodhi Tree",
+      "bbox": [
+        0.86,
+        0.28,
+        0.98,
+        0.3
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "27. Khach Xa",
+      "markdown": "27. Khach Xa",
+      "bbox": [
+        0.86,
+        0.3,
+        0.93,
+        0.32
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "28. Tu An House",
+      "markdown": "28. Tu An House",
+      "bbox": [
+        0.86,
+        0.33,
+        0.95,
+        0.34
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "29. Chua Ngoc",
+      "markdown": "29. Chua Ngoc",
+      "bbox": [
+        0.86,
+        0.35,
+        0.94,
+        0.37
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "30. Bell Tower",
+      "markdown": "30. Bell Tower",
+      "bbox": [
+        0.86,
+        0.37,
+        0.94,
+        0.39
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "31. Chua Ba Sao",
+      "markdown": "31. Chua Ba Sao",
+      "bbox": [
+        0.86,
+        0.39,
+        0.95,
+        0.41
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Pagoda",
+      "markdown": "Pagoda",
+      "bbox": [
+        0.86,
+        0.42,
+        0.9,
+        0.43
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "32. Phat Thien Mon",
+      "markdown": "32. Phat Thien Mon",
+      "bbox": [
+        0.86,
+        0.44,
+        0.96,
+        0.46
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "33. Tam Chuc Spring",
+      "markdown": "33. Tam Chuc Spring",
+      "bbox": [
+        0.86,
+        0.46,
+        0.97,
+        0.48
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Market",
+      "markdown": "Market",
+      "bbox": [
+        0.86,
+        0.48,
+        0.9,
+        0.5
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "34. Tam Chuc Old",
+      "markdown": "34. Tam Chuc Old",
+      "bbox": [
+        0.86,
+        0.5,
+        0.96,
+        0.52
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Ouarter",
+      "markdown": "Ouarter",
+      "bbox": [
+        0.86,
+        0.53,
+        0.91,
+        0.54
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "35. Welcome Party",
+      "markdown": "35. Welcome Party",
+      "bbox": [
+        0.86,
+        0.55,
+        0.96,
+        0.57
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "36. Minh Khong",
+      "markdown": "36. Minh Khong",
+      "bbox": [
+        0.86,
+        0.57,
+        0.95,
+        0.59
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "Duong",
+      "markdown": "Duong",
+      "bbox": [
+        0.86,
+        0.59,
+        0.9,
+        0.61
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "37. Tam An Restaurant",
+      "markdown": "37. Tam An Restaurant",
+      "bbox": [
+        0.86,
+        0.61,
+        0.98,
+        0.63
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "38. Bình An Restaurant",
+      "markdown": "38. Bình An Restaurant",
+      "bbox": [
+        0.86,
+        0.64,
+        0.98,
+        0.65
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "39. Nhat Quang Vien",
+      "markdown": "39. Nhat Quang Vien",
+      "bbox": [
+        0.86,
+        0.66,
+        0.97,
+        0.68
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "40. Nguyet Quang Vien",
+      "markdown": "40. Nguyet Quang Vien",
+      "bbox": [
+        0.86,
+        0.68,
+        0.98,
+        0.7
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "41. Nature Reserve Area",
+      "markdown": "41. Nature Reserve Area",
+      "bbox": [
+        0.86,
+        0.7,
+        0.98,
+        0.72
+      ]
+    },
+    {
+      "page": 1,
+      "type": "ocr-line",
+      "text": "TamChúc",
+      "markdown": "TamChúc",
+      "bbox": [
+        0.77,
+        0.89,
+        0.93,
+        0.93
+      ]
+    }
+  ]
+}
