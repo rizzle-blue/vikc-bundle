@@ -45,3 +45,16 @@ python3 -m venv .venv
 
 Conversion is incremental: a document is rebuilt only when its source file's
 sha256 changes. Regenerating never touches `resources/`.
+
+## Trip registration spreadsheet (separate deliverable)
+
+A separate, spec-driven rebuild of the Shakaijin team's VIKC 2026 signup sheet
+(enroll · categories · cost estimate · agenda). See:
+
+- [`docs/spec-trip-registration.md`](docs/spec-trip-registration.md) — spec
+- [`docs/status-trip-registration.md`](docs/status-trip-registration.md) — phase status
+- [`docs/handoff.md`](docs/handoff.md) — **start here to continue the work**
+
+```bash
+.venv/bin/python tools/build_trip_registration.py
+```
