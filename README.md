@@ -3,6 +3,11 @@
 Machine-readable version of the 1st Vietnam International Kendo Championships
 2026 user guide.
 
+> **Web migration in progress:** flight-fare crawler → Supabase → Vercel web app.
+> Start at [`docs/handoff.md`](docs/handoff.md) · status [`docs/status-web.md`](docs/status-web.md) ·
+> task board [`docs/tasks/`](docs/tasks/README.md) · engine spec
+> [`docs/spec-flight-crawler.md`](docs/spec-flight-crawler.md).
+
 ## Layout
 
 | Path | What |
@@ -46,15 +51,27 @@ python3 -m venv .venv
 Conversion is incremental: a document is rebuilt only when its source file's
 sha256 changes. Regenerating never touches `resources/`.
 
-## Trip registration spreadsheet (separate deliverable)
+## Web migration (active work)
 
-A separate, spec-driven rebuild of the Shakaijin team's VIKC 2026 signup sheet
-(enroll · categories · cost estimate · agenda). See:
-
-- [`docs/spec-trip-registration.md`](docs/spec-trip-registration.md) — spec
-- [`docs/status-trip-registration.md`](docs/status-trip-registration.md) — phase status
-- [`docs/handoff.md`](docs/handoff.md) — **start here to continue the work**
+The trip tooling is moving to a **web app on Vercel** (Supabase for data): the entry point where
+Shakaijin members **enroll in the trip, register their categories and see their estimated cost** —
+plus a view of current SGN↔HAN fares. A TypeScript crawler collects those fares on demand
+(`pnpm crawl`); it runs when the owner triggers it, with no scheduler anywhere.
 
 ```bash
-.venv/bin/python tools/build_trip_registration.py
+pnpm install && pnpm test && pnpm typecheck && pnpm crawl --dry-run
+pnpm crawl                          # one crawl → Supabase, else the local store (data/fares)
+pnpm fares                          # cheapest fare per registered search
+./scripts/crawl.sh run|status       # same, plus data/crawl.log
 ```
+
+- [`docs/handoff.md`](docs/handoff.md) — **start here to continue the work**
+- [`docs/status-web.md`](docs/status-web.md) — step/task status + verification evidence
+- [`docs/tasks/`](docs/tasks/README.md) — one card per task (T7 = the app members use)
+- [`docs/spec-flight-crawler.md`](docs/spec-flight-crawler.md) — crawler engine spec
+
+**Dropped tracks:** the earlier Google-Spreadsheet deliverable
+(`tools/build_trip_registration.py`, `deliverables/`) is frozen and unmaintained — see
+[`docs/archive/spreadsheet-track/`](docs/archive/spreadsheet-track/README.md) (its spec still holds
+the enrollment/cost domain rules for the web app). SerpApi was dropped in favour of first-party
+sources (Vietnam Airlines public endpoint + a VietJet browser adapter).

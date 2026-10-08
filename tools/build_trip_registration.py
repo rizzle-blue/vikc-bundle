@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Build the [refined] ShakAIJIN VIKC 2026 trip registration spreadsheet.
 
-Spec: docs/spec-trip-registration.md
+FROZEN / dropped track — see docs/archive/spreadsheet-track/README.md.
+Spec (archived): docs/archive/spreadsheet-track/spec-trip-registration.md
 Phases implemented:
   1  skeleton + HƯỚNG DẪN + THÀNH VIÊN + CẤU HÌNH
   2  ĐĂNG KÝ core (identity, status, trip, datetime, derived nights/days)
   3  ĐĂNG KÝ categories + HỒ SƠ VKF + ĐỘI
-Later phases: Provider, CHI PHÍ, LỊCH TRÌNH, TỔNG QUAN.
+Phases never built: CHI PHÍ, LỊCH TRÌNH, TỔNG QUAN.
 
 Usage:
     .venv/bin/python tools/build_trip_registration.py
