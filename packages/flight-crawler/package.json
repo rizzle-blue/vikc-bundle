@@ -1,0 +1,25 @@
+{
+  "name": "@vikc/flight-crawler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "crawl": "NODE_EXTRA_CA_CERTS=certs/globalsign-rsa-ov-ssl-ca-2018.pem tsx src/cli.ts",
+    "spike": "tsx scripts/spike.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "fares": "tsx src/cli.ts --report"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.0",
+    "@supabase/supabase-js": "^2.117.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "playwright": "^1.64.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

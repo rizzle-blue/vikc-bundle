@@ -1,0 +1,12 @@
+{
+  "name": "vikc-2026",
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "crawl": "pnpm --filter @vikc/flight-crawler crawl",
+    "fares": "pnpm --filter @vikc/flight-crawler fares",
+    "seed:members": "node scripts/gen-member-seed.mjs"
+  }
+}
