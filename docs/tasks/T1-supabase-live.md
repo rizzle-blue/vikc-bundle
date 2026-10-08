@@ -1,7 +1,7 @@
 # T1 — Supabase schema + first live write (from the local crawl)
 
 **Read first:** [`docs/handoff.md`](../handoff.md) §4, §6. **Owner-only steps are marked 👤.**
-**Status:** ⏳ blocked on T0 + the owner supplying the project's **secret** key.
+**Status:** ✅ **done 2026-10-08** — schema + seed + grants applied to `vikc-tracker`, crawler writing, member write path verified (see `docs/status-web.md` §3).
 
 ## Goal
 

@@ -34,7 +34,7 @@ State as of **2026-10-08** (verified on the owner machine):
 | `pnpm crawl --dry-run` | ✅ live VNA fare matrix fetched (46 + 49 rows) |
 | `pnpm crawl` (real store) | ✅ 95 offers written to the local store (`data/fares`) in ~4 s |
 | `pnpm fares` | ✅ cheapest per registered search (2 round trips priced, 4 one-way legs have no provider) |
-| Supabase write | ⚠️ project exists (`ivxj…supabase.co`) but `.env` holds a **publishable** key → REST returns 401; schema not applied yet (T1) |
+| Supabase | ✅ live: project `vikc-tracker`, both migrations + seeds applied, grants added, crawler writing, member write path verified (T1 done 2026-10-08) |
 | VietJet | ❌ no adapter yet — probe script written, not run (T5) |
 | Crawl schedule | ❌ none — runs are triggered by hand (`./scripts/crawl.sh run` / `pnpm crawl`). No launchd job, no GitHub Actions, no cron. |
 | Git | branch `feat/flight-crawler`, step-1 work **uncommitted** (T0), `main` = `3e6a4da` |
@@ -42,7 +42,8 @@ State as of **2026-10-08** (verified on the owner machine):
 Cadence: **on demand**, triggered by the owner. Providers: **Vietnam Airlines** (public endpoint,
 works) + **VietJet** (browser-driven, T5) — **SerpApi dropped**.
 
-Next action: **T0** (commit + PR, needs owner OK). See [`docs/tasks/README.md`](tasks/README.md).
+Committed and pushed to `main` on 2026-10-08 (`b2e50f2`, `498be1f`, `2eb39ab`).
+Next action: **T3** (`apps/web` scaffold) → **T7** (`/enroll` + `/track`). See [`docs/tasks/README.md`](tasks/README.md).
 
 ## 1. Why this exists
 

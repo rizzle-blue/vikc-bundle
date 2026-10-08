@@ -69,19 +69,52 @@ export function supabaseSink(url: string, serviceKey: string): Sink {
       if (up.error) throw new Error(`upsert fare_offers: ${up.error.message}`);
     },
     async report() {
-      const { data, error } = await db
-        .from("cheapest_by_date")
-        .select("origin, destination, depart_date, return_date, provider, min_price_vnd")
-        .order("min_price_vnd", { ascending: true })
-        .limit(8);
-      if (error) throw new Error(`report cheapest_by_date: ${error.message}`);
+      const [searches, cheapest, runs] = await Promise.all([
+        db.from("flight_searches").select("id, label, origin, destination, depart_date, return_date").eq("active", true).order("id"),
+        db.from("cheapest_by_date").select("origin, destination, depart_date, return_date, provider, min_price_vnd, fetched_at"),
+        db.from("crawl_runs").select("provider, status, offer_count, finished_at").order("id", { ascending: false }).limit(5),
+      ]);
+      for (const r of [searches, cheapest, runs]) if (r.error) throw new Error(`report: ${r.error.message}`);
+      const searchRows = searches.data ?? [];
+      const cheapestRows = cheapest.data ?? [];
+      const runRows = runs.data ?? [];
+
       const vnd = (n: number) => n.toLocaleString("vi-VN");
-      const rows = data.filter((r) => r.min_price_vnd != null);
+      const dmy = (d: string) => d.split("-").reverse().join("/");
+      const clock = (iso: string) => new Date(iso).toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh", timeStyle: "short" });
+      const key = (s: { origin: string; destination: string; depart_date: string; return_date: string | null }) =>
+        `${s.origin.trim()}|${s.destination.trim()}|${s.depart_date}|${s.return_date ?? ""}`;
+      const best = new Map<string, { min_price_vnd: number; provider: string; fetched_at: string }>();
+      for (const c of cheapestRows) {
+        const k = key(c);
+        const prev = best.get(k);
+        if (!prev || (c.min_price_vnd ?? Infinity) < prev.min_price_vnd) {
+          best.set(k, { min_price_vnd: c.min_price_vnd as number, provider: c.provider, fetched_at: c.fetched_at as string });
+        }
+      }
+
+      const rows = searchRows.map((s) => {
+        const hit = best.get(key(s));
+        const label = (s.label ?? `${s.origin}→${s.destination}`).padEnd(28);
+        return hit
+          ? `  ${label} ${vnd(hit.min_price_vnd).padStart(12)} ₫  ${hit.provider} · cập nhật ${clock(hit.fetched_at)}`
+          : `  ${label} ${"—".padStart(12)}    ${
+              s.return_date === null
+                ? "chưa có nguồn: VNA chỉ trả khứ hồi → cần adapter VietJet (T5)"
+                : `chưa crawl cặp ngày này (${dmy(s.depart_date)})`
+            }`;
+      });
+
+      const last = runRows[0];
       return [
-        `store: Supabase ${new URL(url).host} · ${rows.length} priced date pair(s)`,
+        `Supabase ${new URL(url).host} · ${cheapestRows.length} priced date pair(s) in the grid · ` +
+          `${last?.offer_count ?? 0} offers in the last run` + (last ? ` · ${clock(last.finished_at)}` : " · no runs yet"),
         "",
-        "cheapest current fares:",
-        ...rows.map((c) => `  ${c.origin}→${c.destination} ${c.depart_date}${c.return_date ? "→" + c.return_date : ""}  ${vnd(c.min_price_vnd as number)} ₫  ${c.provider}`),
+        "cheapest current fare per registered search:",
+        ...rows,
+        "",
+        "recent runs:",
+        ...runRows.map((r) => `  ${clock(r.finished_at)}  ${r.provider}  ${r.status} (${r.offer_count})`),
       ].join("\n");
     },
     close: async () => {},
