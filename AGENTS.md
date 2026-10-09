@@ -11,7 +11,8 @@ Start here: [`docs/handoff.md`](docs/handoff.md) → [`docs/status.md`](docs/sta
 pnpm install
 pnpm test             # 18 tests: domain rules + SQL view agreement — must stay green
 pnpm typecheck
-pnpm dev              # http://localhost:3000  (/enroll for members, /track for organisers)
+pnpm dev              # http://localhost:3000  (/login → /enroll for members, /admin + /track for organisers)
+pnpm e2e              # browser smoke test (needs `pnpm start -p 3100` running)
 pnpm build && pnpm start
 node scripts/db-apply.mjs   # migrations + seeds → Supabase (needs SUPABASE_ACCESS_TOKEN)
 pnpm seed:members           # regenerate supabase/seed_members.sql from resources/members.json
@@ -21,6 +22,8 @@ Rules of the road:
 
 - One task card at a time: **build → verify → report → commit** on a feature branch. Never push to
   `main` without the user's OK.
+- The access codes gate the UI only: operator writes go through `src/app/api/admin/*` with the
+  service key, so never widen the anon grants on `events`, `event_sessions` or `members`.
 - `pnpm test && pnpm typecheck` green before every commit; a schema change means a **new** migration
   file and a re-run of `scripts/db-apply.mjs`.
 - The browser only ever sees the **publishable** key; secrets stay in the git-ignored `.env`.

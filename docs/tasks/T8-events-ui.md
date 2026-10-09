@@ -2,7 +2,7 @@
 
 **Read first:** [`docs/spec-events.md`](../spec-events.md) (the design and the decisions it encodes),
 [`docs/status.md`](../status.md). The schema is already live in Supabase.
-**Status:** ⏳ next.
+**Status:** ✅ **done 2026-10-09** — gate, operator area, member check-in and exports all verified by `pnpm e2e` (11 checks).
 
 ## Goal
 
@@ -33,6 +33,18 @@ nothing in the app uses it.
    VKF package price. Sign-ups write to `event_signups` with the anon key (allowed by design).
 4. **Board** (`/track`): per-event counts, entries distribution (how many members have 1 vs 2),
    and the roster framing flipped to "đã đăng ký: N" + "dự kiến: M" — no "21 missing out of 22".
+
+## Built
+
+- `src/middleware.ts` + `/login` + httpOnly cookies (`src/lib/auth.ts`); `/enroll` needs the member
+  code, `/admin` + `/api/admin` need the admin code.
+- `/admin`: programme table with sign-up counts, `expected` switches per member, CSV links;
+  `/admin/events/new` and `/admin/events/[id]` (edit form, sessions, sign-up list, per-event CSV).
+- `/enroll`: the trip fields plus check-ins grouped into team shiai / exam (with `form_schema`
+  fields) / common programme / Hà Nội dojo exchange, a live entry counter, and cancel-then-confirm
+  saving (the anon key has no DELETE on sign-ups).
+- `/track`: registrations + events framing, entry distribution (1 vs 2 "nội dung"), event table.
+- `pnpm e2e`: repeatable browser check of the gate, a check-in and the CSV export.
 
 ## Done when
 

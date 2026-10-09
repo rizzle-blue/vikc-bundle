@@ -62,7 +62,7 @@ those two values or optional.
 | Migrations | Applied with `node scripts/db-apply.mjs` through the **Management API** (this machine has no DB password / `supabase link`). Never edit an applied migration — add a new file. |
 | Events (2026-10-09) | The operator sets up **events**; members **check in** to them. `events` + `event_sessions` + `event_signups`, seeded with the VIKC programme from `resources/vikc-2026/md/01`. `counts_as_entry` marks the team shiai events (the VKF package price is 1 vs 2 "nội dung"). Full design: [`spec-events.md`](spec-events.md). |
 | Roster | **Reference data only** — nothing is pre-enrolled. A `registrations` row appears when a member signs up; `members.expected` is the operator's own "I know they're coming" marker. |
-| Access (D9) | Two shared codes: one for members, one for the operator. A UI gate, not a security boundary — so `events`/`event_sessions`/`members.expected` are written **only** through a server route holding the service key; the anon key keeps read-only on them. |
+| Access (D9) | Two shared codes: one for members, one for the operator. A UI gate, not a security boundary — so `events`/`event_sessions`/`members.expected` are written **only** through a server route holding the service key; the anon key keeps read-only on them. **Implemented**: `src/middleware.ts` gates `/enroll` and `/admin`/`/api/admin`, `/login` sets an httpOnly cookie per code. |
 | Teams / fees | Later: teams are assigned after sign-ups (C7); the fee calculator comes after the data (D10). |
 | Parked | Flight-fare crawler (incl. VietJet browser capture), the `.xlsx` spreadsheet generator, the extracted corpus → [`../deprecated/`](../deprecated/README.md). The spreadsheet spec stays in [`archive/spreadsheet-track/`](archive/spreadsheet-track/spec-trip-registration.md) as the domain reference (fees, categories, deadlines). |
 
@@ -75,6 +75,11 @@ those two values or optional.
 | `src/app/enroll/page.tsx` | the member page (the thing members actually use) |
 | `src/app/track/page.tsx` | the organisers' board |
 | `src/app/(admin)/…` | Refine list/edit screens (roster, trip rows, stay view) |
+| `src/app/admin/…` | **operator area**: dashboard (programme + `expected` toggles + CSV links), event editor (`EventForm`), per-event sessions and sign-up list |
+| `src/app/api/admin/…` | operator writes with the service key: `events`, `sessions`, `members` (expected), `export` (CSV) |
+| `src/middleware.ts` | the access-code gate (must live under `src/` because the app uses a `src` directory) |
+| `src/app/login/` | the code form (plain `<form action={…}>` + `useActionState`) |
+| `scripts/e2e.mjs` | `pnpm e2e` — the browser smoke test (gate, check-in, CSV) that cleans up its own rows |
 | `src/lib/supabase.ts` | the publishable-key client + `supabaseConfigured` guard |
 | `src/lib/resources.ts` | Refine resources (`meta.idColumnName: "member_id"` for trip rows) |
 | `src/lib/registration/{trip,stay}.ts` | the domain rules: `vnDate`, `deriveStay`, `presenceDays`, `headcountByDay`, `progressOf`, `summarize`, `daysUntil` |
@@ -112,6 +117,12 @@ those two values or optional.
   boundary; AntD does not prerender cleanly under RSC, so the root layout sets
   `export const dynamic = "force-dynamic"` (everything is a client component with live data anyway).
 - **`member_trip` has no `id`** — pass `meta: { idColumnName: "member_id" }` to Refine hooks.
+- **AntD `Form` does not forward `action`** to the underlying form, so a server action never runs:
+  the login form uses a plain `<form action={formAction}>` with `useActionState`.
+- **Middleware must be `src/middleware.ts`** — a root-level `middleware.ts` is ignored in a `src`
+  layout, which silently disables the whole access gate.
+- **The anon key has no DELETE on `event_signups`** (insert/select/update only): cancelling means
+  `status = 'cancelled'`, and re-checking upserts it back to confirmed.
 - **Vitest must skip `deprecated/`** (`vitest.config.mts`); that parked code imports a deleted
   `tsconfig.base.json`.
 - **`.next/` and `*.tsbuildinfo` are git-ignored** — keep it that way.
@@ -127,8 +138,9 @@ those two values or optional.
 
 ## 6. Task board
 
-[`docs/tasks/README.md`](tasks/README.md) — currently: **T8** (the Events UI: operator editor +
-member check-in + the two access codes), **T3** (deploy to Vercel) and **T7** (the app; CSV export). Done and parked cards live in
+[`docs/tasks/README.md`](tasks/README.md) — currently: **T3** (deploy to Vercel — needs
+`SUPABASE_SERVICE_ROLE_KEY`, `MEMBER_ACCESS_CODE` and `ADMIN_ACCESS_CODE` in the Vercel env) and
+**T7** (the app). T8 (Events UI) is done; its card records what was built. Done and parked cards live in
 [`../deprecated/tasks/`](../deprecated/tasks/).
 
 ## 7. Definition of done

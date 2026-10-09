@@ -1,7 +1,7 @@
 # STATUS — VIKC 2026 Shakaijin trip app
 
 Handoff: [`handoff.md`](handoff.md) · Task board: [`tasks/README.md`](tasks/README.md)
-Last updated: **2026-10-09** (Events schema live; roster is reference-only)
+Last updated: **2026-10-09** (Events UI live: gate + operator editor + member check-in)
 
 Single source of truth for where the project stands. Update it whenever a card finishes or a check
 changes.
@@ -18,8 +18,11 @@ changes.
 | Repo re-shaped: app at the root, earlier tracks in `deprecated/` | ✅ done |
 | **Events**: `events` / `event_sessions` / `event_signups` + the VIKC programme seeded (9 events, 3 Godo sessions) | ✅ live in Supabase |
 | Roster is reference-only: `registrations` is opt-in, `members.expected` flag added | ✅ live (a row appears when a member signs up) |
-| Operator event editor + member "check to enrol" UI + the two access codes | ⏳ **next** (T8) |
-| Vercel deploy + member link handed out | ⏳ T3 (owner) |
+| Access gate: member + admin codes (httpOnly cookie, middleware) | ✅ done (T8) |
+| Operator area: dashboard, event editor, sessions, sign-up lists, `expected` toggle, CSV exports | ✅ done (T8) |
+| Member check-in: per-event/session checkboxes, exam `form_schema` fields, live entry counter | ✅ done (T8) |
+| Board reframed around registrations + events | ✅ done (T8) |
+| Vercel deploy + member link handed out (**needs `SUPABASE_SERVICE_ROLE_KEY` + the two codes in Vercel env**) | ⏳ T3 (owner) |
 | CSV export for the organisers | ⏳ small, unstarted |
 | Fee/cost estimation in the app | 🔒 later (D10): the model already carries the inputs (entry count, room type, exam grade, extras) |
 | Teams (assignment for team 3 / team 5) | 🔒 later (C7): members mark interest today; four separate events encode the gender/size |
@@ -50,6 +53,10 @@ Reproducible with the commands in the handoff §0; record the date and the obser
 | 2026-10-09 | Sign-up boundary | REST probes with the publishable key | ✅ `event_signups` insert/update allowed; `events` insert **denied** (operator writes through the server route with the service key) |
 | 2026-10-09 | Migration tracking | `node scripts/db-apply.mjs --status` | ✅ applied migrations are recorded in `schema_migrations` and skipped; seeds still re-run |
 | 2026-10-09 | Tests | `pnpm test` | ✅ 21 tests — registry of the roster being reference-only, the seeded programme, entry counting, sign-up uniqueness (incl. per-session) and the anon-write boundary |
+| 2026-10-09 | Access gate (real browser) | `pnpm e2e` | ✅ `/enroll` + `/admin` redirect to `/login?next=…`; the member cookie cannot open `/admin`; both codes set their cookie |
+| 2026-10-09 | Member check-in (real browser → live DB) | `pnpm e2e` | ✅ picked a name, 18/11 14:00 → 22/11 10:00, ticked Team 3 Nam + the exam with grade `3 dan` → saved; **entry counter = 1** (the exam is not a "nội dung"); rows present in `regrations`/`event_signups` |
+| 2026-10-09 | Operator area | same run | ✅ dashboard lists the programme, CSV export returns 200 with the sign-up, `POST /api/admin/events` allowed for the admin cookie |
+| 2026-10-09 | E2E as a repeatable check | `pnpm e2e` (playwright devDependency) | ✅ 11 checks, cleans up its own rows |
 | 2026-10-09 | Vercel | — | ❌ not deployed; needs the owner to import the repo and set the two `NEXT_PUBLIC_*` vars |
 
 ## 3. Environment
@@ -81,6 +88,14 @@ Reproducible with the commands in the handoff §0; record the date and the obser
 - Approve any change to an already-applied migration.
 
 ## 6. Risks / open questions
+
+- **The codes are a UI gate, not auth** (accepted): anyone with the member code can edit any row;
+  anyone with the admin code can edit the programme. Operator *writes* still go through the server
+  route with the service key, so the member code cannot change events.
+- **AntD `Form` cannot drive a server action** — the login page uses a plain `<form action={…}>`
+  with `useActionState`. Keep it that way.
+- **A member cannot `DELETE` a sign-up** (granted insert/select/update only, by design): cancelling
+  an event sets `status = 'cancelled'` and re-checking flips it back to confirmed.
 
 - **Trust-based editing** is the accepted trade-off (no login): whoever has the link can edit any
   row. The page states it; revisit only if spoofed edits ever matter.

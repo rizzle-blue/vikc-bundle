@@ -19,6 +19,10 @@ export default function Home() {
           Chưa cấu hình <Text code>NEXT_PUBLIC_SUPABASE_URL</Text> / <Text code>NEXT_PUBLIC_SUPABASE_ANON_KEY</Text>.
         </Paragraph>
       )}
+      <Paragraph type="secondary">
+        Trang cần <Text strong>mã truy cập</Text> của đoàn: thành viên dùng mã của đoàn, ban tổ chức dùng
+        mã quản trị (<Link href="/login">nhập mã</Link>).
+      </Paragraph>
       <Row gutter={[16, 16]}>
         <Col xs={24} md={12}>
           <Link href="/enroll">
