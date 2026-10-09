@@ -3,8 +3,8 @@
 **Read first:** [`docs/handoff.md`](../handoff.md) §1–2. Domain reference (categories, VKF fees,
 deadlines, the exact datetime requirements): the archived spreadsheet spec
 [`docs/archive/spreadsheet-track/spec-trip-registration.md`](../archive/spreadsheet-track/spec-trip-registration.md).
-**Status:** 🚧 foundation done (migration + roster seed + domain rules, 18 tests) · **next:** T1 (apply
-to Supabase) → T3 (scaffold) → `/enroll` + `/track`. **This is the product.**
+**Status:** ✅ **built and verified** (2026-10-09) — schema live, `/enroll` + `/track` working against
+Supabase, member flow proven in a real browser. Remaining: deploy to Vercel and hand out the link.
 
 ## Decisions (owner, 2026-10-08) — done
 
@@ -67,10 +67,10 @@ Admins get one screen with those numbers. Everything else (fares, categories, fe
    `supabase/migrations/20261009000000_registration.sql`, `supabase/seed_members.sql`
    (`pnpm seed:members`), pure rules in `packages/registration/`, cross-check test
    `packages/registration/test/views.test.ts`.
-3. `apps/web` (T3 scaffold): `/enroll` — roster pick, two datetime fields, optional fields, mobile
+3. ✅ `apps/web` (T3 scaffold): `/enroll` — roster pick, two datetime fields, optional fields, mobile
    first, Vietnamese, instant preview of "đêm / ngày" and which legs the dates produce.
-4. `/track` — admin: headcount per day 18–30/11, progress list (complete/partial/missing),
-   countdown to 20/10 and 25/10, CSV export for the admins.
+4. ✅ `/track` — headcount per day 18–30/11, progress list, countdown to 20/10 and 25/10.
+   (CSV export still open.)
 5. Deploy to Vercel, hand over the link, test with two real members end-to-end.
 
 ## Done when

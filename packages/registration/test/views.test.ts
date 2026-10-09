@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { PGlite } from "@electric-sql/pglite";
@@ -6,7 +6,7 @@ import { beforeAll, describe, expect, it } from "vitest";
 import { deriveStay, headcountByDay, presenceDays, progressOf, vnDate, type TripRow } from "../src/index.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
-const MIGRATION = join(ROOT, "supabase/migrations/20261009000000_registration.sql");
+const MIGRATIONS_DIR = join(ROOT, "supabase/migrations");
 const SEED = join(ROOT, "supabase/seed_members.sql");
 
 /** The fixtures the SQL views and the TypeScript rules must agree on. */
@@ -31,7 +31,10 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
         if not exists (select 1 from pg_roles where rolname = 'service_role')  then create role service_role noinherit bypassrls; end if;
       end $$;
     `);
-    await db.exec(readFileSync(MIGRATION, "utf8"));
+    // apply the whole migration set, in order — the views build on each other
+    for (const file of readdirSync(MIGRATIONS_DIR).filter((f) => f.endsWith(".sql")).sort()) {
+      await db.exec(readFileSync(join(MIGRATIONS_DIR, file), "utf8"));
+    }
     await db.exec(readFileSync(SEED, "utf8"));
     await db.exec(readFileSync(SEED, "utf8")); // idempotent
 
@@ -55,8 +58,8 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
   it("v_member_stay agrees with deriveStay()/progressOf() for every fixture", async () => {
     const { rows } = await db.query<{
       member_id: string; nights: number; days: number; tam_chuc_nights: number;
-      ha_noi_nights: number; has_datetimes: boolean; complete: boolean;
-    }>(`select member_id, nights, days, tam_chuc_nights, ha_noi_nights, has_datetimes, complete
+      ha_noi_nights: number; outside_nights: number; has_datetimes: boolean; complete: boolean;
+    }>(`select member_id, nights, days, tam_chuc_nights, ha_noi_nights, outside_nights, has_datetimes, complete
           from public.v_member_stay order by member_id`);
 
     for (const f of FIXTURES) {
@@ -64,9 +67,9 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
       const ts = deriveStay(f);
       expect(sql, `row for ${f.memberId}`).toBeTruthy();
       expect(
-        { nights: sql!.nights, days: sql!.days, tam: sql!.tam_chuc_nights, hn: sql!.ha_noi_nights, has: sql!.has_datetimes },
+        { nights: sql!.nights, days: sql!.days, tam: sql!.tam_chuc_nights, hn: sql!.ha_noi_nights, out: sql!.outside_nights, has: sql!.has_datetimes },
         `stay for ${f.memberId}`,
-      ).toEqual({ nights: ts.nights, days: ts.days, tam: ts.tamChucNights, hn: ts.haNoiNights, has: ts.nights > 0 });
+      ).toEqual({ nights: ts.nights, days: ts.days, tam: ts.tamChucNights, hn: ts.haNoiNights, out: ts.outsideNights, has: ts.nights > 0 });
       expect(sql!.complete, `complete flag for ${f.memberId}`).toBe(progressOf(f) === "complete");
     }
   });

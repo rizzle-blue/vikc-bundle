@@ -59,11 +59,17 @@ plus a view of current SGN↔HAN fares. A TypeScript crawler collects those fare
 (`pnpm crawl`); it runs when the owner triggers it, with no scheduler anywhere.
 
 ```bash
-pnpm install && pnpm test && pnpm typecheck && pnpm crawl --dry-run
-pnpm crawl                          # one crawl → Supabase, else the local store (data/fares)
+pnpm install && pnpm test && pnpm typecheck
+pnpm dev                            # the app → http://localhost:3000  (/enroll, /track)
+pnpm crawl                          # one crawl → Supabase
 pnpm fares                          # cheapest fare per registered search
-./scripts/crawl.sh run|status       # same, plus data/crawl.log
+node scripts/db-apply.mjs           # apply migrations + seeds to the Supabase project
+pnpm seed:members                   # regenerate the roster seed from resources/members.json
 ```
+
+The app (`apps/web`) is **Refine + Ant Design on Next.js**: `/enroll` where a member picks their name
+and enters the datetime they arrive and leave, `/track` for the admin board (headcount per day
+18–30/11, progress, deadlines), plus ready-made CRUD screens for the roster and trip rows.
 
 - [`docs/handoff.md`](docs/handoff.md) — **start here to continue the work**
 - [`docs/status-web.md`](docs/status-web.md) — step/task status + verification evidence

@@ -28,7 +28,8 @@ Actions cron or a Vercel cron. `scripts/crawl.sh` is a foreground script on purp
 
 Work one task card at a time: **build → verify → report to the user → commit**.
 Feature branch only; never push to or merge into `main` without the user's OK.
-Next up: **T0** (commit step 1 + open the PR), which needs the user's OK to push.
+Next up: **deploy `apps/web` to Vercel** (user creates the project + the two `NEXT_PUBLIC_*` vars),
+then hand the `/enroll` link to the members.
 
 Owner gates (ask first): pushing/merging, editing `.env` secrets, applying a migration to the
 Supabase project, creating cloud resources, budget spend. Never work around bot protection, WAFs

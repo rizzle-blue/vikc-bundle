@@ -7,6 +7,8 @@
     "typecheck": "pnpm -r typecheck",
     "crawl": "pnpm --filter @vikc/flight-crawler crawl",
     "fares": "pnpm --filter @vikc/flight-crawler fares",
-    "seed:members": "node scripts/gen-member-seed.mjs"
+    "seed:members": "node scripts/gen-member-seed.mjs",
+    "dev": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build"
   }
 }

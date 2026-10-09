@@ -28,11 +28,11 @@ T6 (manual crawl workflow + data health)   T4 (verify VNA price semantics)   T5 
 | [T0](T0-commit-and-pr.md) | Commit step 1 and open a PR | agent (needs owner OK to push) | — | ⏳ ready |
 | [T1](T1-supabase-live.md) | Supabase schema + seed + first live write | owner 👤 + agent | T0 | ⏳ needs the secret key |
 | ~~T2~~ | ~~SerpApi real fixture~~ — dropped 2026-10-08 | — | — | ❌ |
-| [T3](T3-web-app.md) | `apps/web`: Next.js scaffold + fares panel on Vercel | agent | T1 | ⏳ |
+| [T3](T3-web-app.md) | `apps/web`: Refine + AntD app (admin CRUD + member pages) | agent | T1 | ✅ built, Vercel deploy left |
 | [T4](T4-verify-vna-taxes.md) | Verify VNA fare-matrix price semantics | agent or owner | — | ⏳ |
 | [T5](T5-vietjet-browser-adapter.md) | VietJet browser-capture adapter | agent | owner restart | 🅿️ parked |
 | [T6](T6-manual-crawl-and-data-health.md) | Manual crawl workflow + data health | agent | T1 | ⏳ secondary |
-| [T7](T7-enrollment-and-registration.md) | **Arrival/departure datetime capture + progress tracking** | agent | T1, T3 + 2 decisions | 🔒 **the product** |
+| [T7](T7-enrollment-and-registration.md) | **Arrival/departure datetime capture + progress tracking** | agent | T1, T3 | ✅ built + verified |
 
 ## Rules for every card
 

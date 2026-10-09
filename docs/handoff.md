@@ -42,8 +42,11 @@ State as of **2026-10-08** (verified on the owner machine):
 Cadence: **on demand**, triggered by the owner. Providers: **Vietnam Airlines** (public endpoint,
 works) + **VietJet** (browser-driven, T5) — **SerpApi dropped**.
 
-Committed and pushed to `main` on 2026-10-08 (`b2e50f2`, `498be1f`, `2eb39ab`).
-Next action: **T3** (`apps/web` scaffold) → **T7** (`/enroll` + `/track`). See [`docs/tasks/README.md`](tasks/README.md).
+The app is built and verified against Supabase locally: `/enroll` (member: name + arrival/departure,
+live nights/days) and `/track` (headcount 18–30/11, progress, deadlines), plus Refine admin pages for
+the roster, trip rows, the stay view and the edit form.
+Next action: **deploy to Vercel** (owner: create the project, set the two `NEXT_PUBLIC_*` vars), then
+hand the link to the members. See [`docs/tasks/README.md`](tasks/README.md).
 
 ## 1. Why this exists
 
@@ -84,6 +87,7 @@ Step 1 (done, uncommitted at hand-off time) = flight-fare crawler engine.
 | Providers | **Vietnam Airlines** (official public fare-matrix JSON) + **VietJet** (browser-driven capture, T5). SerpApi, Bamboo and Vietravel are out. |
 | Cadence | **On demand** — the owner triggers every run (`./scripts/crawl.sh run` / `pnpm crawl`). No scheduler exists; add one only if staleness becomes a real problem. |
 | Runner | none. No background job is installed anywhere; the repo ships scripts only. |
+| UI stack (2026-10-09) | **Refine 5** (MIT) + **AntD 5** + Next 16 App Router, deployed on Vercel Hobby. Refine supplies the admin CRUD surface (list/edit/form/table/filters) so we don't hand-build it; it reads Supabase through the **publishable** key + RLS. Rejected alternatives: Payload/Directus need the Postgres password (we only have publishable + PAT) and an always-on service. |
 | Product | The **web app is the entry point and the tracker**: each member enters the datetime they **arrive** and the datetime they **leave**; the system derives nights/days, the Tam Chúc vs Hà Nội split and a per-day headcount, and admins watch progress against the deadlines (đăng ký 20/10/2026, thanh toán 25/10/2026). Categories/fees/fares are secondary. |
 | Core data | `member_trip.arrival_at` + `departure_at` (`timestamptz`, Asia/Ho_Chi_Minh) per member — everything else is derived or optional. |
 | Identity (T7 decision 1a, 2026-10-08) | **Pick your name from the roster, no login.** The anon key may read the roster and insert/update trip rows — a deliberate, documented trust trade-off for a 22-person club tool. Revisit if spoofed edits ever matter. |
@@ -166,6 +170,18 @@ Use the project's **secret** key (`sb_secret_…`) for `SUPABASE_SERVICE_ROLE_KE
 | Bamboo, Vietravel | — | ❌ out of scope |
 
 ## 6. Gotchas
+
+- **TypeScript 7 removed `baseUrl`.** In `apps/web/tsconfig.json` the `@/*` alias exists without it
+  (`"paths": { "@/*": ["./src/*"] }`) and the alias is *also* declared for webpack.
+- **Next must be ≥ 16.2.11 for TypeScript 7** — older Next refuses the TS 7 compiler API.
+  `apps/web` runs webpack explicitly (`next build --webpack`) because the workspace package
+  `@vikc/registration` is NodeNext TS: webpack needs `resolve.extensionAlias` to map its `./x.js`
+  specifiers back to `./x.ts`.
+- **Refine + App Router**: the Refine provider reads `useSearchParams`, so it must sit inside a
+  `<Suspense>` boundary, and AntD does not prerender cleanly under RSC → the app sets
+  `export const dynamic = "force-dynamic"`.
+- **`member_trip` has no `id` column** — its key is `member_id`, so every Refine hook needs
+  `meta: { idColumnName: "member_id" }`.
 
 - **Bot-protection boundary is a hard rule** (§2). A blocked site is a *finding*, not a puzzle.
 - **Runs are manual.** Nothing collects fares unless someone runs it. `./scripts/crawl.sh status`

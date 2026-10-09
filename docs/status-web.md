@@ -2,7 +2,7 @@
 
 Handoff: [`handoff.md`](handoff.md) · Engine spec: [`spec-flight-crawler.md`](spec-flight-crawler.md) ·
 Task board: [`tasks/README.md`](tasks/README.md)
-Last updated: **2026-10-08** (T1 done: schema live in Supabase, member write path verified) · Next: **T3 + T7 UI**
+Last updated: **2026-10-09** (T3 + T7 UI built and verified end-to-end against Supabase) · Next: **Vercel deploy**
 
 Single source of truth for *where the web migration stands*. Update this file
 whenever a card is finished or a check changes (rule 7 in the handoff).
@@ -28,9 +28,9 @@ whenever a card is finished or a check changes (rule 7 in the handoff).
 | B1 | Registration schema + roster seed (`members`, `member_trip`, 3 views, RLS) | ✅ built + verified on PGlite (18 tests) |
 | B1b | Trip-domain rules as pure TS (`@vikc/registration`: stay/headcount/progress) | ✅ built + tested |
 | B2 | Supabase: both migrations + seeds applied, grants, first live writes | ✅ done (T1) |
-| B3 | `apps/web` scaffold on Vercel | ⏳ T3 |
-| B4 | `/enroll` — pick your name, enter arrival + departure datetime, see nights/days live | 🔒 T7, next after T3 |
-| B5 | `/track` — headcount per day 18–30/11, progress list, deadline countdown | 🔒 T7 |
+| B3 | `apps/web` built on **Refine + AntD** (admin CRUD + custom member pages) | ✅ done (T3) — deploy to Vercel left |
+| B4 | `/enroll` — pick your name, arrival + departure datetime, live nights/days | ✅ done (T7) |
+| B5 | `/track` — headcount per day 18–30/11, progress list, deadline countdown | ✅ done (T7) |
 
 Decisions (T7): **1a roster pick, no login** · v1 fields = arrival/departure + room type + roommate,
 exam grade, team-3, team-5, dojo, notes (no fees).
@@ -78,6 +78,11 @@ and the observed result — never a bare "looks fine".
 | 2026-10-08 | Crawl → Supabase (real write) | `pnpm crawl` | ✅ `[store] supabase …` , 95 grid rows written, re-run upserts within the hour |
 | 2026-10-08 | `pnpm fares` against Supabase | `pnpm fares` | ✅ cheapest per registered search (khứ hồi 18–22/11 = 2.673.158 ₫, 18–29/11 = 2.335.769 ₫) with fetch time |
 | 2026-10-08 | **Member write path** (publishable key, as the browser will do) | `PATCH /rest/v1/member_trip?member_id=eq.SKJ-198` | ✅ 204; `v_member_stay` → nights 4 / days 5 / NB 4 / HN 0 / complete; `v_headcount_per_day` reflected it live; reversed stay → `400 check constraint "member_trip_order"`; test row reset |
+| 2026-10-09 | Web app builds | `pnpm --filter web build` | ✅ Next 16.4 (webpack) — 8 routes, type-check clean |
+| 2026-10-09 | All routes respond | `pnpm --filter web start` + curl | ✅ `/`, `/enroll`, `/track`, `/members`, `/trips`, `/stay` → 200 |
+| 2026-10-09 | **Member flow, real browser** | Playwright against the running app | ✅ picked a name → `18/11/2026 14:00` / `22/11/2026 10:00` → live preview "5 ngày · 4 đêm · Tam Chúc 4" → "Đã lưu. Cảm ơn bạn!" → Supabase row showed `14:00`/`10:00` VN |
+| 2026-10-09 | **Board** | same browser run, `/track` | ✅ 22 members · 1/22 filled · headcount 1 on 18–22/11 with VIKC/Hà Nội tags · member row "4 đêm · thiếu phòng" |
+| 2026-10-09 | Derived view gap found by the E2E | 400 `column v_member_stay.outside_nights does not exist` | ✅ migration `20261009000002_stay_outside_nights.sql` recreates the view with `outside_nights`; the SQL-vs-TS agreement test now covers it and applies **all** migrations in order |
 | 2026-10-08 | VietJet probe | `npx tsx scripts/spike-vietjet.ts` (headless Chromium **and** real Chrome) | ⚠️ form fills correctly and the page reaches `/vi/select-flight`, `get-session` → 200 with `sessionId`, but **no `search-flight` call is made** → results show “Không tìm thấy chuyến bay”. AWS WAF present. Outcome: not usable in automated headless; headed run is the untried option (T5) |
 | 2026-10-08 | install/uninstall of a scheduler | `scripts/crawl-local.sh install` + `uninstall` | ✅ verified, then **removed** — owner triggers runs by hand (no LaunchAgent remains) |
 
@@ -93,6 +98,7 @@ and the observed result — never a bare "looks fine".
 | Log | `data/crawl.log` (git-ignored with `data/`) |
 | Providers | Vietnam Airlines ✅ · VietJet ⏳ (T5) · SerpApi ❌ dropped |
 | Supabase project | exists (`ivxj…supabase.co`), **no tables yet** |
+| Web app | `apps/web` — Refine 5 + AntD 5 + Next 16 (App Router, webpack); `dev`/`build`/`start` scripts, needs the two `NEXT_PUBLIC_*` vars |
 | Vercel project | none yet |
 | Owner shell | fish — wrap bash loops in `bash -c '...'`; `scripts/crawl.sh` is bash |
 

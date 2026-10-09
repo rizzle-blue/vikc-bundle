@@ -1,8 +1,8 @@
 # T3 — `apps/web`: Next.js app + fares page on Vercel
 
 **Read first:** [`docs/handoff.md`](../handoff.md) §2 (Product), §4. Requires T1 (data in Supabase).
-Status: ⏳ blocked on T1. This is **step 1 of the member-facing app** — T7 adds enrollment and
-category registration to the same app.
+Status: ✅ **built** (2026-10-09) — `apps/web` on Refine + AntD + Next 16, all routes green, member
+flow and board verified end-to-end. Remaining: the Vercel deploy (owner).
 
 ## Goal
 
