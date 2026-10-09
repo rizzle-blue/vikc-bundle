@@ -65,7 +65,7 @@ export default function EnrollPage() {
   /** Load whatever this member already filled in, so they can correct it. */
   const loadExisting = async (id: string) => {
     const { data, error: err } = await supabase
-      .from("member_trip")
+      .from("registrations")
       .select("*")
       .eq("member_id", id)
       .maybeSingle();
@@ -106,7 +106,7 @@ export default function EnrollPage() {
       notes: values.notes ?? null,
       updated_at: new Date().toISOString(),
     };
-    const { error: err } = await supabase.from("member_trip").update(payload).eq("member_id", values.member_id);
+    const { error: err } = await supabase.from("registrations").update(payload).eq("member_id", values.member_id);
     setSaving(false);
     if (err) {
       setError(err.message);

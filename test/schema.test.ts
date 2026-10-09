@@ -7,7 +7,7 @@ import { deriveStay, headcountByDay, presenceDays, progressOf, vnDate, type Trip
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const MIGRATIONS_DIR = join(ROOT, "supabase/migrations");
-const SEED = join(ROOT, "supabase/seed_members.sql");
+const SEEDS = [join(ROOT, "supabase/seed_members.sql"), join(ROOT, "supabase/seed_events.sql")];
 
 /** The fixtures the SQL views and the TypeScript rules must agree on. */
 const FIXTURES: TripRow[] = [
@@ -35,24 +35,101 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
     for (const file of readdirSync(MIGRATIONS_DIR).filter((f) => f.endsWith(".sql")).sort()) {
       await db.exec(readFileSync(join(MIGRATIONS_DIR, file), "utf8"));
     }
-    await db.exec(readFileSync(SEED, "utf8"));
-    await db.exec(readFileSync(SEED, "utf8")); // idempotent
+    for (const seed of SEEDS) {
+      await db.exec(readFileSync(seed, "utf8"));
+      await db.exec(readFileSync(seed, "utf8")); // idempotent
+    }
 
+    // registrations are opt-in: the fixtures create their own rows
     for (const f of FIXTURES) {
       await db.query(
-        `update public.member_trip
-            set arrival_at = $2, departure_at = $3, room_type = $4, roommate = $5, updated_at = now()
-          where member_id = $1`,
+        `insert into public.registrations (member_id, arrival_at, departure_at, room_type, roommate)
+         values ($1, $2, $3, $4, $5)
+         on conflict (member_id) do update
+            set arrival_at = excluded.arrival_at, departure_at = excluded.departure_at,
+                room_type = excluded.room_type, roommate = excluded.roommate, updated_at = now()`,
         [f.memberId, f.arrivalAt, f.departureAt, f.roomType ?? null, f.roommate ?? null],
       );
     }
   }, 60_000);
 
-  it("seeds the roster and one trip row per member", async () => {
+  it("seeds the roster as reference data and pre-enrols nobody", async () => {
     const members = await db.query<{ n: number }>("select count(*)::int as n from public.members");
-    const trips = await db.query<{ n: number }>("select count(*)::int as n from public.member_trip");
+    const regs = await db.query<{ n: number }>("select count(*)::int as n from public.registrations");
     expect(members.rows[0]?.n).toBe(22);
-    expect(trips.rows[0]?.n).toBe(22);
+    // the roster is not a list of expected attendees: one row per member who actually signed up
+    expect(regs.rows[0]?.n).toBe(FIXTURES.length);
+  });
+
+  it("seeds the VIKC programme as events, with the entry-counting ones flagged", async () => {
+    const { rows } = await db.query<{ code: string; kind: string; counts_as_entry: boolean; included_in_package: boolean }>(
+      "select code, kind, counts_as_entry, included_in_package from public.events order by code",
+    );
+    expect(rows).toHaveLength(9);
+    expect(rows.filter((r) => r.counts_as_entry).map((r) => r.code)).toEqual([
+      "team3-nam", "team3-nu", "team5-nam", "team5-nu",
+    ]);
+    // the package already covers the seminar, Godo and the welcome party
+    expect(rows.filter((r) => r.included_in_package).map((r) => r.code).sort()).toEqual([
+      "godo", "party", "seminar", "team3-nam", "team3-nu", "team5-nam", "team5-nu",
+    ]);
+    const sessions = await db.query<{ n: number }>(
+      "select count(*)::int as n from public.event_sessions s join public.events e on e.id = s.event_id where e.code = 'godo'",
+    );
+    expect(sessions.rows[0]?.n).toBe(3);
+  });
+
+  it("counts a member's entries the way the VKF package price needs (1 vs 2 nội dung)", async () => {
+    // one athlete in both team events, one in a single event, one only in the included seminar
+    await db.exec(`
+      insert into public.event_signups (event_id, member_id, status)
+      select id, 'SKJ-198', 'confirmed' from public.events where code in ('team3-nam', 'team5-nam');
+      insert into public.event_signups (event_id, member_id, status)
+      select id, 'SKJ-023', 'interested' from public.events where code = 'team3-nam';
+      insert into public.event_signups (event_id, member_id, status)
+      select id, 'SKJ-960', 'confirmed' from public.events where code = 'seminar';
+    `);
+    const { rows } = await db.query<{ member_id: string; entries: number }>(
+      `select member_id, entries from public.v_member_entry_count
+        where member_id in ('SKJ-198', 'SKJ-023', 'SKJ-960') order by member_id`,
+    );
+    expect(rows).toEqual([
+      { member_id: "SKJ-023", entries: 1 },
+      { member_id: "SKJ-198", entries: 2 },
+      { member_id: "SKJ-960", entries: 0 }, // the seminar is not an entry
+    ]);
+  });
+
+  it("keeps one sign-up per member per event (and per session) and counts them", async () => {
+    await db.exec(`
+      insert into public.event_signups (event_id, member_id, status)
+      select id, 'SKJ-201', 'interested' from public.events where code = 'godo'
+      on conflict (event_id, member_id, session_id) do update set status = 'confirmed';
+      insert into public.event_signups (event_id, member_id, status)
+      select id, 'SKJ-201', 'confirmed' from public.events where code = 'godo'
+      on conflict (event_id, member_id, session_id) do update set status = 'confirmed';
+    `);
+    const upserted = await db.query<{ n: number; status: string }>(
+      `select count(*)::int as n, max(status) as status from public.event_signups
+        where member_id = 'SKJ-201'`,
+    );
+    expect(upserted.rows[0]).toEqual({ n: 1, status: "confirmed" });
+
+    // a per-session sign-up is a different row (dojo exchange: one dojo per day)
+    const session = await db.query<{ id: number }>(
+      `select s.id from public.event_sessions s join public.events e on e.id = s.event_id
+        where e.code = 'godo' order by s.starts_at limit 1`,
+    );
+    await db.query(
+      `insert into public.event_signups (event_id, session_id, member_id, status)
+       select e.id, $1, 'SKJ-201', 'confirmed' from public.events e where e.code = 'godo'
+       on conflict (event_id, member_id, session_id) do nothing`,
+      [session.rows[0]!.id],
+    );
+    const counts = await db.query<{ signups: number; confirmed: number }>(
+      `select signups, confirmed from public.v_event_signup_counts where code = 'godo'`,
+    );
+    expect(counts.rows[0]).toEqual({ signups: 2, confirmed: 2 });
   });
 
   it("v_member_stay agrees with deriveStay()/progressOf() for every fixture", async () => {
@@ -103,15 +180,15 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
 
   it("rejects a departure before the arrival", async () => {
     await expect(
-      db.query(`update public.member_trip set arrival_at = timestamptz '2026-11-20T10:00:00+07',
+      db.query(`update public.registrations set arrival_at = timestamptz '2026-11-20T10:00:00+07',
                                              departure_at = timestamptz '2026-11-19T10:00:00+07'
                 where member_id = 'SKJ-198'`),
-    ).rejects.toThrow(/member_trip_order/);
+    ).rejects.toThrow(/registrations_order/);
   });
 
   it("lets the anon role read the roster and write trip rows (decision 1a), but not add members", async () => {
-    const { rows } = await db.query<{ policyname: string; cmd: string; roles: string[] }>(
-      "select policyname, cmd, roles::text[] as roles from pg_policies where schemaname = 'public' order by policyname",
+    const { rows } = await db.query<{ policyname: string; cmd: string; roles: string[]; tablename: string }>(
+      "select policyname, cmd, roles::text[] as roles, tablename from pg_policies where schemaname = 'public' order by policyname",
     );
     const names = rows.map((r) => `${r.policyname}:${r.cmd}`);
     expect(names).toContain("roster readable:SELECT");
@@ -119,5 +196,12 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
     expect(names).toContain("trip insertable:INSERT");
     expect(names).toContain("trip updatable:UPDATE");
     expect(rows.some((r) => r.policyname.startsWith("members") && r.cmd === "INSERT")).toBe(false);
+
+    // members check themselves in; the programme itself is the operator's to write (server route
+    // with the service key), so the anon key may only read events and sessions
+    expect(rows.filter((r) => r.tablename === "events").map((r) => r.cmd)).toEqual(["SELECT"]);
+    expect(rows.filter((r) => r.tablename === "event_sessions").map((r) => r.cmd)).toEqual(["SELECT"]);
+    expect(rows.filter((r) => r.tablename === "event_signups").map((r) => r.cmd).sort())
+      .toEqual(["INSERT", "SELECT", "UPDATE"]);
   });
 });

@@ -27,7 +27,7 @@ type FormValues = {
 export default function TripEditPage() {
   const { id } = useParams<{ id: string }>();
   const { formProps, saveButtonProps, query } = useForm<FormValues>({
-    resource: "member_trip",
+    resource: "registrations",
     id,
     action: "edit",
     meta: { idColumnName: "member_id" },
@@ -53,7 +53,7 @@ export default function TripEditPage() {
   });
 
   return (
-    <Edit resource="member_trip" recordItemId={id} title={`Giờ đến & về — ${id}`} saveButtonProps={saveButtonProps}>
+    <Edit resource="registrations" recordItemId={id} title={`Giờ đến & về — ${id}`} saveButtonProps={saveButtonProps}>
       {stay.warnings.includes("departure-before-arrival") && (
         <Alert type="error" showIcon message="Giờ về phải sau giờ đến." style={{ marginBottom: 16 }} />
       )}

@@ -60,6 +60,10 @@ those two values or optional.
 | Night convention | A night is dated by its **check-in day** (hotel-bill convention). Arrive 18/11 + leave 22/11 = 4 nights. Tam Chúc nights 18–22/11, Hà Nội nights 23–29/11; the VKF package covers the 21/11 night. |
 | Trip window | 18–30/11/2026 tracked; VIKC days 19–22/11; Hà Nội days 23–29/11. Deadline đăng ký **20/10/2026**, thanh toán **25/10/2026**. |
 | Migrations | Applied with `node scripts/db-apply.mjs` through the **Management API** (this machine has no DB password / `supabase link`). Never edit an applied migration — add a new file. |
+| Events (2026-10-09) | The operator sets up **events**; members **check in** to them. `events` + `event_sessions` + `event_signups`, seeded with the VIKC programme from `resources/vikc-2026/md/01`. `counts_as_entry` marks the team shiai events (the VKF package price is 1 vs 2 "nội dung"). Full design: [`spec-events.md`](spec-events.md). |
+| Roster | **Reference data only** — nothing is pre-enrolled. A `registrations` row appears when a member signs up; `members.expected` is the operator's own "I know they're coming" marker. |
+| Access (D9) | Two shared codes: one for members, one for the operator. A UI gate, not a security boundary — so `events`/`event_sessions`/`members.expected` are written **only** through a server route holding the service key; the anon key keeps read-only on them. |
+| Teams / fees | Later: teams are assigned after sign-ups (C7); the fee calculator comes after the data (D10). |
 | Parked | Flight-fare crawler (incl. VietJet browser capture), the `.xlsx` spreadsheet generator, the extracted corpus → [`../deprecated/`](../deprecated/README.md). The spreadsheet spec stays in [`archive/spreadsheet-track/`](archive/spreadsheet-track/spec-trip-registration.md) as the domain reference (fees, categories, deadlines). |
 
 ## 3. Repo map
@@ -74,7 +78,9 @@ those two values or optional.
 | `src/lib/supabase.ts` | the publishable-key client + `supabaseConfigured` guard |
 | `src/lib/resources.ts` | Refine resources (`meta.idColumnName: "member_id"` for trip rows) |
 | `src/lib/registration/{trip,stay}.ts` | the domain rules: `vnDate`, `deriveStay`, `presenceDays`, `headcountByDay`, `progressOf`, `summarize`, `daysUntil` |
-| `supabase/migrations/` | `…_flights` (parked crawler tables), `…_registration`, `…_grants`, `…_stay_outside_nights` |
+| `supabase/migrations/` | `…_flights` (parked crawler tables), `…_registration`, `…_grants`, `…_stay_outside_nights`, `…_events`, `…_event_view_grants` |
+| `supabase/seed_events.sql` | the VIKC programme as operator-editable events (idempotent, never overwrites edits) |
+| `src/lib/registration/` | the trip rules (nights, days, headcount, progress) — `events` will reuse them |
 | `supabase/seed.sql`, `seed_members.sql` | the 6 fare searches (legacy) and the roster + empty trip rows |
 | `scripts/db-apply.mjs`, `gen-member-seed.mjs` | apply SQL to the project; regenerate the roster seed |
 | `test/schema.test.ts` | applies **all** migrations on PGlite and compares every view against the TS rules |
@@ -109,8 +115,9 @@ those two values or optional.
 - **Vitest must skip `deprecated/`** (`vitest.config.mts`); that parked code imports a deleted
   `tsconfig.base.json`.
 - **`.next/` and `*.tsbuildinfo` are git-ignored** — keep it that way.
-- **Migrations**: `node scripts/db-apply.mjs` (needs `SUPABASE_ACCESS_TOKEN`, a `sbp_…` token). It
-  treats an error returned with HTTP 200 as a failure; the API masks secret keys unless requested
+- **Migrations**: `node scripts/db-apply.mjs` (needs `SUPABASE_ACCESS_TOKEN`, a `sbp_…` token).
+  Applied migrations are recorded in `public.schema_migrations` and skipped — `--status` lists what
+  is pending. Seeds always re-run (they are idempotent). The API masks secret keys unless requested
   with `?reveal=true`.
 - **Commits are SSH-signed through 1Password.** A tool shell often inherits a launchd
   `SSH_AUTH_SOCK` with no identities → `1Password: failed to fill whole buffer` on commit or an auth
@@ -120,8 +127,8 @@ those two values or optional.
 
 ## 6. Task board
 
-[`docs/tasks/README.md`](tasks/README.md) — currently: **T3** (deploy to Vercel) and **T7** (the app;
-remaining: CSV export for the organisers). Done and parked cards live in
+[`docs/tasks/README.md`](tasks/README.md) — currently: **T8** (the Events UI: operator editor +
+member check-in + the two access codes), **T3** (deploy to Vercel) and **T7** (the app; CSV export). Done and parked cards live in
 [`../deprecated/tasks/`](../deprecated/tasks/).
 
 ## 7. Definition of done

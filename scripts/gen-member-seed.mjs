@@ -34,11 +34,8 @@ on conflict (id) do update set
   email         = excluded.email,
   phone         = excluded.phone;
 
--- Give every member an (empty) trip row so the app can simply update instead of upserting,
--- and so "chưa điền" shows up as a row rather than a missing member.
-insert into public.member_trip (member_id)
-select id from public.members
-on conflict (member_id) do nothing;
+-- Nothing is pre-enrolled: the roster is reference data. A registrations row appears only when
+-- a member signs up (docs/spec-events.md); the expected flag is the operator's own marker.
 `;
 
 writeFileSync(join(root, "supabase/seed_members.sql"), sql);

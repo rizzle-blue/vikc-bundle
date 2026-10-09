@@ -5,7 +5,8 @@ Done/parked cards: [`../../deprecated/tasks/`](../../deprecated/tasks/).
 
 | Card | Task | Who | Depends on | Status |
 |---|---|---|---|---|
-| [T3](T3-web-app.md) | Deploy the app to Vercel and hand out the `/enroll` link | owner + agent | — | ⏳ next |
+| [T8](T8-events-ui.md) | **Events UI**: operator editor + member "check to enrol" + the two access codes | agent | schema ✅ | ⏳ **next** |
+| [T3](T3-web-app.md) | Deploy the app to Vercel and hand out the `/enroll` link | owner + agent | — | ⏳ |
 | [T7](T7-enrollment-and-registration.md) | The app itself (arrival/departure + tracking) | agent | — | ✅ built · CSV export open |
 
 Rules: one card at a time; **build → verify → report → commit**; `pnpm test && pnpm typecheck` green

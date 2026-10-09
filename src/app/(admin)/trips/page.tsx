@@ -9,14 +9,14 @@ import { Table, Tag } from "antd";
  */
 export default function TripsPage() {
   const { tableProps } = useTable({
-    resource: "member_trip",
+    resource: "registrations",
     meta: { idColumnName: "member_id" },
     syncWithLocation: true,
     pagination: { pageSize: 50 },
   });
 
   return (
-    <List resource="member_trip" title="Giờ đến & giờ về">
+    <List resource="registrations" title="Giờ đến & giờ về">
       <Table {...tableProps} rowKey="member_id" size="middle">
         <Table.Column dataIndex="member_id" title="Mã TV" width={90} />
         <Table.Column
@@ -53,7 +53,7 @@ export default function TripsPage() {
           title=""
           width={80}
           render={(_, r: { member_id: string }) => (
-            <EditButton resource="member_trip" recordItemId={r.member_id} meta={{ idColumnName: "member_id" }} size="small" />
+            <EditButton resource="registrations" recordItemId={r.member_id} meta={{ idColumnName: "member_id" }} size="small" />
           )}
         />
       </Table>

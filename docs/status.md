@@ -1,7 +1,7 @@
 # STATUS — VIKC 2026 Shakaijin trip app
 
 Handoff: [`handoff.md`](handoff.md) · Task board: [`tasks/README.md`](tasks/README.md)
-Last updated: **2026-10-09** (repo re-shaped around the Next.js app; crawler/spreadsheet parked)
+Last updated: **2026-10-09** (Events schema live; roster is reference-only)
 
 Single source of truth for where the project stands. Update it whenever a card finishes or a check
 changes.
@@ -16,9 +16,13 @@ changes.
 | `/track` — headcount per day, progress, deadlines | ✅ built + verified |
 | Refine admin screens (roster, trip rows + edit form, stay view) | ✅ built |
 | Repo re-shaped: app at the root, earlier tracks in `deprecated/` | ✅ done |
-| Vercel deploy + member link handed out | ⏳ **next** (owner) |
+| **Events**: `events` / `event_sessions` / `event_signups` + the VIKC programme seeded (9 events, 3 Godo sessions) | ✅ live in Supabase |
+| Roster is reference-only: `registrations` is opt-in, `members.expected` flag added | ✅ live (a row appears when a member signs up) |
+| Operator event editor + member "check to enrol" UI + the two access codes | ⏳ **next** (T8) |
+| Vercel deploy + member link handed out | ⏳ T3 (owner) |
 | CSV export for the organisers | ⏳ small, unstarted |
-| Fee/cost estimation in the app | 🔒 not started (rules exist in the archived spreadsheet spec) |
+| Fee/cost estimation in the app | 🔒 later (D10): the model already carries the inputs (entry count, room type, exam grade, extras) |
+| Teams (assignment for team 3 / team 5) | 🔒 later (C7): members mark interest today; four separate events encode the gender/size |
 
 Dropped: the flight-fare crawler (incl. the VietJet browser attempt), the `.xlsx` spreadsheet
 generator, the extracted corpus → [`../deprecated/`](../deprecated/README.md).
@@ -41,6 +45,11 @@ Reproducible with the commands in the handoff §0; record the date and the obser
 | 2026-10-09 | **Member flow, real browser** | Playwright against the running app | ✅ name → `18/11/2026 14:00` / `22/11/2026 10:00` → "5 ngày · 4 đêm · Tam Chúc 4" → "Đã lưu. Cảm ơn bạn!" → Supabase row showed those VN times (test row reset) |
 | 2026-10-09 | **Board** | same browser run, `/track` | ✅ 22 members · 1/22 filled · headcount 1 on 18–22/11 with VIKC/Hà Nội tags · member row "4 đêm · thiếu phòng" |
 | 2026-10-09 | Derived-view gap found by the E2E | 400 `column v_member_stay.outside_nights does not exist` | ✅ migration `20261009000002` recreates the view, re-grants, and the agreement test covers the column |
+| 2026-10-09 | Events migration + programme seed | `node scripts/db-apply.mjs` | ✅ `events`(9) · `event_sessions`(3 Godo) · `event_signups`; `counts_as_entry` true for exactly the 4 team shiai events |
+| 2026-10-09 | Entry counting (1 vs 2 "nội dung" for the package price) | `v_member_entry_count` | ✅ athlete in both team events → 2, in one → 1, seminar only → 0 |
+| 2026-10-09 | Sign-up boundary | REST probes with the publishable key | ✅ `event_signups` insert/update allowed; `events` insert **denied** (operator writes through the server route with the service key) |
+| 2026-10-09 | Migration tracking | `node scripts/db-apply.mjs --status` | ✅ applied migrations are recorded in `schema_migrations` and skipped; seeds still re-run |
+| 2026-10-09 | Tests | `pnpm test` | ✅ 21 tests — registry of the roster being reference-only, the seeded programme, entry counting, sign-up uniqueness (incl. per-session) and the anon-write boundary |
 | 2026-10-09 | Vercel | — | ❌ not deployed; needs the owner to import the repo and set the two `NEXT_PUBLIC_*` vars |
 
 ## 3. Environment
