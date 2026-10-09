@@ -61,9 +61,11 @@ export default function AdminPage() {
     <main style={{ maxWidth: 1200, margin: "0 auto", padding: 24 }}>
       <Title level={2}>Ban tổ chức · VIKC 2026</Title>
       <Paragraph type="secondary">
-        <Link href="/track">Bảng theo dõi</Link> · <Link href="/enroll">Trang thành viên</Link> ·
+        <Link href="/track">Bảng theo dõi</Link> · <Link href="/admin/registration">VIKC Registration</Link> ·
+        {" "}<Link href="/enroll">Trang thành viên</Link> ·
         {" "}<a href="/api/admin/export?kind=counts">CSV sự kiện</a> ·
         {" "}<a href="/api/admin/export?kind=members">CSV thành viên</a> ·
+        {" "}<a href="/api/admin/export?kind=vkf">CSV cho VKF</a> ·
         {" "}<a href="/api/admin/export">CSV tất cả đăng ký</a>
       </Paragraph>
       {!supabaseConfigured && <Alert type="error" showIcon message="Chưa cấu hình Supabase." />}

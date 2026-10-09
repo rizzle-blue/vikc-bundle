@@ -30,6 +30,29 @@ export async function GET(req: NextRequest) {
     headers = ["code", "name_vi", "kind", "starts_at", "counts_as_entry", "included_in_package", "price_vnd", "capacity", "signups", "confirmed"];
     rows = (data ?? []).map((r) => headers.map((h) => (r as Record<string, unknown>)[h]));
     filename = "vikc-events";
+  } else if (kind === "vkf") {
+    // VKF's own workbook columns, in their order (resources/vikc-2026/data/09-mau-dang-ky.csv)
+    const { data, error } = await db.from("v_vikc_registration").select("*").order("full_name");
+    if (error) return fail(error);
+    const rowsData = data ?? [];
+    headers = ["STT", "Họ và tên", "Giới tính", "Ngày", "Tháng", "Năm", "Số CCCD", "Số điện thoại", "Email",
+      "Liên hệ khẩn cấp", "Thành viên VKF", "Mã số VKF", "Trình độ hiện tại", "Ngày cấp bằng hiện có",
+      "Nơi/đơn vị cấp bằng", "Link ảnh bằng", "1 Kyu", "Dan", "Vai trò", "Số đêm Tam Chúc", "Số đêm Hà Nội",
+      "Loại phòng", "Ở cùng ai", "Số nội dung thi đấu", "Còn thiếu (mục)"];
+    const dob = (v: string | null) => (v ? v.split("-") : ["", "", ""]);
+    rows = rowsData.map((r, i) => {
+      const [y, m, d] = dob(r.date_of_birth as string | null);
+      const grade = (r.grade_applied as string | null) ?? "";
+      return [
+        i + 1, r.full_name, r.gender, d, m, y, r.national_id, r.phone, r.email, r.emergency_contact,
+        r.vkf_member ? "Có" : "Không", r.vkf_id, r.current_rank, r.current_rank_issued_on,
+        r.current_rank_issued_by, r.current_rank_photo_url,
+        grade === "1 kyu" ? "X" : "", grade && grade !== "1 kyu" ? grade : "",
+        r.role === "competitor" ? "VĐV" : (r.role ?? ""),
+        r.tam_chuc_nights, r.ha_noi_nights, r.room_type, r.roommate, r.entries, r.missing_fields,
+      ];
+    });
+    filename = "vikc-registration";
   } else if (kind === "members") {
     const { data, error } = await db
       .from("v_member_stay")

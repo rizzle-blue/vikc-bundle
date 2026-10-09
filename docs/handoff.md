@@ -44,6 +44,7 @@ those two values or optional.
 |---|---|---|
 | `/enroll` | members | pick your name, enter arrival + departure, live nights/days preview, optional room/exam/teams/notes, save |
 | `/track` | organisers | members · filled/missing · total nights · progress · countdown to 20/10 & 25/10 · headcount 18–30/11 (VIKC/Hà Nội tagged) · per-member table |
+| `/admin/registration` | organisers | **VIKC Registration**: every VKF column pre-filled from the members, with missing-field marks and the `?kind=vkf` CSV |
 | `/members` | organisers | the roster (read-only) |
 | `/trips`, `/trips/edit/:id` | organisers | every member's datetimes, via Refine's list + form |
 | `/stay` | organisers | the derived `v_member_stay` view |
@@ -148,7 +149,7 @@ those two values or optional.
 
 ## 6. Task board
 
-[`docs/tasks/README.md`](tasks/README.md) — currently: **T9** (the VKF submission export), **T3**
+[`docs/tasks/README.md`](tasks/README.md) — currently: **T3**
 (deploy to Vercel — needs
 `SUPABASE_SERVICE_ROLE_KEY`, `MEMBER_ACCESS_CODE` and `ADMIN_ACCESS_CODE` in the Vercel env) and
 **T7** (the app). T8 (Events UI) is done; its card records what was built. Done and parked cards live in

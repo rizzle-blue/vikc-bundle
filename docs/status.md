@@ -25,7 +25,8 @@ changes.
 | **Member paperwork** for VKF (`member_profiles`: latin/Kanji name, CCCD, address, occupation, dojo, emergency contact, mailing address, current grade + date/issuer/photo) | ✅ live + in the form |
 | **Exam submission** (`exam_entries`: grade applied, 1 kyu→shodan, snapshot of the grade paperwork, dojo approval, withdrawable) | ✅ live + in the form |
 | Eligibility guidance against VKF's table (min age, training period per dan) | ✅ shown live in the form (`checkEligibility`) |
-| **VKF workbook export** (the club's submission to `vikc@vietnamkendo.com`) | ⏳ T9 — next |
+| **Scope 1 — Member sign-up form**: basic info (pre-filled from the roster, member can correct) + the personal data VKF requires | ✅ live |
+| **Scope 2 — VIKC Registration**: the sheet pre-filled from the members, with `missing_fields` and a **VKF-column CSV** | ✅ live (`/admin/registration`, `?kind=vkf`) |
 | Member data model documented (three tiers + write matrix) and the pre-events columns dropped | ✅ [`spec-member-data-model.md`](spec-member-data-model.md) |
 | Vercel deploy + member link handed out (**needs `SUPABASE_SERVICE_ROLE_KEY` + the two codes in Vercel env**) | ⏳ T3 (owner) |
 | CSV export for the organisers | ⏳ small, unstarted |
@@ -68,6 +69,8 @@ Reproducible with the commands in the handoff §0; record the date and the obser
 | 2026-10-09 | Paperwork storage + submission view | same | ✅ `v_member_profile.missing_fields` counts down as fields are filled (photo included); `v_exam_submission` snapshots the grade paperwork, hides withdrawn entries, marks the VKF fee bracket and carries the trip's room/nights |
 | 2026-10-09 | Member form (real browser → live DB) | `pnpm e2e` | ✅ 23 checks — fills the whole VKF paperwork + exam fields, then the submission row reads back: grade `3 dan`, latin name, certificate date, dojo approval, 0 missing fields; the test cleans up |
 | 2026-10-09 | Login robustness | `pnpm e2e` (repeated) | ✅ found a hydration race: clicking "Vào" before React hydrated did a native POST — no cookie, no message. The button is now disabled until hydration |
+| 2026-10-09 | Scope 1 (real browser) | `pnpm e2e` | ✅ the basic info arrives pre-filled from the roster; correcting the phone is stored as the member's own value |
+| 2026-10-09 | Scope 2 (real browser + DB) | `pnpm e2e` | ✅ the registration sheet pre-fills name, latin name, VKF member, exam grade and the trip (room Đôi, 4 nights); the CSV carries VKF's column names and the member; 23→29 checks total |
 | 2026-10-09 | Vercel | — | ❌ not deployed; needs the owner to import the repo and set the two `NEXT_PUBLIC_*` vars |
 
 ## 3. Environment

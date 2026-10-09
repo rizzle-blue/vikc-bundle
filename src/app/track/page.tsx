@@ -78,7 +78,7 @@ export default function TrackPage() {
       <Title level={2}>Bảng theo dõi · Shakaijin VIKC 2026</Title>
       <Paragraph type="secondary">
         Quân số tính từ giờ đến / giờ về của từng thành viên · <Link href="/enroll">trang đăng ký</Link>
-        {" · "}<Link href="/admin">ban tổ chức</Link>
+        {" · "}<Link href="/admin/registration">VIKC Registration</Link> · <Link href="/admin">ban tổ chức</Link>
       </Paragraph>
       {!supabaseConfigured && <Alert type="error" showIcon message="Chưa cấu hình Supabase." />}
       {error && <Alert type="error" showIcon message={error} />}

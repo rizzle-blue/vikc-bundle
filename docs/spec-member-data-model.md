@@ -4,6 +4,24 @@ Status: **current** (read off the live database 2026-10-09). Companion to
 [`spec-member-registration.md`](spec-member-registration.md) (which fields VKF demands and why).
 Project: `vikc-tracker`.
 
+## The two scopes (owner, 2026-10-09)
+
+Everything in the app serves exactly two screens:
+
+1. **Member sign-up form** (`/enroll`) — the member gives their **basic info** (name, gender, DOB,
+   phone, email, VKF membership + number) and the **personal data VKF requires** (latin/Kanji name,
+   CCCD, nationality, address, occupation, dojo, emergency contact, mailing address, the current
+   grade's date/issuer/photo), plus their trip dates, room and event check-ins.
+2. **VIKC Registration** (`/admin/registration`) — the club's registration sheet, **pre-filled from
+   what each member entered**: every column VKF's workbook asks for, with `missing_fields` marked so
+   nothing incomplete is sent. One click gives the CSV in VKF's column order.
+
+The basic info is pre-filled from the club's roster and the member confirms or corrects it. Their
+answer is stored on their own record, so the roster is never rewritten: every registration column is
+`coalesce(declared, roster)` (see `v_vikc_registration`).
+
+## The rule behind it
+
 The model keeps one rule: **what cannot change is preserved and never edited through the app; what
 the member chooses is captured per trip; and whatever was submitted is frozen as it was submitted.**
 

@@ -15,7 +15,8 @@ and in Vercel for production; changing them needs a redeploy. See `docs/spec-eve
 
 | Page | Who | What |
 |---|---|---|
-| `/enroll` | members | pick your name, arrival + departure datetime, live nights/days, **the paperwork VKF requires for the exam** (latin/Kanji name, CCCD, address, occupation, dojo, emergency contact, certificate photo) and **check-ins for every event** (team shiai, exam with grade + eligibility guidance, seminar, Godo per session, party, Hà Nội dojo exchange) |
+| `/enroll` | members | **sign up**: basic info (pre-filled from the roster, correctable), the paperwork VKF requires, arrival + departure datetime, live nights/days, (latin/Kanji name, CCCD, address, occupation, dojo, emergency contact, certificate photo) and **check-ins for every event** (team shiai, exam with grade + eligibility guidance, seminar, Godo per session, party, Hà Nội dojo exchange) |
+| `/admin/registration` | organisers | **VIKC Registration**: the sheet for VKF pre-filled from the members, with missing-field marks and a CSV in VKF's column order |
 | `/track` | organisers | registrations, expected attendees, entry split (1 vs 2 "nội dung"), event sign-ups, headcount per day 18–30/11 |
 | `/admin` | operator | the programme with sign-up counts, the `expected` switch per member, CSV exports; `/admin/events/new` + `/admin/events/[id]` to create and edit events and their sessions |
 | `/members`, `/trips`, `/trips/edit/:id`, `/stay` | organisers | Refine CRUD on the roster, the registrations, the edit form and the derived stay view |

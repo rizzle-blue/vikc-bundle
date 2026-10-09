@@ -103,6 +103,14 @@ try {
   await page.waitForTimeout(400);
 
   // the VKF paperwork
+  // room type is part of signing up (VKF charges the package by room × entries)
+  await page.locator("#room_type").click();
+  await page.waitForTimeout(400);
+  await page.locator(".ant-select-item-option", { hasText: "Đôi" }).first().click();
+  await page.waitForTimeout(300);
+
+  // scope 1: the basic info arrives pre-filled from the roster — change the phone to prove precedence
+  await page.locator("#phone").fill("0900000000");
   await page.locator("#full_name_latin").fill("TRUONG HUA DAN");
   await page.locator("#national_id").fill("012345678901");
   await page.locator("#address").fill("123 Đường ABC, Quận 1, TP.HCM");
@@ -138,6 +146,17 @@ try {
       { headers },
     ).then((r) => r.json());
     check("all VKF paperwork complete (0 missing)", profile[0]?.missing_fields, 0);
+
+    // scope 2: the VIKC Registration sheet is pre-filled from the member's own entry
+    const registration = await fetch(
+      `${url}/rest/v1/v_vikc_registration?member_id=eq.${TEST_MEMBER}&select=full_name,full_name_latin,phone,vkf_member,current_rank,grade_applied,room_type,nights,entries,missing_fields`,
+      { headers },
+    ).then((r) => r.json());
+    check("the member appears on the VIKC registration sheet", registration.length, 1);
+    check("basic info: the member's own phone wins over the roster", registration[0]?.phone, "0900000000");
+    check("basic info: the roster fills what was not declared (VKF member)", registration[0]?.vkf_member, true);
+    check("the exam grade is pre-filled", registration[0]?.grade_applied, "3 dan");
+    check("the trip is pre-filled", { room: registration[0]?.room_type, nights: registration[0]?.nights }, { room: "Đôi", nights: 4 });
   }
 
   // 3. a member cannot open the operator areas

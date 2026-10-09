@@ -10,6 +10,7 @@ import dayjs from "dayjs";
 import { TAM_CHUC_NIGHTS, WINDOW, deriveStay, missingProfileFields } from "@/lib/registration";
 import { supabase, supabaseConfigured } from "@/lib/supabase";
 import EventCheckins from "./EventCheckins";
+import BasicInfoFields from "./BasicInfoFields";
 import ProfileFields from "./ProfileFields";
 import ExamFields from "./ExamFields";
 import type { EventRow, Selection, SessionRow } from "./types";
@@ -20,7 +21,15 @@ const ROOM_TYPES = ["Đôi", "Ba", "Đơn"];
 type Member = { id: string; full_name: string; rank: string | null };
 type Profile = Record<string, unknown> & { current_rank_issued_on?: string | null };
 /** Roster facts the form needs for the exam eligibility check. */
-type MemberInfo = { date_of_birth: string | null; rank: string | null; vkf_id: string | null };
+type MemberInfo = {
+  full_name: string | null;
+  gender: string | null;
+  date_of_birth: string | null;
+  phone: string | null;
+  email: string | null;
+  rank: string | null;
+  vkf_id: string | null;
+};
 type Values = {
   member_id: string;
   arrival_at: Dayjs | null;
@@ -85,7 +94,7 @@ export default function EnrollForm() {
         supabase.from("event_sessions").select("id, event_id, starts_at, title").order("starts_at"),
         supabase.from("event_signups").select("event_id, session_id, answers, status").eq("member_id", id),
         supabase.from("member_profiles").select("*").eq("member_id", id).maybeSingle(),
-        supabase.from("members").select("date_of_birth, rank, vkf_id").eq("id", id).maybeSingle(),
+        supabase.from("members").select("full_name, gender, date_of_birth, phone, email, rank, vkf_id").eq("id", id).maybeSingle(),
       ]);
       const firstError = trip.error ?? evs.error ?? counts.error ?? sess.error ?? mine.error ?? prof.error ?? member.error;
       if (firstError) setError(firstError.message);
@@ -107,7 +116,16 @@ export default function EnrollForm() {
         ? (await supabase.from("exam_entries").select("*")
             .eq("member_id", id).eq("event_id", examEvent.id).eq("withdrawn", false).maybeSingle()).data
         : null;
+      const roster = (member.data ?? null) as MemberInfo | null;
       form.setFieldsValue({
+        full_name_vi: (profileRow?.full_name_vi as string) ?? roster?.full_name ?? "",
+        gender: (profileRow?.gender as string) ?? roster?.gender ?? undefined,
+        date_of_birth: profileRow?.date_of_birth ? dayjs(profileRow.date_of_birth as string) : roster?.date_of_birth ? dayjs(roster.date_of_birth) : null,
+        phone: (profileRow?.phone as string) ?? roster?.phone ?? "",
+        email: (profileRow?.email as string) ?? roster?.email ?? "",
+        declared_vkf_member:
+          (profileRow?.declared_vkf_member as boolean | null) ?? Boolean(roster?.vkf_id),
+        declared_vkf_id: (profileRow?.declared_vkf_id as string) ?? roster?.vkf_id ?? "",
         full_name_latin: (profileRow?.full_name_latin as string) ?? "",
         full_name_kanji: (profileRow?.full_name_kanji as string) ?? "",
         use_kanji_on_certificate: Boolean(profileRow?.use_kanji_on_certificate),
@@ -223,6 +241,13 @@ export default function EnrollForm() {
       const profileUpsert = await supabase.from("member_profiles").upsert(
         {
           member_id: values.member_id,
+          full_name_vi: text("full_name_vi"),
+          gender: text("gender"),
+          date_of_birth: (raw.date_of_birth as Dayjs | null)?.format("YYYY-MM-DD") ?? null,
+          phone: text("phone"),
+          email: text("email"),
+          declared_vkf_member: raw.declared_vkf_member === true,
+          declared_vkf_id: text("declared_vkf_id"),
           full_name_latin: text("full_name_latin"),
           full_name_kanji: text("full_name_kanji"),
           use_kanji_on_certificate: raw.use_kanji_on_certificate === true,
@@ -375,6 +400,7 @@ export default function EnrollForm() {
           </Card>
         )}
 
+        {loaded && <BasicInfoFields rosterRank={info?.rank ?? null} rosterVkfId={info?.vkf_id ?? null} />}
         {loaded && <ProfileFields mustFill={profileMissing} />}
 
         {loaded && (

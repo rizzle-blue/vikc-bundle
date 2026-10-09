@@ -258,6 +258,39 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
     expect(rows[0]).toEqual({ profiles: true, exams: true, members_update: false, events_insert: false });
   });
 
+  it("assembles the VIKC registration: the member's own values win, the roster fills the rest", async () => {
+    // the profile row from the test above declares everything; change two values to prove precedence
+    await db.exec(`update public.member_profiles
+                      set full_name_vi = 'Trương Hứa Dân (tự khai)', phone = '0900000000', declared_vkf_id = '999'
+                    where member_id = 'SKJ-198'`);
+    const { rows } = await db.query<Record<string, unknown>>(
+      `select member_id, full_name, phone, vkf_id, vkf_member, gender, date_of_birth, current_rank,
+              room_type, nights, entries, missing_fields, grade_applied
+         from public.v_vikc_registration where member_id = 'SKJ-198'`,
+    );
+    expect(rows).toHaveLength(1);
+    expect(day(rows[0]!.date_of_birth)).toBe("1994-06-02"); // the roster's date of birth
+    expect(rows[0]).toMatchObject({
+      full_name: "Trương Hứa Dân (tự khai)",   // the member's own entry
+      phone: "0900000000",
+      vkf_id: "999",
+      vkf_member: true,
+      gender: "Nam",                            // falls back to the club's roster
+      current_rank: "4 dan",
+      room_type: "Đôi",                         // from the trip registration
+      nights: 4,
+      entries: 2,                               // both team events from the earlier test
+      grade_applied: "4 dan",                   // the exam entry from the test above
+      missing_fields: 0,
+    });
+
+    // a member who has not filled the paperwork is not on the registration sheet at all
+    const { rows: notSigned } = await db.query(
+      `select 1 from public.v_vikc_registration where member_id = 'SKJ-855'`,
+    );
+    expect(notSigned).toHaveLength(0);
+  });
+
   it("keeps the registration row free of fields that belong to the events model", async () => {
     const { rows } = await db.query<{ column_name: string }>(
       `select column_name from information_schema.columns
