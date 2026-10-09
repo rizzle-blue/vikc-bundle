@@ -56,7 +56,8 @@ Reproducible with the commands in the handoff §0; record the date and the obser
 | 2026-10-09 | Access gate (real browser) | `pnpm e2e` | ✅ `/enroll` + `/admin` redirect to `/login?next=…`; the member cookie cannot open `/admin`; both codes set their cookie |
 | 2026-10-09 | Member check-in (real browser → live DB) | `pnpm e2e` | ✅ picked a name, 18/11 14:00 → 22/11 10:00, ticked Team 3 Nam + the exam with grade `3 dan` → saved; **entry counter = 1** (the exam is not a "nội dung"); rows present in `regrations`/`event_signups` |
 | 2026-10-09 | Operator area | same run | ✅ dashboard lists the programme, CSV export returns 200 with the sign-up, `POST /api/admin/events` allowed for the admin cookie |
-| 2026-10-09 | E2E as a repeatable check | `pnpm e2e` (playwright devDependency) | ✅ 11 checks, cleans up its own rows |
+| 2026-10-09 | E2E as a repeatable check | `pnpm e2e` (playwright devDependency) | ✅ 18 checks, cleans up its own rows |
+| 2026-10-09 | Access gate completeness | `pnpm e2e` | ✅ `/track`, `/members`, `/trips`, `/stay` were open to anyone with the URL → now behind the admin code; the member cookie is bounced from all of them, the admin cookie opens them |
 | 2026-10-09 | Vercel | — | ❌ not deployed; needs the owner to import the repo and set the two `NEXT_PUBLIC_*` vars |
 
 ## 3. Environment

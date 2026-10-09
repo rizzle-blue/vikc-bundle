@@ -7,8 +7,11 @@ A Next.js app (Refine + Ant Design + Supabase) for the Shakaijin Kendo Team's tr
 The purpose is small and specific: **each member enters the datetime they arrive and the datetime
 they leave**, and from those two values the app derives everything the organisers track.
 
-The site is behind **two shared access codes** (owner decision): the member code opens `/enroll`, the
-admin code opens `/admin`. It is a private-link gate, not accounts — see `docs/spec-events.md`.
+The site is behind **two shared access codes** (owner decision): the member code opens `/enroll`;
+the admin code opens everything else with data — `/track` (the board), `/admin` (the programme
+editor), the roster and registration screens. Only `/` and `/login` are public. It is a private-link
+gate, not accounts — the codes are set in `.env.local` (`MEMBER_ACCESS_CODE`, `ADMIN_ACCESS_CODE`)
+and in Vercel for production; changing them needs a redeploy. See `docs/spec-events.md`.
 
 | Page | Who | What |
 |---|---|---|

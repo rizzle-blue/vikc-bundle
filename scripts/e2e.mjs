@@ -19,7 +19,7 @@ const BASE = process.env.E2E_BASE ?? "http://localhost:3100";
 const MEMBER = process.env.MEMBER_ACCESS_CODE;
 const ADMIN = process.env.ADMIN_ACCESS_CODE;
 const TEST_MEMBER = process.env.E2E_MEMBER ?? "SKJ-198";
-const TEST_NAME = process.env.E2E_NAME ?? "Trương";
+const TEST_NAME = process.env.E2E_NAME ?? "SKJ-198"; // the AntD option label contains the member id
 
 let failures = 0;
 const check = (label, actual, expected) => {
@@ -57,6 +57,10 @@ try {
   check("gate: /enroll without a code → /login", path(), "/login");
   await page.goto(`${BASE}/admin`, { waitUntil: "networkidle" });
   check("gate: /admin without a code → /login", path(), "/login");
+  await page.goto(`${BASE}/track`, { waitUntil: "networkidle" });
+  check("gate: /track (names, times, rooms) → /login", path(), "/login");
+  await page.goto(`${BASE}/members`, { waitUntil: "networkidle" });
+  check("gate: /members (roster) → /login", path(), "/login");
 
   // 2. member signs in and checks in to events
   await login(MEMBER);
@@ -65,7 +69,9 @@ try {
   await page.locator("#member_id").click();
   await page.locator("#member_id").type(TEST_NAME, { delay: 40 });
   await page.waitForTimeout(1200);
-  await page.locator(".ant-select-item-option").first().click();
+  const option = page.locator(".ant-select-item-option", { hasText: TEST_MEMBER }).first();
+  check("the member option is offered", await option.isVisible({ timeout: 4000 }).catch(() => false), true);
+  await option.click();
   await page.waitForTimeout(2000);
   await page.locator("#arrival_at").click();
   await page.keyboard.type("18/11/2026 14:00", { delay: 40 });
@@ -91,15 +97,23 @@ try {
   const saved = (await page.locator(".ant-message-notice-content").first().textContent().catch(() => ""))?.trim();
   check("save confirms", saved, "Đã lưu. Cảm ơn bạn!");
 
-  // 3. a member cannot open the operator area
+  // 3. a member cannot open the operator areas
   await page.goto(`${BASE}/admin`, { waitUntil: "networkidle" });
   check("member → /admin is bounced", path(), "/login");
+  await page.goto(`${BASE}/track`, { waitUntil: "networkidle" });
+  check("member → /track is bounced", path(), "/login");
+  await page.goto(`${BASE}/trips`, { waitUntil: "networkidle" });
+  check("member → /trips is bounced", path(), "/login");
 
   // 4. operator signs in, sees the programme, exports the CSV
   await login(ADMIN);
   check("admin login sets the cookie", (await ctx.cookies()).map((c) => c.name).includes("vikc_admin"), true);
   await page.goto(`${BASE}/admin`, { waitUntil: "networkidle" });
   await page.waitForTimeout(2500);
+  await page.goto(`${BASE}/track`, { waitUntil: "networkidle" });
+  check("admin can open the board", path(), "/track");
+  await page.goto(`${BASE}/admin`, { waitUntil: "networkidle" });
+  await page.waitForTimeout(1500);
   const dashboard = await page.evaluate("document.body.innerText");
   check("dashboard lists the four team events", ["Đồng đội Nữ 3 người", "Đồng đội Nam 5 người"].every((t) => dashboard.includes(t)), true);
 
@@ -108,16 +122,18 @@ try {
     return { status: res.status, text: await res.text() };
   }, BASE);
   check("CSV export is allowed for the operator", csv.status, 200);
+  if (!csv.text.includes(TEST_MEMBER)) console.log("  csv was:", csv.text.replace(/\n/g, " ⏎ ").slice(0, 300));
   check("CSV contains the sign-up", csv.text.includes(TEST_MEMBER), true);
 
-  const denied = await page.evaluate(async (base) => {
+  // the operator route is reachable with the admin cookie and validates without writing anything
+  const validation = await page.evaluate(async (base) => {
     const res = await fetch(`${base}/api/admin/events`, {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ code: "nope", name_vi: "nope", kind: "other" }),
+      body: JSON.stringify({ code: "missing-name" }), // no name_vi → rejected, nothing inserted
     });
-    return res.status;
+    return { status: res.status, body: (await res.text()).slice(0, 120) };
   }, BASE);
-  check("operator route is open to the admin cookie", denied === 200 || denied === 400, true);
+  check("operator route validates with the admin cookie", validation.status, 400);
 } catch (e) {
   failures++;
   console.log("FAIL unexpected error:", String(e).slice(0, 300));

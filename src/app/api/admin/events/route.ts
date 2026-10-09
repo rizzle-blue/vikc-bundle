@@ -9,7 +9,10 @@ export async function POST(req: NextRequest) {
   const payload = eventPayload(body);
   if (!payload.code || !payload.name_vi) return bad("code và name_vi là bắt buộc");
   const { data, error } = await adminClient().from("events").insert(payload).select("id, code").single();
-  if (error) return fail(error);
+  if (error) {
+    if (/duplicate key/i.test(error.message)) return bad(`Mã sự kiện “${payload.code}” đã tồn tại`, 409);
+    return fail(error);
+  }
   return ok(data);
 }
 

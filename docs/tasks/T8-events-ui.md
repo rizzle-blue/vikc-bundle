@@ -44,7 +44,8 @@ nothing in the app uses it.
   fields) / common programme / Hà Nội dojo exchange, a live entry counter, and cancel-then-confirm
   saving (the anon key has no DELETE on sign-ups).
 - `/track`: registrations + events framing, entry distribution (1 vs 2 "nội dung"), event table.
-- `pnpm e2e`: repeatable browser check of the gate, a check-in and the CSV export.
+- `pnpm e2e`: repeatable browser check of the gate (including that the board and roster screens are
+  admin-only), a check-in and the CSV export. 18 checks, cleans up after itself.
 
 ## Done when
 
