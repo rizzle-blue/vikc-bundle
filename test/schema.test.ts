@@ -3,9 +3,9 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { PGlite } from "@electric-sql/pglite";
 import { beforeAll, describe, expect, it } from "vitest";
-import { deriveStay, headcountByDay, presenceDays, progressOf, vnDate, type TripRow } from "../src/index.js";
+import { deriveStay, headcountByDay, presenceDays, progressOf, vnDate, type TripRow } from "../src/lib/registration/index.js";
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const MIGRATIONS_DIR = join(ROOT, "supabase/migrations");
 const SEED = join(ROOT, "supabase/seed_members.sql");
 

@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   TAM_CHUC_NIGHTS, addDays, dayRange, daysUntil, deriveStay, headcountByDay, presenceDays,
   progressOf, summarize, vnDate, type TripRow,
-} from "../src/index.js";
+} from "../src/lib/registration/index.js";
 
 const row = (over: Partial<TripRow> = {}): TripRow => ({
   memberId: "SKJ-198",

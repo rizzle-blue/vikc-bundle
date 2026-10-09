@@ -1,6 +1,6 @@
 # T7 — Web app core: arrival/departure datetime + progress tracking
 
-**Read first:** [`docs/handoff.md`](../handoff.md) §1–2. Domain reference (categories, VKF fees,
+**Read first:** [`docs/handoff.md`](../handoff.md) §1–2, §4. Domain reference (categories, VKF fees,
 deadlines, the exact datetime requirements): the archived spreadsheet spec
 [`docs/archive/spreadsheet-track/spec-trip-registration.md`](../archive/spreadsheet-track/spec-trip-registration.md).
 **Status:** ✅ **built and verified** (2026-10-09) — schema live, `/enroll` + `/track` working against
@@ -59,6 +59,11 @@ Admins get one screen with those numbers. Everything else (fares, categories, fe
 - Nights = VN-calendar date difference; days = nights + 1.
 - Tam Chúc window 19–22/11, Hà Nội window 23–29/11 → extra Tam Chúc nights are the ones outside the
   VKF package night (package includes the Sat 21/11 night, per the parked spreadsheet decision).
+
+## Remaining
+
+- CSV export of the board (organisers want it for the payment/booking spreadsheets).
+- Optional later: fee estimation, agenda view.
 
 ## Steps
 

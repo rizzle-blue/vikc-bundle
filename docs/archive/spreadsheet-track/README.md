@@ -5,14 +5,14 @@ These documents describe the **pre-web plan**: generating a Google-Spreadsheet-b
 estimate · agenda), built by `tools/build_trip_registration.py`.
 
 The owner **dropped this track** in favour of the web migration
-([`../../docs/handoff.md`](../../handoff.md), [`../../status-web.md`](../../status-web.md)).
+([`../../docs/handoff.md`](../../handoff.md), [`../../status.md`](../../status.md)).
 
 - Frozen as of 2026-10-08. Do not maintain, extend or reference from new work.
 - The generator, the built workbook (`deliverables/`) and the reference sheets under
   `resources/` are left in place untouched; the corpus under `content/` and
   `tools/vikc-guide/` is still the source of trip facts.
 - Kept for history only; the equivalent capability is earmarked as the owner-gated
-  final step of the web migration (see `../../status-web.md` §1, step S5).
+  final step of the web migration (see `../../status.md` §1, step S5).
 
 | File | Was |
 |---|---|

@@ -7,7 +7,7 @@ import {
 } from "antd";
 import type { Dayjs } from "dayjs";
 import dayjs from "dayjs";
-import { TAM_CHUC_NIGHTS, WINDOW, deriveStay } from "@vikc/registration";
+import { TAM_CHUC_NIGHTS, WINDOW, deriveStay } from "@/lib/registration";
 import { supabase, supabaseConfigured } from "@/lib/supabase";
 
 const { Title, Paragraph, Text } = Typography;
@@ -30,7 +30,7 @@ type Values = {
 
 /**
  * The member-facing page: pick your name, enter when you arrive and when you leave.
- * Everything else (nights, days, which leg, headcount) is derived — see @vikc/registration.
+ * Everything else (nights, days, which leg, headcount) is derived — see @/lib/registration.
  * No login (decision 1a): writes go through the publishable key + RLS, so the link can edit rows.
  */
 export default function EnrollPage() {

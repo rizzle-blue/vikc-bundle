@@ -1,14 +1,38 @@
 {
   "name": "vikc-2026",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck",
-    "crawl": "pnpm --filter @vikc/flight-crawler crawl",
-    "fares": "pnpm --filter @vikc/flight-crawler fares",
-    "seed:members": "node scripts/gen-member-seed.mjs",
-    "dev": "pnpm --filter web dev",
-    "build:web": "pnpm --filter web build"
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "db:apply": "node scripts/db-apply.mjs",
+    "seed:members": "node scripts/gen-member-seed.mjs"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6",
+    "@ant-design/nextjs-registry": "^1",
+    "@ant-design/v5-patch-for-react-19": "^1",
+    "@refinedev/antd": "^6",
+    "@refinedev/core": "^5",
+    "@refinedev/nextjs-router": "^7",
+    "@refinedev/supabase": "^6",
+    "@supabase/supabase-js": "^2",
+    "antd": "^5",
+    "dayjs": "^1",
+    "next": "^16.4.0",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.0",
+    "@types/node": "^26",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^7",
+    "vitest": "^5"
   }
 }

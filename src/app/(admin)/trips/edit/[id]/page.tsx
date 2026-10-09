@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { Edit, useForm } from "@refinedev/antd";
 import { Alert, Descriptions, DatePicker, Form, Input, Select, Switch } from "antd";
 import dayjs, { type Dayjs } from "dayjs";
-import { deriveStay } from "@vikc/registration";
+import { deriveStay } from "@/lib/registration";
 
 const ROOM_TYPES = ["Đôi", "Ba", "Đơn"];
 const EXAM_GRADES = ["1 kyu", "1 dan", "2 dan", "3 dan", "4 dan", "5 dan"];

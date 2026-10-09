@@ -1,83 +1,54 @@
-# VIKC 2026 — user guide corpus
+# VIKC 2026 · Shakaijin trip registration
 
-Machine-readable version of the 1st Vietnam International Kendo Championships
-2026 user guide.
+A Next.js app (Refine + Ant Design + Supabase) for the Shakaijin Kendo Team's trip to the
+1st Vietnam International Kendo Championships 2026 — **Tam Chúc, Ninh Bình 19–22/11/2026** plus a
+**Hà Nội dojo exchange 23–29/11/2026**.
 
-> **Web migration in progress:** flight-fare crawler → Supabase → Vercel web app.
-> Start at [`docs/handoff.md`](docs/handoff.md) · status [`docs/status-web.md`](docs/status-web.md) ·
-> task board [`docs/tasks/`](docs/tasks/README.md) · engine spec
-> [`docs/spec-flight-crawler.md`](docs/spec-flight-crawler.md).
+The purpose is small and specific: **each member enters the datetime they arrive and the datetime
+they leave**, and from those two values the app derives everything the organisers track.
+
+| Page | Who | What |
+|---|---|---|
+| `/enroll` | members | pick your name, enter arrival + departure datetime, see nights/days instantly |
+| `/track` | organisers | members, filled/missing, total nights, headcount per day 18–30/11, deadlines |
+| `/members`, `/trips`, `/trips/edit/:id`, `/stay` | organisers | Refine CRUD on the roster, the trip rows, the edit form and the derived stay view |
+
+Derived from the two datetimes: nights and days (Vietnam calendar), which nights belong to the Tam
+Chúc leg (18–22/11) vs the Hà Nội leg (23–29/11), per-member progress, and headcount for every day.
+
+## Run
+
+```bash
+pnpm install
+cp .env.example .env.local     # fill in the two NEXT_PUBLIC_* values
+pnpm dev                       # http://localhost:3000
+pnpm test                      # domain rules + SQL views must agree (18 tests)
+pnpm typecheck
+```
+
+## Deploy
+
+Vercel → import this repository (root directory = the repo root), set
+`NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` (the **publishable** key — never the
+secret one), deploy. Share `/enroll` with the members and `/track` with the organisers.
 
 ## Layout
 
 | Path | What |
 |---|---|
-| `resources/user-guide/` | **source of truth** — the original PDFs and the registration workbook |
-| `content/user-guide/md/` | Markdown per document, structure preserved (headings, lists, tables) + YAML front matter |
-| `content/user-guide/json/` | block-level structure (type, page, bbox, table rows, heading outline) — the format to consume from code |
-| `content/user-guide/data/` | spreadsheet exports (CSV + JSON per sheet) |
-| `content/user-guide/assets/` | 300 dpi page renders of the scanned brochures |
-| `content/user-guide/schema.json` | JSON Schema for `json/*.json` |
-| `tools/vikc-guide/` | the conversion pipeline (`convert.py`, `ocr.swift`) |
+| `src/app/` | routes: `/`, `/enroll`, `/track` and the Refine admin screens under `(admin)/` |
+| `src/lib/supabase.ts` | the client the browser uses — publishable key, everything passes through RLS |
+| `src/lib/resources.ts` | the Refine resources (roster, trip rows, derived stay view) |
+| `src/lib/registration/` | the trip domain rules as pure functions: `deriveStay`, `presenceDays`, `headcountByDay`, `progressOf` |
+| `supabase/migrations/` | the schema: `members`, `member_trip`, derived views, grants, RLS |
+| `supabase/seed_members.sql` | the roster + one trip row per member (generated from `resources/members.json`) |
+| `scripts/db-apply.mjs` | applies migrations + seeds to the Supabase project (Management API) |
+| `scripts/gen-member-seed.mjs` | regenerates the roster seed after roster edits |
+| `test/` | vitest: the domain rules, plus a check that every SQL view matches them day by day |
+| `docs/` | [`handoff.md`](docs/handoff.md) · [`status.md`](docs/status.md) · [`tasks/`](docs/tasks/README.md) |
+| `resources/` | the roster (`members.json`) and the original user-guide PDFs |
+| `deprecated/` | parked earlier attempts — see [`deprecated/README.md`](deprecated/README.md) |
 
-Start at [`content/user-guide/README.md`](content/user-guide/README.md) for the
-document index, and [`tools/vikc-guide/README.md`](tools/vikc-guide/README.md)
-for how the conversion works and how to add a document.
-
-## Documents
-
-| ID | Document | Extracted from |
-|---|---|---|
-| 01 | Chương trình / programme | embedded text layer |
-| 02 | Entry fee — VKF members | embedded text layer |
-| 03 | Entry fee — non-VKF members | embedded text layer |
-| 04 | Điều lệ / regulations | embedded text layer |
-| 05 | Kyu/Dan exam info & application form | embedded text layer |
-| 06 | Payment instructions | embedded text layer |
-| 07 | Tam Chúc 1-day tour | OCR (macOS Vision) |
-| 08 | The venue — Tam Chúc | OCR (macOS Vision) |
-| 09 | Kyu/Dan registration workbook | openpyxl → CSV/JSON |
-| 10 | Bản đồ Tam Chúc / site map | OCR (macOS Vision) |
-
-## Refresh
-
-```bash
-python3 -m venv .venv
-.venv/bin/pip install -r tools/vikc-guide/requirements.txt
-.venv/bin/python tools/vikc-guide/convert.py --force
-.venv/bin/python tools/vikc-guide/convert.py --check   # fails if artefacts are stale
-```
-
-Conversion is incremental: a document is rebuilt only when its source file's
-sha256 changes. Regenerating never touches `resources/`.
-
-## Web migration (active work)
-
-The trip tooling is moving to a **web app on Vercel** (Supabase for data): the entry point where
-Shakaijin members **enroll in the trip, register their categories and see their estimated cost** —
-plus a view of current SGN↔HAN fares. A TypeScript crawler collects those fares on demand
-(`pnpm crawl`); it runs when the owner triggers it, with no scheduler anywhere.
-
-```bash
-pnpm install && pnpm test && pnpm typecheck
-pnpm dev                            # the app → http://localhost:3000  (/enroll, /track)
-pnpm crawl                          # one crawl → Supabase
-pnpm fares                          # cheapest fare per registered search
-node scripts/db-apply.mjs           # apply migrations + seeds to the Supabase project
-pnpm seed:members                   # regenerate the roster seed from resources/members.json
-```
-
-The app (`apps/web`) is **Refine + Ant Design on Next.js**: `/enroll` where a member picks their name
-and enters the datetime they arrive and leave, `/track` for the admin board (headcount per day
-18–30/11, progress, deadlines), plus ready-made CRUD screens for the roster and trip rows.
-
-- [`docs/handoff.md`](docs/handoff.md) — **start here to continue the work**
-- [`docs/status-web.md`](docs/status-web.md) — step/task status + verification evidence
-- [`docs/tasks/`](docs/tasks/README.md) — one card per task (T7 = the app members use)
-- [`docs/spec-flight-crawler.md`](docs/spec-flight-crawler.md) — crawler engine spec
-
-**Dropped tracks:** the earlier Google-Spreadsheet deliverable
-(`tools/build_trip_registration.py`, `deliverables/`) is frozen and unmaintained — see
-[`docs/archive/spreadsheet-track/`](docs/archive/spreadsheet-track/README.md) (its spec still holds
-the enrollment/cost domain rules for the web app). SerpApi was dropped in favour of first-party
-sources (Vietnam Airlines public endpoint + a VietJet browser adapter).
+Identity: **no login** — a member picks their name from the roster, so anyone with the link can edit
+any row. That is a deliberate choice for a 22-person club tool (the page says so). The anon key may
+read the roster and write trip rows; `members` itself is read-only.

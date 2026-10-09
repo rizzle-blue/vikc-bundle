@@ -3,9 +3,7 @@ import path from "node:path";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // @vikc/registration is consumed as TypeScript source (the workspace package has no build step)
-  transpilePackages: ["@vikc/registration"],
-  // `@/…` alias + `.js`→`.ts` mapping for the NodeNext workspace packages.
+  // `@/…` alias + `.js`→`.ts` mapping for the NodeNext-style relative imports in src/lib.
   // (webpack is used explicitly: `next build --webpack`.)
   webpack: (config) => {
     config.resolve.alias = { ...(config.resolve.alias ?? {}), "@": path.resolve(import.meta.dirname, "src") };

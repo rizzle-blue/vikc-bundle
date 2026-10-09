@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Alert, Card, Col, Progress, Row, Statistic, Table, Tag, Typography } from "antd";
-import { DEADLINES, daysUntil } from "@vikc/registration";
+import { DEADLINES, daysUntil } from "@/lib/registration";
 import { supabase, supabaseConfigured } from "@/lib/supabase";
 
 const { Title, Paragraph, Text } = Typography;

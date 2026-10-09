@@ -1,4 +1,4 @@
-# T3 — `apps/web`: Next.js app + fares page on Vercel
+# T3 — Deploy the app to Vercel
 
 **Read first:** [`docs/handoff.md`](../handoff.md) §2 (Product), §4. Requires T1 (data in Supabase).
 Status: ✅ **built** (2026-10-09) — `apps/web` on Refine + AntD + Next 16, all routes green, member
@@ -9,17 +9,15 @@ flow and board verified end-to-end. Remaining: the Vercel deploy (owner).
 The app skeleton on Vercel, with the read-only fares view: what SGN↔HAN costs on the trip dates
 and how prices move. Vietnamese UI. Free Vercel Hobby deploy.
 
-## Scope (MVP)
-- `/` — one card per active `flight_searches` row (use `label`): cheapest current
-  price per provider from `cheapest_by_date` (match exact depart/return date),
-  "cập nhật lúc …" from latest `crawl_runs.finished_at`.
-- `/search/[id]` —
-  - table of `latest_fares` for that search: airline, flight no., giờ đi/đến (Asia/Ho_Chi_Minh),
-    stops, price VND (`Intl.NumberFormat('vi-VN')`), provider; sorted by price.
-  - VNA calendar searches: 7×7 grid (depart × return) of `price_vnd`, cheapest cell highlighted.
-  - price history: minimum `price_vnd` from `fare_offers` grouped by `fetched_hour` (one row per
-    offer per VN clock hour) or by day for a longer window (simple line chart).
-- Footer: data sources + "giá tham khảo, không phải giá đặt vé".
+## Scope
+
+- Import the repository into Vercel (Hobby), **root directory = the repo root**.
+- Environment variables: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` (the
+  **publishable** key — never the secret one).
+- Framework detection: Next.js; the build command is `next build --webpack` (already in
+  `package.json`).
+- Verify after deploy: `/` loads, `/enroll` lists the 22 members and saves a test datetime, `/track`
+  shows the headcount board. Then reset the test row.
 
 ## Tech
 - `pnpm create next-app@latest apps/web --ts --app --tailwind --eslint --src-dir --use-pnpm`
@@ -41,7 +39,7 @@ and how prices move. Vietnamese UI. Free Vercel Hobby deploy.
 - `pnpm --filter web build` passes; `pnpm test` still green.
 - Locally `pnpm web` shows the 6 searches with real prices from Supabase.
 - Empty states handled (no runs yet, provider blocked, no offers).
-- Owner gets the Vercel preview URL, and [`docs/status-web.md`](../status-web.md) §1–§3 are updated.
+- Owner gets the Vercel preview URL, and [`status.md`](../status.md) is updated.
 
 ## Don't
 - No service-role key anywhere in `apps/web`. No auth/login in MVP. No booking links that
