@@ -182,6 +182,13 @@ Use the project's **secret** key (`sb_secret_…`) for `SUPABASE_SERVICE_ROLE_KE
   `export const dynamic = "force-dynamic"`.
 - **`member_trip` has no `id` column** — its key is `member_id`, so every Refine hook needs
   `meta: { idColumnName: "member_id" }`.
+- **Commits are SSH-signed through 1Password.** A non-interactive shell (agent, CI, tool runner)
+  often gets a launchd `SSH_AUTH_SOCK` with no identities → `1Password: failed to fill whole buffer`
+  when signing, or an auth failure on push. Fix: export the 1Password socket first, and retry once
+  (the first signature request can time out):
+  `export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"`.
+  `git ls-remote origin` is a quick way to check whether auth works while signing does not.
+- **`next build` leaves `.next/` and `*.tsbuildinfo`** — both are git-ignored; keep it that way.
 
 - **Bot-protection boundary is a hard rule** (§2). A blocked site is a *finding*, not a puzzle.
 - **Runs are manual.** Nothing collects fares unless someone runs it. `./scripts/crawl.sh status`
