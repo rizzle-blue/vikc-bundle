@@ -178,6 +178,86 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
     expect(day(rows[0]!.d)).toBe("2026-11-18");
   });
 
+  it("stores the VKF paperwork and reports what is still missing", async () => {
+    await db.query(
+      `insert into public.member_profiles
+         (member_id, full_name_latin, full_name_kanji, use_kanji_on_certificate, national_id, address,
+          occupation, emergency_contact, current_rank, current_rank_issued_on, current_rank_issued_by,
+          current_rank_photo_url, dojo_name, certificate_mailing_address)
+       values ('SKJ-198', 'TRUONG HUA DAN', '張 華 民', true, '012345678901', '123 Đường ABC, Quận 1',
+               'Kỹ sư', 'Nguyễn Thị B — 0901234567', '4 dan', date '2023-01-01', 'VKF',
+               'https://drive.google.com/file/d/x/view', 'Shakaijin', 'CLB Shakaijin')
+       on conflict (member_id) do update set full_name_latin = excluded.full_name_latin`,
+    );
+    const complete = await db.query<{ missing_fields: number; full_name_latin: string }>(
+      `select missing_fields, full_name_latin from public.v_member_profile where member_id = 'SKJ-198'`,
+    );
+    expect(complete.rows[0]).toEqual({ missing_fields: 0, full_name_latin: "TRUONG HUA DAN" });
+
+    // the photo of the current certificate is one of VKF's required columns
+    await db.exec(`update public.member_profiles set current_rank_photo_url = null where member_id = 'SKJ-198'`);
+    const missing = await db.query<{ missing_fields: number }>(
+      `select missing_fields from public.v_member_profile where member_id = 'SKJ-198'`,
+    );
+    expect(missing.rows[0]?.missing_fields).toBe(1);
+    await db.exec(`update public.member_profiles
+                     set current_rank_photo_url = 'https://drive.google.com/file/d/x/view'
+                   where member_id = 'SKJ-198'`);
+  });
+
+  it("builds the exam submission row VKF's workbook will read, and hides withdrawn entries", async () => {
+    const examEvent = await db.query<{ id: number }>(`select id from public.events where code = 'exam'`);
+    const eventId = examEvent.rows[0]!.id;
+    await db.query(
+      `insert into public.exam_entries
+         (member_id, event_id, grade_applied, current_rank, current_rank_issued_on, current_rank_issued_by, dojo_approved)
+       values ('SKJ-198', $1, '4 dan', '3 dan', date '2021-05-05', 'VKF', true)
+       on conflict (member_id, event_id) do update set grade_applied = excluded.grade_applied`,
+      [eventId],
+    );
+    const { rows } = await db.query<Record<string, unknown>>(
+      `select member_id, full_name_latin, full_name_kanji, grade_applied, current_rank,
+              current_rank_issued_on, dojo_approved, vkf_member, vkf_fee_bracket, room_type, nights
+         from public.v_exam_submission where member_id = 'SKJ-198'`,
+    );
+    expect(rows).toHaveLength(1);
+    expect(rows[0]).toMatchObject({
+      member_id: "SKJ-198",
+      full_name_latin: "TRUONG HUA DAN",
+      full_name_kanji: "張 華 民",
+      grade_applied: "4 dan",
+      current_rank: "3 dan",          // the entry snapshots the grade paperwork
+      dojo_approved: true,
+      vkf_member: true,
+      vkf_fee_bracket: true,          // VKF members pay the lower exam fee
+      room_type: "Đôi",               // comes from the trip registration
+      nights: 4,
+    });
+
+    // the Kanji name only appears on the submission when the member asked for it on the certificate
+    await db.exec(`update public.member_profiles set use_kanji_on_certificate = false where member_id = 'SKJ-198'`);
+    const withoutKanji = await db.query<{ full_name_kanji: string | null }>(
+      `select full_name_kanji from public.v_exam_submission where member_id = 'SKJ-198'`,
+    );
+    expect(withoutKanji.rows[0]?.full_name_kanji).toBeNull();
+    await db.exec(`update public.member_profiles set use_kanji_on_certificate = true where member_id = 'SKJ-198'`);
+
+    await db.exec(`update public.exam_entries set withdrawn = true where member_id = 'SKJ-198'`);
+    const withdrawn = await db.query(`select 1 from public.v_exam_submission where member_id = 'SKJ-198'`);
+    expect(withdrawn.rows).toHaveLength(0);
+    await db.exec(`update public.exam_entries set withdrawn = false where member_id = 'SKJ-198'`);
+  });
+
+  it("lets the anon key fill the paperwork but keeps the roster read-only", async () => {
+    const { rows } = await db.query<{ profiles: boolean; exams: boolean; members_update: boolean; events_insert: boolean }>(
+      `select has_table_privilege('anon','public.member_profiles','insert') as profiles,
+              has_table_privilege('anon','public.exam_entries','insert')   as exams,
+              has_table_privilege('anon','public.members','update')        as members_update,
+              has_table_privilege('anon','public.events','insert')         as events_insert`,
+    );
+    expect(rows[0]).toEqual({ profiles: true, exams: true, members_update: false, events_insert: false });
+  });
+
   it("rejects a departure before the arrival", async () => {
     await expect(
       db.query(`update public.registrations set arrival_at = timestamptz '2026-11-20T10:00:00+07',

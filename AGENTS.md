@@ -5,11 +5,13 @@ VIKC 2026 trip. Members enter the datetime they arrive and the datetime they lea
 nights, days and a per-day headcount, and organisers track progress against the deadlines.
 
 Start here: [`docs/handoff.md`](docs/handoff.md) → [`docs/status.md`](docs/status.md) →
-[`docs/tasks/`](docs/tasks/README.md).
+[`docs/tasks/`](docs/tasks/README.md). Domain specs: [`docs/spec-events.md`](docs/spec-events.md)
+(events + access codes) and [`docs/spec-member-registration.md`](docs/spec-member-registration.md)
+(the VKF paperwork VKF's workbook asks for and the exam submission).
 
 ```bash
 pnpm install
-pnpm test             # 18 tests: domain rules + SQL view agreement — must stay green
+pnpm test             # 33 tests: trip rules, exam eligibility, events, SQL views — must stay green
 pnpm typecheck
 pnpm dev              # http://localhost:3000  (/login → /enroll for members, /admin + /track for organisers)
 pnpm e2e              # browser smoke test (needs `pnpm start -p 3100` running)

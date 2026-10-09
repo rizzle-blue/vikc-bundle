@@ -7,15 +7,20 @@ import {
 } from "antd";
 import type { Dayjs } from "dayjs";
 import dayjs from "dayjs";
-import { TAM_CHUC_NIGHTS, WINDOW, deriveStay } from "@/lib/registration";
+import { TAM_CHUC_NIGHTS, WINDOW, deriveStay, missingProfileFields } from "@/lib/registration";
 import { supabase, supabaseConfigured } from "@/lib/supabase";
 import EventCheckins from "./EventCheckins";
+import ProfileFields from "./ProfileFields";
+import ExamFields from "./ExamFields";
 import type { EventRow, Selection, SessionRow } from "./types";
 
 const { Title, Paragraph, Text } = Typography;
 const ROOM_TYPES = ["Đôi", "Ba", "Đơn"];
 
 type Member = { id: string; full_name: string; rank: string | null };
+type Profile = Record<string, unknown> & { current_rank_issued_on?: string | null };
+/** Roster facts the form needs for the exam eligibility check. */
+type MemberInfo = { date_of_birth: string | null; rank: string | null; vkf_id: string | null };
 type Values = {
   member_id: string;
   arrival_at: Dayjs | null;
@@ -40,6 +45,8 @@ export default function EnrollForm() {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [savedAt, setSavedAt] = useState<string | null>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [info, setInfo] = useState<MemberInfo | null>(null);
 
   useEffect(() => {
     if (!supabaseConfigured) return;
@@ -67,7 +74,7 @@ export default function EnrollForm() {
     setLoading(true);
     setError(null);
     try {
-      const [trip, evs, counts, sess, mine] = await Promise.all([
+      const [trip, evs, counts, sess, mine, prof, member] = await Promise.all([
         supabase.from("registrations").select("*").eq("member_id", id).maybeSingle(),
         supabase
           .from("events")
@@ -77,8 +84,10 @@ export default function EnrollForm() {
         supabase.from("v_event_signup_counts").select("event_id, signups"),
         supabase.from("event_sessions").select("id, event_id, starts_at, title").order("starts_at"),
         supabase.from("event_signups").select("event_id, session_id, answers, status").eq("member_id", id),
+        supabase.from("member_profiles").select("*").eq("member_id", id).maybeSingle(),
+        supabase.from("members").select("date_of_birth, rank, vkf_id").eq("id", id).maybeSingle(),
       ]);
-      const firstError = trip.error ?? evs.error ?? counts.error ?? sess.error ?? mine.error;
+      const firstError = trip.error ?? evs.error ?? counts.error ?? sess.error ?? mine.error ?? prof.error ?? member.error;
       if (firstError) setError(firstError.message);
 
       form.setFieldsValue({
@@ -88,6 +97,38 @@ export default function EnrollForm() {
         roommate: trip.data?.roommate ?? null,
         notes: trip.data?.notes ?? null,
       });
+
+      // paperwork: profile + the exam entry that belongs to the exam event
+      const profileRow = (prof.data ?? null) as Profile | null;
+      setProfile(profileRow);
+      setInfo((member.data ?? null) as MemberInfo | null);
+      const examEvent = (evs.data ?? []).find((e) => e.kind === "exam");
+      const examEntry = examEvent
+        ? (await supabase.from("exam_entries").select("*")
+            .eq("member_id", id).eq("event_id", examEvent.id).eq("withdrawn", false).maybeSingle()).data
+        : null;
+      form.setFieldsValue({
+        full_name_latin: (profileRow?.full_name_latin as string) ?? "",
+        full_name_kanji: (profileRow?.full_name_kanji as string) ?? "",
+        use_kanji_on_certificate: Boolean(profileRow?.use_kanji_on_certificate),
+        national_id: (profileRow?.national_id as string) ?? "",
+        nationality: (profileRow?.nationality as string) ?? "Việt Nam",
+        occupation: (profileRow?.occupation as string) ?? "",
+        address: (profileRow?.address as string) ?? "",
+        dojo_name: (profileRow?.dojo_name as string) ?? "Shakaijin",
+        emergency_contact: (profileRow?.emergency_contact as string) ?? "",
+        certificate_mailing_address: (profileRow?.certificate_mailing_address as string) ?? "",
+        exam_grade_applied: (examEntry?.grade_applied as string) ?? undefined,
+        exam_also_shodan: Boolean(examEntry?.also_shodan),
+        exam_current_rank: (examEntry?.current_rank as string) ?? (member.data?.rank as string) ?? "",
+        exam_current_rank_issued_on: examEntry?.current_rank_issued_on
+          ? dayjs(examEntry.current_rank_issued_on as string)
+          : profileRow?.current_rank_issued_on
+            ? dayjs(profileRow.current_rank_issued_on as string)
+            : null,
+        exam_current_rank_issued_by: (examEntry?.current_rank_issued_by as string) ?? (profileRow?.current_rank_issued_by as string) ?? "",
+        exam_dojo_approved: Boolean(examEntry?.dojo_approved),
+      } as never);
 
       const signups = (counts.data ?? []) as { event_id: number; signups: number }[];
       setEvents(
@@ -141,6 +182,16 @@ export default function EnrollForm() {
 
   const entryCount = events.filter((e) => e.counts_as_entry && selections[e.event_id]?.checked).length;
 
+  // exam-specific fields (typed, not the generic form_schema): the grade drives the VKF fee bracket
+  const examEvent = events.find((e) => e.kind === "exam");
+  const examChecked = Boolean(examEvent && selections[examEvent.event_id]?.checked);
+  const examValues = {
+    exam_grade_applied: Form.useWatch<string | undefined>("exam_grade_applied", form) as string | undefined,
+    exam_current_rank: Form.useWatch<string | undefined>("exam_current_rank", form) as string | undefined,
+    exam_current_rank_issued_on: Form.useWatch<Dayjs | null>("exam_current_rank_issued_on", form) as Dayjs | null,
+  };
+  const profileMissing = missingProfileFields(profile as Record<string, unknown> | null).length;
+
   const save = async (values: Values) => {
     if (!values.member_id) {
       void message.warning("Chọn tên của bạn trước.");
@@ -162,6 +213,37 @@ export default function EnrollForm() {
         { onConflict: "member_id" },
       );
       if (trip.error) throw trip.error;
+
+      // VKF paperwork (reused by every form the club submits)
+      const raw = values as unknown as Record<string, unknown>;
+      const text = (key: string) => {
+        const v = raw[key];
+        return typeof v === "string" && v.trim() !== "" ? v.trim() : null;
+      };
+      const profileUpsert = await supabase.from("member_profiles").upsert(
+        {
+          member_id: values.member_id,
+          full_name_latin: text("full_name_latin"),
+          full_name_kanji: text("full_name_kanji"),
+          use_kanji_on_certificate: raw.use_kanji_on_certificate === true,
+          national_id: text("national_id"),
+          nationality: text("nationality"),
+          address: text("address"),
+          occupation: text("occupation"),
+          dojo_name: text("dojo_name"),
+          emergency_contact: text("emergency_contact"),
+          certificate_mailing_address: text("certificate_mailing_address"),
+          current_rank_photo_url: text("current_rank_photo_url"),
+          current_rank: text("exam_current_rank") ?? profile?.current_rank ?? null,
+          current_rank_issued_on: examValues.exam_current_rank_issued_on
+            ? examValues.exam_current_rank_issued_on.format("YYYY-MM-DD")
+            : (profile?.current_rank_issued_on as string | null) ?? null,
+          current_rank_issued_by: text("exam_current_rank_issued_by"),
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: "member_id" },
+      );
+      if (profileUpsert.error) throw profileUpsert.error;
 
       // Events: the member may cancel and re-check, but the anon key has no DELETE on sign-ups
       // (by design — the row is a record). So: cancel everything shown, then confirm what is ticked.
@@ -191,6 +273,37 @@ export default function EnrollForm() {
           .upsert(rows, { onConflict: "event_id,member_id,session_id" });
         if (ins.error) throw ins.error;
       }
+      // the exam entry: typed row for the VKF submission, withdrawn when the member unticks it
+      if (examEvent) {
+        if (examChecked) {
+          const grade = text("exam_grade_applied");
+          if (!grade) throw new Error("Thi Kyu/Dan cần chọn cấp đẳng đăng ký thi.");
+          const entry = await supabase.from("exam_entries").upsert(
+            {
+              member_id: values.member_id,
+              event_id: examEvent.event_id,
+              grade_applied: grade,
+              also_shodan: grade === "1 kyu" && raw.exam_also_shodan === true,
+              current_rank: text("exam_current_rank") ?? info?.rank ?? null,
+              current_rank_issued_on: examValues.exam_current_rank_issued_on
+                ? examValues.exam_current_rank_issued_on.format("YYYY-MM-DD")
+                : null,
+              current_rank_issued_by: text("exam_current_rank_issued_by"),
+              dojo_approved: raw.exam_dojo_approved === true,
+              withdrawn: false,
+              updated_at: new Date().toISOString(),
+            },
+            { onConflict: "member_id,event_id" },
+          );
+          if (entry.error) throw entry.error;
+        } else {
+          const withdraw = await supabase.from("exam_entries")
+            .update({ withdrawn: true, updated_at: new Date().toISOString() })
+            .eq("member_id", values.member_id).eq("event_id", examEvent.event_id);
+          if (withdraw.error) throw withdraw.error;
+        }
+      }
+
       setSavedAt(new Date().toISOString());
       void message.success("Đã lưu. Cảm ơn bạn!");
     } catch (e) {
@@ -262,6 +375,8 @@ export default function EnrollForm() {
           </Card>
         )}
 
+        {loaded && <ProfileFields mustFill={profileMissing} />}
+
         {loaded && (
           <>
             <Divider orientation="left" plain>Phòng & ghi chú</Divider>
@@ -301,6 +416,15 @@ export default function EnrollForm() {
               onAnswer={setAnswer}
               disabled={saving}
             />
+            {examChecked && (
+              <ExamFields
+                values={examValues}
+                dateOfBirth={info?.date_of_birth ?? null}
+                rosterRank={info?.rank ?? null}
+                vkfMember={Boolean(info?.vkf_id)}
+                examDate={examEvent?.starts_at ?? null}
+              />
+            )}
           </>
         )}
 

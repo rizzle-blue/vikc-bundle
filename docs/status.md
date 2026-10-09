@@ -1,7 +1,7 @@
 # STATUS — VIKC 2026 Shakaijin trip app
 
 Handoff: [`handoff.md`](handoff.md) · Task board: [`tasks/README.md`](tasks/README.md)
-Last updated: **2026-10-09** (Events UI live: gate + operator editor + member check-in)
+Last updated: **2026-10-09** (member paperwork + exam submission live — the VKF registration data)
 
 Single source of truth for where the project stands. Update it whenever a card finishes or a check
 changes.
@@ -22,8 +22,13 @@ changes.
 | Operator area: dashboard, event editor, sessions, sign-up lists, `expected` toggle, CSV exports | ✅ done (T8) |
 | Member check-in: per-event/session checkboxes, exam `form_schema` fields, live entry counter | ✅ done (T8) |
 | Board reframed around registrations + events | ✅ done (T8) |
+| **Member paperwork** for VKF (`member_profiles`: latin/Kanji name, CCCD, address, occupation, dojo, emergency contact, mailing address, current grade + date/issuer/photo) | ✅ live + in the form |
+| **Exam submission** (`exam_entries`: grade applied, 1 kyu→shodan, snapshot of the grade paperwork, dojo approval, withdrawable) | ✅ live + in the form |
+| Eligibility guidance against VKF's table (min age, training period per dan) | ✅ shown live in the form (`checkEligibility`) |
+| **VKF workbook export** (the club's submission to `vikc@vietnamkendo.com`) | ⏳ T9 — next |
 | Vercel deploy + member link handed out (**needs `SUPABASE_SERVICE_ROLE_KEY` + the two codes in Vercel env**) | ⏳ T3 (owner) |
 | CSV export for the organisers | ⏳ small, unstarted |
+| VKF submission export (CSV in their column order) | ⏳ T9 |
 | Fee/cost estimation in the app | 🔒 later (D10): the model already carries the inputs (entry count, room type, exam grade, extras) |
 | Teams (assignment for team 3 / team 5) | 🔒 later (C7): members mark interest today; four separate events encode the gender/size |
 
@@ -58,6 +63,10 @@ Reproducible with the commands in the handoff §0; record the date and the obser
 | 2026-10-09 | Operator area | same run | ✅ dashboard lists the programme, CSV export returns 200 with the sign-up, `POST /api/admin/events` allowed for the admin cookie |
 | 2026-10-09 | E2E as a repeatable check | `pnpm e2e` (playwright devDependency) | ✅ 18 checks, cleans up its own rows |
 | 2026-10-09 | Access gate completeness | `pnpm e2e` | ✅ `/track`, `/members`, `/trips`, `/stay` were open to anyone with the URL → now behind the admin code; the member cookie is bounced from all of them, the admin cookie opens them |
+| 2026-10-09 | Paperwork + exam rules | `pnpm test` | ✅ 33 tests — eligibility per dan (ages 13/14/16/19/23 and 1/2/3/4-year training periods), the missing certificate-date nudge, the foreign-candidate 1 kyu note, the 8 required VKF fields |
+| 2026-10-09 | Paperwork storage + submission view | same | ✅ `v_member_profile.missing_fields` counts down as fields are filled (photo included); `v_exam_submission` snapshots the grade paperwork, hides withdrawn entries, marks the VKF fee bracket and carries the trip's room/nights |
+| 2026-10-09 | Member form (real browser → live DB) | `pnpm e2e` | ✅ 23 checks — fills the whole VKF paperwork + exam fields, then the submission row reads back: grade `3 dan`, latin name, certificate date, dojo approval, 0 missing fields; the test cleans up |
+| 2026-10-09 | Login robustness | `pnpm e2e` (repeated) | ✅ found a hydration race: clicking "Vào" before React hydrated did a native POST — no cookie, no message. The button is now disabled until hydration |
 | 2026-10-09 | Vercel | — | ❌ not deployed; needs the owner to import the repo and set the two `NEXT_PUBLIC_*` vars |
 
 ## 3. Environment

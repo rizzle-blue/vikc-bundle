@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { Alert, Button, Card, Input, Space, Typography } from "antd";
 import { signIn, type LoginState } from "./actions";
 
@@ -12,6 +12,10 @@ const { Title, Paragraph } = Typography;
  */
 export default function LoginForm({ next }: { next: string }) {
   const [state, formAction, pending] = useActionState<LoginState, FormData>(signIn, null);
+  // Until React has hydrated, a submit would be a *native* form post — no server action, no cookie,
+  // and the user sees nothing happen. Keep the button disabled for that instant.
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
 
   return (
     <Card style={{ maxWidth: 420, margin: "64px auto" }}>
@@ -24,7 +28,9 @@ export default function LoginForm({ next }: { next: string }) {
         <input type="hidden" name="next" value={next} />
         <Space direction="vertical" style={{ width: "100%" }} size={12}>
           <Input.Password name="code" size="large" placeholder="Mã truy cập" autoFocus autoComplete="off" required />
-          <Button type="primary" htmlType="submit" size="large" loading={pending}>Vào</Button>
+          <Button type="primary" htmlType="submit" size="large" loading={pending || !ready} disabled={!ready}>
+            Vào
+          </Button>
         </Space>
       </form>
       <Paragraph type="secondary" style={{ marginTop: 16, fontSize: 12 }}>

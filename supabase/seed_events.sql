@@ -19,9 +19,7 @@ values
   ('exam', 'Kỳ thi Kyu/Dan', 'Kyu/Dan examination',
    'exam', timestamptz '2026-11-20 08:00:00+07', timestamptz '2026-11-20 17:00:00+07',
    'Trung tâm Hội nghị Quốc tế Vesak, Tam Chúc', false, false, null, false, null, null,
-   '[{"name":"grade","label":"Kyu/Dan đăng ký thi","type":"select","required":true,"options":["1 kyu","1 dan","2 dan","3 dan","4 dan","5 dan"]},
-     {"name":"kanji_name","label":"Họ tên chữ Hán (để in bằng)","type":"text","required":false},
-     {"name":"certificate_kanji","label":"Bằng có in tên Kanji?","type":"boolean","required":false}]',
+   null,
    30, 'Check-in 7:00, thi 8:00–17:00. Lệ phí theo cấp đẳng (bảng phí riêng). Thí sinh 1 Kyu có thể thi tiếp Shodan.'),
 
   ('team3-nu', 'Đồng đội Nữ 3 người', 'Women''s team of 3',
@@ -58,3 +56,7 @@ join (values
   ('godo', timestamptz '2026-11-22 17:30:00+07', timestamptz '2026-11-22 18:30:00+07', 'Godo Keiko — ngày 3', 'Tam Chúc')
 ) as s(code, starts_at, ends_at, title, venue) on s.code = e.code
 on conflict (event_id, starts_at, title) do nothing;
+
+-- The exam is collected with typed fields (exam_entries + member_profiles) rather than the generic
+-- form_schema, so clear any schema an earlier seed may have written.
+update public.events set form_schema = null where code = 'exam' and form_schema is not null;

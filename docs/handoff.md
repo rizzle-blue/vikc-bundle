@@ -85,7 +85,10 @@ those two values or optional.
 | `src/lib/registration/{trip,stay}.ts` | the domain rules: `vnDate`, `deriveStay`, `presenceDays`, `headcountByDay`, `progressOf`, `summarize`, `daysUntil` |
 | `supabase/migrations/` | `…_flights` (parked crawler tables), `…_registration`, `…_grants`, `…_stay_outside_nights`, `…_events`, `…_event_view_grants` |
 | `supabase/seed_events.sql` | the VIKC programme as operator-editable events (idempotent, never overwrites edits) |
-| `src/lib/registration/` | the trip rules (nights, days, headcount, progress) — `events` will reuse them |
+| `docs/spec-member-registration.md` | the field inventory VKF requires, the paperwork model and the exam submission design |
+| `src/lib/registration/` | the trip rules (nights, days, headcount, progress) **and the exam rules** (`checkEligibility`, `EXAM_GRADES`, `VKF_REQUIRED_PROFILE_FIELDS`) |
+| `src/app/enroll/ProfileFields.tsx` | the paperwork VKF asks for (latin/Kanji name, CCCD, address, occupation, dojo, emergency contact, mailing address, certificate photo link) |
+| `src/app/enroll/ExamFields.tsx` | the exam questions + live eligibility guidance |
 | `supabase/seed.sql`, `seed_members.sql` | the 6 fare searches (legacy) and the roster + empty trip rows |
 | `scripts/db-apply.mjs`, `gen-member-seed.mjs` | apply SQL to the project; regenerate the roster seed |
 | `test/schema.test.ts` | applies **all** migrations on PGlite and compares every view against the TS rules |
@@ -116,6 +119,9 @@ those two values or optional.
 - **Refine + App Router**: the provider reads `useSearchParams`, so it sits inside a `<Suspense>`
   boundary; AntD does not prerender cleanly under RSC, so the root layout sets
   `export const dynamic = "force-dynamic"` (everything is a client component with live data anyway).
+- **Clicking before hydration does nothing** (found via a flaky login): a `<form action={serverAction}>`
+  submitted before React hydrates falls back to a native POST — no cookie, no error, silently
+  ignored. Keep submit buttons disabled until `useEffect` has run (see `LoginForm`).
 - **`member_trip` has no `id`** — pass `meta: { idColumnName: "member_id" }` to Refine hooks.
 - **AntD `Form` does not forward `action`** to the underlying form, so a server action never runs:
   the login form uses a plain `<form action={formAction}>` with `useActionState`.
@@ -138,7 +144,8 @@ those two values or optional.
 
 ## 6. Task board
 
-[`docs/tasks/README.md`](tasks/README.md) — currently: **T3** (deploy to Vercel — needs
+[`docs/tasks/README.md`](tasks/README.md) — currently: **T9** (the VKF submission export), **T3**
+(deploy to Vercel — needs
 `SUPABASE_SERVICE_ROLE_KEY`, `MEMBER_ACCESS_CODE` and `ADMIN_ACCESS_CODE` in the Vercel env) and
 **T7** (the app). T8 (Events UI) is done; its card records what was built. Done and parked cards live in
 [`../deprecated/tasks/`](../deprecated/tasks/).

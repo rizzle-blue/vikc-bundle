@@ -36,7 +36,10 @@ const path = () => new URL(page.url()).pathname;
 async function login(code) {
   await page.goto(`${BASE}/login`, { waitUntil: "networkidle" });
   await page.locator("input[name=code]").fill(code);
-  await page.getByRole("button", { name: "Vào" }).click();
+  const enter = page.getByRole("button", { name: "Vào" });
+  await enter.waitFor({ state: "visible" });
+  for (let i = 0; i < 40 && (await enter.isDisabled()); i++) await page.waitForTimeout(100);
+  await enter.click();
   await page.waitForLoadState("networkidle");
   await page.waitForTimeout(800);
 }
@@ -47,6 +50,8 @@ async function cleanup() {
   if (!url || !key) return "skipped (no service key)";
   const headers = { apikey: key, Authorization: `Bearer ${key}` };
   await fetch(`${url}/rest/v1/event_signups?member_id=eq.${TEST_MEMBER}`, { method: "DELETE", headers });
+  await fetch(`${url}/rest/v1/exam_entries?member_id=eq.${TEST_MEMBER}`, { method: "DELETE", headers });
+  await fetch(`${url}/rest/v1/member_profiles?member_id=eq.${TEST_MEMBER}`, { method: "DELETE", headers });
   await fetch(`${url}/rest/v1/registrations?member_id=eq.${TEST_MEMBER}`, { method: "DELETE", headers });
   return "done";
 }
@@ -87,7 +92,25 @@ try {
   await page.locator(".ant-select").last().click();
   await page.waitForTimeout(400);
   await page.locator(".ant-select-item-option", { hasText: "3 dan" }).first().click();
+  await page.waitForTimeout(600);
+
+  // the exam expands into typed fields (the VKF submission data)
+  await page.locator("#exam_current_rank_issued_on").click();
+  await page.keyboard.type("01/01/2023", { delay: 40 });
+  await page.keyboard.press("Enter");
+  await page.locator("#exam_current_rank_issued_by").fill("VKF");
+  await page.locator("#exam_dojo_approved").check();
   await page.waitForTimeout(400);
+
+  // the VKF paperwork
+  await page.locator("#full_name_latin").fill("TRUONG HUA DAN");
+  await page.locator("#national_id").fill("012345678901");
+  await page.locator("#address").fill("123 Đường ABC, Quận 1, TP.HCM");
+  await page.locator("#occupation").fill("Kỹ sư");
+  await page.locator("#emergency_contact").fill("Nguyễn Thị B — 0901234567");
+  await page.locator("#certificate_mailing_address").fill("CLB Shakaijin");
+  await page.locator("#current_rank_photo_url").fill("https://drive.google.com/file/d/test/view");
+  await page.waitForTimeout(300);
 
   const entryTag = (await page.locator("text=/\\d+ nội dung thi đấu/").first().textContent())?.trim();
   check("entry counter counts only the shiai event", entryTag, "1 nội dung thi đấu");
@@ -96,6 +119,26 @@ try {
   await page.waitForTimeout(2500);
   const saved = (await page.locator(".ant-message-notice-content").first().textContent().catch(() => ""))?.trim();
   check("save confirms", saved, "Đã lưu. Cảm ơn bạn!");
+
+  // 2b. what VKF's workbook will read back
+  const url = process.env.SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (url && key) {
+    const headers = { apikey: key, Authorization: `Bearer ${key}` };
+    const submission = await fetch(
+      `${url}/rest/v1/v_exam_submission?member_id=eq.${TEST_MEMBER}&select=grade_applied,full_name_latin,current_rank_issued_on,dojo_approved,vkf_fee_bracket,nights`,
+      { headers },
+    ).then((r) => r.json());
+    check("the exam submission row exists", submission.length, 1);
+    check("grade applied recorded", submission[0]?.grade_applied, "3 dan");
+    check("latin name for the certificate recorded", submission[0]?.full_name_latin, "TRUONG HUA DAN");
+    check("certificate issue date recorded", submission[0]?.current_rank_issued_on, "2023-01-01");
+    check("dojo approval recorded", submission[0]?.dojo_approved, true);
+    const profile = await fetch(
+      `${url}/rest/v1/v_member_profile?member_id=eq.${TEST_MEMBER}&select=missing_fields`,
+      { headers },
+    ).then((r) => r.json());
+    check("all VKF paperwork complete (0 missing)", profile[0]?.missing_fields, 0);
+  }
 
   // 3. a member cannot open the operator areas
   await page.goto(`${BASE}/admin`, { waitUntil: "networkidle" });

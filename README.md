@@ -15,7 +15,7 @@ and in Vercel for production; changing them needs a redeploy. See `docs/spec-eve
 
 | Page | Who | What |
 |---|---|---|
-| `/enroll` | members | pick your name, arrival + departure datetime, live nights/days, and **check in to the events** you take part in (team shiai, exam with grade, seminar, Godo per session, party, Hà Nội dojo exchange) |
+| `/enroll` | members | pick your name, arrival + departure datetime, live nights/days, **the paperwork VKF requires for the exam** (latin/Kanji name, CCCD, address, occupation, dojo, emergency contact, certificate photo) and **check-ins for every event** (team shiai, exam with grade + eligibility guidance, seminar, Godo per session, party, Hà Nội dojo exchange) |
 | `/track` | organisers | registrations, expected attendees, entry split (1 vs 2 "nội dung"), event sign-ups, headcount per day 18–30/11 |
 | `/admin` | operator | the programme with sign-up counts, the `expected` switch per member, CSV exports; `/admin/events/new` + `/admin/events/[id]` to create and edit events and their sessions |
 | `/members`, `/trips`, `/trips/edit/:id`, `/stay` | organisers | Refine CRUD on the roster, the registrations, the edit form and the derived stay view |
@@ -29,7 +29,7 @@ Chúc leg (18–22/11) vs the Hà Nội leg (23–29/11), per-member progress, a
 pnpm install
 cp .env.example .env.local     # NEXT_PUBLIC_* + MEMBER_ACCESS_CODE + ADMIN_ACCESS_CODE
 pnpm dev                       # http://localhost:3000
-pnpm test                      # domain rules + SQL views + the events model (21 tests)
+pnpm test                      # trip rules, exam eligibility, events model, SQL views (33 tests)
 pnpm typecheck
 pnpm e2e                       # browser smoke test (needs `pnpm start -p 3100` running)
 node scripts/db-apply.mjs      # migrations + seeds → Supabase
@@ -59,7 +59,7 @@ keep the admin code for the organisers.
 | `scripts/gen-member-seed.mjs` | regenerates the roster seed after roster edits |
 | `test/` | vitest: the domain rules, the events model, plus a check that every SQL view matches them day by day |
 | `scripts/e2e.mjs` | `pnpm e2e` — the browser smoke test (gate, check-in, CSV) |
-| `docs/` | [`handoff.md`](docs/handoff.md) · [`status.md`](docs/status.md) · [`tasks/`](docs/tasks/README.md) |
+| `docs/` | [`handoff.md`](docs/handoff.md) · [`status.md`](docs/status.md) · [`spec-events.md`](docs/spec-events.md) · [`spec-member-registration.md`](docs/spec-member-registration.md) · [`tasks/`](docs/tasks/README.md) |
 | `resources/` | the roster (`members.json`) and the original user-guide PDFs |
 | `deprecated/` | parked earlier attempts — see [`deprecated/README.md`](deprecated/README.md) |
 
