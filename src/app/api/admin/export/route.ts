@@ -33,10 +33,10 @@ export async function GET(req: NextRequest) {
   } else if (kind === "members") {
     const { data, error } = await db
       .from("v_member_stay")
-      .select("member_id, full_name, expected, role, arrival_at, departure_at, nights, days, tam_chuc_nights, ha_noi_nights, room_type, roommate, exam_grade, complete")
+      .select("member_id, full_name, expected, role, arrival_at, departure_at, nights, days, tam_chuc_nights, ha_noi_nights, room_type, roommate, complete")
       .order("full_name");
     if (error) return fail(error);
-    headers = ["member_id", "full_name", "expected", "role", "arrival_at", "departure_at", "nights", "days", "tam_chuc_nights", "ha_noi_nights", "room_type", "roommate", "exam_grade", "complete"];
+    headers = ["member_id", "full_name", "expected", "role", "arrival_at", "departure_at", "nights", "days", "tam_chuc_nights", "ha_noi_nights", "room_type", "roommate", "complete"];
     rows = (data ?? []).map((r) => headers.map((h) => (r as Record<string, unknown>)[h]));
     filename = "vikc-members";
   } else {

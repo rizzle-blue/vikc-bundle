@@ -26,6 +26,7 @@ changes.
 | **Exam submission** (`exam_entries`: grade applied, 1 kyu→shodan, snapshot of the grade paperwork, dojo approval, withdrawable) | ✅ live + in the form |
 | Eligibility guidance against VKF's table (min age, training period per dan) | ✅ shown live in the form (`checkEligibility`) |
 | **VKF workbook export** (the club's submission to `vikc@vietnamkendo.com`) | ⏳ T9 — next |
+| Member data model documented (three tiers + write matrix) and the pre-events columns dropped | ✅ [`spec-member-data-model.md`](spec-member-data-model.md) |
 | Vercel deploy + member link handed out (**needs `SUPABASE_SERVICE_ROLE_KEY` + the two codes in Vercel env**) | ⏳ T3 (owner) |
 | CSV export for the organisers | ⏳ small, unstarted |
 | VKF submission export (CSV in their column order) | ⏳ T9 |

@@ -30,6 +30,7 @@ export default function TripsPage() {
           render={(v: string | null) => (v ? <DateField value={v} format="DD/MM/YYYY HH:mm" /> : <Tag color="red">chưa điền</Tag>)}
         />
         <Table.Column dataIndex="room_type" title="Phòng" width={90} render={(v: string | null) => v ?? "—"} />
+        <Table.Column dataIndex="role" title="Vai trò" width={110} render={(v: string | null) => v ?? "vận động viên"} />
         <Table.Column
           dataIndex="team3"
           title="Đội 3"

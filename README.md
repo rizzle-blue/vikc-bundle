@@ -59,7 +59,7 @@ keep the admin code for the organisers.
 | `scripts/gen-member-seed.mjs` | regenerates the roster seed after roster edits |
 | `test/` | vitest: the domain rules, the events model, plus a check that every SQL view matches them day by day |
 | `scripts/e2e.mjs` | `pnpm e2e` — the browser smoke test (gate, check-in, CSV) |
-| `docs/` | [`handoff.md`](docs/handoff.md) · [`status.md`](docs/status.md) · [`spec-events.md`](docs/spec-events.md) · [`spec-member-registration.md`](docs/spec-member-registration.md) · [`tasks/`](docs/tasks/README.md) |
+| `docs/` | [`handoff.md`](docs/handoff.md) · [`status.md`](docs/status.md) · [`spec-member-data-model.md`](docs/spec-member-data-model.md) (the member model + who may write what) · [`spec-events.md`](docs/spec-events.md) · [`spec-member-registration.md`](docs/spec-member-registration.md) · [`tasks/`](docs/tasks/README.md) |
 | `resources/` | the roster (`members.json`) and the original user-guide PDFs |
 | `deprecated/` | parked earlier attempts — see [`deprecated/README.md`](deprecated/README.md) |
 

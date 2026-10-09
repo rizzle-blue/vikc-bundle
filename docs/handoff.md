@@ -86,6 +86,7 @@ those two values or optional.
 | `supabase/migrations/` | `…_flights` (parked crawler tables), `…_registration`, `…_grants`, `…_stay_outside_nights`, `…_events`, `…_event_view_grants` |
 | `supabase/seed_events.sql` | the VIKC programme as operator-editable events (idempotent, never overwrites edits) |
 | `docs/spec-member-registration.md` | the field inventory VKF requires, the paperwork model and the exam submission design |
+| `docs/spec-member-data-model.md` | the member data model as it exists: three tiers (preserved identity / personal record / changeable logistics), every column, every view, and the write matrix |
 | `src/lib/registration/` | the trip rules (nights, days, headcount, progress) **and the exam rules** (`checkEligibility`, `EXAM_GRADES`, `VKF_REQUIRED_PROFILE_FIELDS`) |
 | `src/app/enroll/ProfileFields.tsx` | the paperwork VKF asks for (latin/Kanji name, CCCD, address, occupation, dojo, emergency contact, mailing address, certificate photo link) |
 | `src/app/enroll/ExamFields.tsx` | the exam questions + live eligibility guidance |
@@ -122,6 +123,9 @@ those two values or optional.
 - **Clicking before hydration does nothing** (found via a flaky login): a `<form action={serverAction}>`
   submitted before React hydrates falls back to a native POST — no cookie, no error, silently
   ignored. Keep submit buttons disabled until `useEffect` has run (see `LoginForm`).
+- **The preserved identity cannot be edited with the browser key**: `members` has SELECT only for
+  the anon role, so a member can never rewrite their own DOB, gender, VKF number or name — only the
+  operator's service-key route touches `expected`.
 - **`member_trip` has no `id`** — pass `meta: { idColumnName: "member_id" }` to Refine hooks.
 - **AntD `Form` does not forward `action`** to the underlying form, so a server action never runs:
   the login form uses a plain `<form action={formAction}>` with `useActionState`.

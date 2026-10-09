@@ -3,12 +3,11 @@
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import { Edit, useForm } from "@refinedev/antd";
-import { Alert, Descriptions, DatePicker, Form, Input, Select, Switch } from "antd";
+import { Alert, Descriptions, DatePicker, Form, Input, Select } from "antd";
 import dayjs, { type Dayjs } from "dayjs";
 import { deriveStay } from "@/lib/registration";
 
 const ROOM_TYPES = ["Đôi", "Ba", "Đơn"];
-const EXAM_GRADES = ["1 kyu", "1 dan", "2 dan", "3 dan", "4 dan", "5 dan"];
 
 type FormValues = {
   member_id: string;
@@ -16,10 +15,6 @@ type FormValues = {
   departure_at: Dayjs | null;
   room_type: string | null;
   roommate: string | null;
-  exam_grade: string | null;
-  team3: boolean;
-  team5: boolean;
-  dojo_exchange: boolean;
   notes: string | null;
 };
 
@@ -78,7 +73,13 @@ export default function TripEditPage() {
         <Form.Item name="departure_at" label="Giờ về (dự kiến)">
           <DatePicker showTime format="DD/MM/YYYY HH:mm" minuteStep={5} style={{ width: 260 }} allowClear />
         </Form.Item>
-        <Descriptions size="small" column={3} style={{ marginBottom: 16 }}>
+        <Alert
+        type="info"
+        showIcon
+        style={{ marginBottom: 12 }}
+        message="Nội dung đăng ký (thi Kyu/Dan, đội 3/5, giao lưu HN) nằm ở ĐĂNG KÝ SỰ KIỆN, không phải ở đây."
+      />
+      <Descriptions size="small" column={3} style={{ marginBottom: 16 }}>
           <Descriptions.Item label="Đêm">{stay.nights}</Descriptions.Item>
           <Descriptions.Item label="Ngày">{stay.days}</Descriptions.Item>
           <Descriptions.Item label="Tam Chúc / Hà Nội">
@@ -90,18 +91,6 @@ export default function TripEditPage() {
         </Form.Item>
         <Form.Item name="roommate" label="Bạn cùng phòng">
           <Input placeholder="Mã TV hoặc tên" style={{ maxWidth: 320 }} />
-        </Form.Item>
-        <Form.Item name="exam_grade" label="Thi Kyu/Dan">
-          <Select allowClear options={EXAM_GRADES.map((v) => ({ value: v, label: v }))} style={{ width: 200 }} />
-        </Form.Item>
-        <Form.Item name="team3" label="Đội 3" valuePropName="checked">
-          <Switch />
-        </Form.Item>
-        <Form.Item name="team5" label="Đội 5" valuePropName="checked">
-          <Switch />
-        </Form.Item>
-        <Form.Item name="dojo_exchange" label="Giao lưu võ đường HN" valuePropName="checked">
-          <Switch />
         </Form.Item>
         <Form.Item name="notes" label="Ghi chú">
           <Input.TextArea rows={2} />

@@ -7,7 +7,9 @@ nights, days and a per-day headcount, and organisers track progress against the 
 Start here: [`docs/handoff.md`](docs/handoff.md) → [`docs/status.md`](docs/status.md) →
 [`docs/tasks/`](docs/tasks/README.md). Domain specs: [`docs/spec-events.md`](docs/spec-events.md)
 (events + access codes) and [`docs/spec-member-registration.md`](docs/spec-member-registration.md)
-(the VKF paperwork VKF's workbook asks for and the exam submission).
+(the VKF paperwork VKF's workbook asks for and the exam submission) and
+[`docs/spec-member-data-model.md`](docs/spec-member-data-model.md) (the member model: preserved
+identity → personal record → changeable logistics, and who may write each table).
 
 ```bash
 pnpm install

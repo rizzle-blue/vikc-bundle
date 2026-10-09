@@ -258,6 +258,21 @@ describe("registration schema (local Postgres) + agreement with the TypeScript r
     expect(rows[0]).toEqual({ profiles: true, exams: true, members_update: false, events_insert: false });
   });
 
+  it("keeps the registration row free of fields that belong to the events model", async () => {
+    const { rows } = await db.query<{ column_name: string }>(
+      `select column_name from information_schema.columns
+        where table_schema = 'public' and table_name = 'registrations' order by column_name`,
+    );
+    const columns = rows.map((r) => r.column_name);
+    // the exam lives in exam_entries, the teams in the four team events
+    for (const legacy of ["exam_grade", "team3", "team5", "dojo_exchange"]) {
+      expect(columns).not.toContain(legacy);
+    }
+    expect(columns).toEqual([
+      "arrival_at", "departure_at", "member_id", "notes", "role", "room_type", "roommate", "updated_at",
+    ]);
+  });
+
   it("rejects a departure before the arrival", async () => {
     await expect(
       db.query(`update public.registrations set arrival_at = timestamptz '2026-11-20T10:00:00+07',
